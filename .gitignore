@@ -1,0 +1,28 @@
+.venv/
+.build/
+__pycache__/
+*.pyc
+artifacts/reduced_*.npz
+*.log
+
+# Large source archive and generated submission bundle.
+0.tar
+submission/*.zip
+
+# Local artifact-authoring scratch data and machine files.
+.chart-data-*/
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.codex/
+.agents/
+.aws/
+
+# Local credentials and environment settings.
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key

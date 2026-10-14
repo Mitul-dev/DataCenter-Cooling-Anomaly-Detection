@@ -1,0 +1,8 @@
+{
+  "test_windows": 72252,
+  "window_positives": 761,
+  "endpoint_positives": 432,
+  "raw_incidents": 34,
+  "alignment_verified": true,
+  "status": "Fixed policy sensitivity analysis on previously inspected test scores; not validation-selected improvements"
+}

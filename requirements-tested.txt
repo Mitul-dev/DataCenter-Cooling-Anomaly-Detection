@@ -1,0 +1,10 @@
+joblib==1.6.0
+matplotlib==3.11.1
+numpy==2.4.6
+pandas==3.0.5
+plotly==7.1.0
+polars==1.44.1
+pyarrow==25.0.1
+scikit-learn==1.9.0
+streamlit==1.65.0
+torch==2.14.0

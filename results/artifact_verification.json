@@ -1,0 +1,56 @@
+[
+  {
+    "experiment": "base24",
+    "saved_score": 0.003446335671469569,
+    "fresh_score": 0.003446337301284075,
+    "passed": true
+  },
+  {
+    "experiment": "base48",
+    "saved_score": 0.3977307081222534,
+    "fresh_score": 0.39773017168045044,
+    "passed": true
+  },
+  {
+    "experiment": "base8",
+    "saved_score": 0.0023762136697769165,
+    "fresh_score": 0.002376214135438204,
+    "passed": true
+  },
+  {
+    "experiment": "clean22_8",
+    "saved_score": 0.0020342576317489147,
+    "fresh_score": 0.0020342564675956964,
+    "passed": true
+  },
+  {
+    "experiment": "cooling12_8",
+    "saved_score": 0.001020879833959043,
+    "fresh_score": 0.0010208802996203303,
+    "passed": true
+  },
+  {
+    "experiment": "correlation8",
+    "saved_score": 0.0032757767476141453,
+    "fresh_score": 0.003275776281952858,
+    "passed": true
+  },
+  {
+    "experiment": "enhanced24",
+    "saved_score": 0.054199449717998505,
+    "fresh_score": 0.0541994608938694,
+    "passed": true
+  },
+  {
+    "experiment": "feature_reference8",
+    "saved_score": 0.0023762136697769165,
+    "fresh_score": 0.002376214135438204,
+    "passed": true
+  },
+  {
+    "experiment": "robust24",
+    "saved_score": 0.17639067769050598,
+    "fresh_score": 0.17639067769050598,
+    "passed": true
+  }
+]

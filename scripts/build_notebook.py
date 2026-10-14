@@ -1,0 +1,43 @@
+"""Produce and execute a clean notebook against the delivered experiment files."""
+from pathlib import Path
+import contextlib,io,json,uuid
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def main():
+    evidence=json.loads((ROOT/'results'/'submission_evidence.json').read_text())
+    selected_name=json.loads((ROOT/'results'/'selected_model.json').read_text())['name']
+    chosen=json.loads((ROOT/'results'/selected_name/'summary.json').read_text());metric=chosen['test']
+    cells=[]
+    def markdown(text):cells.append({'cell_type':'markdown','id':uuid.uuid4().hex[:8],'metadata':{},'source':text.splitlines(True)})
+    def code(text):cells.append({'cell_type':'code','id':uuid.uuid4().hex[:8],'metadata':{},'execution_count':None,'source':text.splitlines(True),'outputs':[]})
+    markdown('# Data center telemetry anomaly detection\n\nDeep Learning project, Section B. Rishabh Srivastava, Mitul Seth and Madhav Mittal.\n\nThis notebook examines the completed experiments and can reproduce training. Normal-only LSTM reconstruction is evaluated against general Nagios server-health labels. The original TensorFlow notebook remains separately available.\n\nInstall `requirements.txt` in your environment before running. Keep this notebook beside the `src`, `scripts` and `results` folders. Download the public `0.tar` rack archive into the project root when retraining.')
+    code("from pathlib import Path\nimport sys, json, subprocess\nimport pandas as pd\nROOT = next((p for p in [Path.cwd(), *Path.cwd().parents] if (p/'src/dccad').exists()), None)\nif ROOT is None:\n    raise FileNotFoundError('Open the notebook from the project folder')\nsys.path.insert(0, str(ROOT/'src'))\nRETRAIN = False\nprint('Project:', ROOT.name)\nprint('RETRAIN:', RETRAIN)")
+    markdown('## Data and experimental design\n\nNine nodes use a chronological 70/10/20 split. Scalers fit finite normal training rows. Causal filling is limited to four readings and resets at gaps. Windows contain known labels, finite readings and uninterrupted 15-minute timestamps. Base experiments use 22 features; the enhanced set uses 33. Training stride is four, while validation and test stride are two.\n\nThe delivered runs compare 8, 24 and 48 readings, enhanced features and robust scaling. Each LSTM uses hidden size 64, latent size 16, seed 42, Adam 0.001, batch 512 and at most 30 epochs. Setting selection uses labelled validation F1, rather than test performance.')
+    code("evidence = json.loads((ROOT/'results/submission_evidence.json').read_text())\nprint('Nodes:', evidence['dataset']['nodes'])\nprint('Reduced readings:', evidence['dataset']['rows'])\nprint('Label counts:', evidence['dataset']['labels'])\nprint('Split row counts:', evidence['dataset']['split_rows'])")
+    markdown('## Optional full reproduction\n\nSet `RETRAIN = True` in the first cell to rerun the five neural configurations and the Isolation Forest baseline. Training takes substantial CPU time. The default uses the trained artifacts already supplied. The raw archive is needed for full reproduction.')
+    code("if RETRAIN:\n    if not (ROOT/'0.tar').exists():\n        raise FileNotFoundError('Download 0.tar from https://zenodo.org/records/7541722')\n    for script, args in [('evaluate_saved.py', []), ('train_baseline.py', []), ('train_experiments.py', ['--epochs','30','--configs','base24','base8','base48','enhanced24','robust24']), ('build_results.py', [])]:\n        subprocess.run([sys.executable, str(ROOT/'scripts'/script), *args], cwd=ROOT, check=True)\nelse:\n    print('Using completed experiment artifacts')")
+    markdown('## Correct endpoint and incident evaluation\n\n`y_window` marks any CRITICAL reading in a window. `y_end` uses only the original label at the scored timestamp. Raw incidents group consecutive CRITICAL 15-minute bins, with breaks at missing timestamps. Alarm timestamps must fall inside the original interval to count. Both total and observable incident recall are retained. Persistence and alarm bursts reset at gaps and node changes. AP refers to average precision, not trapezoidal PR-AUC.')
+    code("audit = json.loads((ROOT/'results/original_audit/summary.json').read_text())\nprint(json.dumps(audit, indent=2))\ncomparison = pd.read_csv(ROOT/'results/experiment_comparison.csv')\nprint(comparison[['experiment','width','validation_f1','average_precision','precision','recall','f1','detected','episodes','observable_episodes','false_bursts_per_node_day']].to_string(index=False))")
+    markdown(f"## Selected LSTM and limitations\n\nThe validation-selected LSTM is **{chosen['name']}**. Its endpoint average precision is **{metric['average_precision']:.4f}** and its selected-policy F1 is **{metric['f1']:.4f}** on the corresponding test cohort. It catches **{metric['detected']} of {metric['episodes']} raw incidents**; **{metric['observable_episodes']}** have scoring opportunities. Different window lengths change retained cohorts. General server-health labels, a single rack, one seed, overlapping windows and previously inspected test recordings limit interpretation. The baseline can outperform the LSTM on ranking metrics.")
+    code("selected = json.loads((ROOT/'results/selected_model.json').read_text())['name']\nsummary = json.loads((ROOT/'results'/selected/'summary.json').read_text())\nprint('Selected policy:', json.dumps({k:summary['selected_policy'][k] for k in ['score_mode','quantile','per_node','persistence']}, indent=2))\nprint('Per-node results:')\nprint(pd.read_csv(ROOT/'results'/selected/'per_node.csv').to_string(index=False))")
+    markdown('## Fresh saved-model inference\n\nThe example file contains actual consecutive 15-minute feature readings. This cell loads the selected checkpoint and scaler, calculates a new score and lists the largest latest-reading reconstruction errors. An isolated window does not establish a persistence streak.')
+    code("sys.path.insert(0,str(ROOT/'scripts'))\nfrom predict import predict\nexample = json.loads((ROOT/'results'/selected/'example_metadata.json').read_text())\nprint(json.dumps(predict(ROOT/'results'/selected, ROOT/'results'/selected/'example_window.csv', example['node']), indent=2))")
+    markdown('## Data cleaning and feature selection\n\nThe supplementary workflow preserves the original data, flags nonfinite and implausible negative sensor measurements, and forward-fills at most four readings without crossing timestamp gaps or split boundaries. Selection uses normal training data only: missingness, constant inputs and redundant correlations. Correlation selection and a predefined cooling subset are compared with cleaned and original 22-feature models on exactly the same window endpoints. These experiments remain exploratory. The earlier final PDF and PPT are supplemented by `results/feature_selection/REPORT.md`.')
+    code("feature_dir = ROOT/'results/feature_selection'\nif (feature_dir/'results.json').exists():\n    feature_result = json.loads((feature_dir/'results.json').read_text())\n    print('Selected input count:', feature_result['plan']['feature_count'])\n    print('Matched-cohort validation winner:', feature_result['winner_on_matched_cohort'])\n    print(pd.read_csv(feature_dir/'comparison.csv')[['experiment','features','validation_f1','precision','recall','f1','average_precision']].to_string(index=False))\nelse:\n    print('Run scripts/clean_and_select.py to generate supplementary results')")
+    markdown('## Dashboard and submission\n\nRun `python -m streamlit run dashboard/app.py` from the project folder. The dashboard includes recorded replay, sensor reconstructions, experiment tables and fresh CSV scoring.\n\nThe report and final PPT are in `submission`. Detailed histories, scores and incident records are in `results`. The README contains commands, feature definitions, data sources and scope limitations.')
+    env={'__name__':'__main__'};execution=0
+    # Execute every code cell in its order. Stored outputs come from these executions.
+    for cell in cells:
+        if cell['cell_type']!='code':continue
+        execution+=1;capture=io.StringIO()
+        with contextlib.redirect_stdout(capture):exec(''.join(cell['source']),env)
+        cell['execution_count']=execution
+        output=capture.getvalue()
+        if output:cell['outputs']=[{'output_type':'stream','name':'stdout','text':output.splitlines(True)}]
+    notebook={'cells':cells,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.11'}},'nbformat':4,'nbformat_minor':5}
+    (ROOT/'M100_submission.ipynb').write_text(json.dumps(notebook,indent=1),encoding='utf-8')
+    print('Created and executed clean submission notebook')
+
+
+if __name__=='__main__':main()

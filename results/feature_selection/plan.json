@@ -1,0 +1,129 @@
+{
+  "selection_fit": "normal training rows only; neither validation nor test statistics",
+  "data_quality": {
+    "rows_preserved": 751363,
+    "duplicate_node_timestamp_keys": 0,
+    "original_missing_cells": 1304207,
+    "implausible_negative_cells": 130,
+    "causally_filled_cells": 75640,
+    "remaining_missing_cells": 1228697
+  },
+  "correlation_limit": 0.95,
+  "training_missing_limit": 0.2,
+  "variance_minimum": 1e-08,
+  "selected_features": [
+    "ambient",
+    "fan0_0",
+    "fan1_0",
+    "fan1_1",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "feature_count": 16,
+  "original_feature_count": 22,
+  "cohort": {
+    "train": {
+      "original_eligible": 105150,
+      "cleaned_eligible": 105150,
+      "common": 105150,
+      "common_critical_endpoints": 0
+    },
+    "validation": {
+      "original_eligible": 37074,
+      "cleaned_eligible": 37074,
+      "common": 37074,
+      "common_critical_endpoints": 388
+    },
+    "test": {
+      "original_eligible": 73300,
+      "cleaned_eligible": 73300,
+      "common": 73300,
+      "common_critical_endpoints": 512
+    }
+  },
+  "configs": [
+    {
+      "width": 8,
+      "enhanced": false,
+      "common_cohort_path": "results/feature_selection/common_cohort.npz",
+      "name": "feature_reference8"
+    },
+    {
+      "width": 8,
+      "enhanced": false,
+      "common_cohort_path": "results/feature_selection/common_cohort.npz",
+      "name": "clean22_8",
+      "cleaning": true
+    },
+    {
+      "width": 8,
+      "enhanced": false,
+      "common_cohort_path": "results/feature_selection/common_cohort.npz",
+      "name": "correlation8",
+      "cleaning": true,
+      "selected_features": [
+        "ambient",
+        "fan0_0",
+        "fan1_0",
+        "fan1_1",
+        "p0_vdd_temp",
+        "p1_vdd_temp",
+        "dimm_temp",
+        "p0_core_temp",
+        "p1_core_temp",
+        "gpu_core_temp",
+        "gpu_mem_temp",
+        "p0_power",
+        "p1_power",
+        "total_power",
+        "ps0_input_power",
+        "ps1_input_power"
+      ]
+    },
+    {
+      "width": 8,
+      "enhanced": false,
+      "common_cohort_path": "results/feature_selection/common_cohort.npz",
+      "name": "cooling12_8",
+      "cleaning": true,
+      "selected_features": [
+        "ambient",
+        "fan0_0",
+        "fan1_0",
+        "fan1_1",
+        "p0_vdd_temp",
+        "p1_vdd_temp",
+        "dimm_temp",
+        "p0_core_temp",
+        "p1_core_temp",
+        "gpu_core_temp",
+        "gpu_mem_temp",
+        "total_power"
+      ]
+    }
+  ],
+  "rules": [
+    "nonfinite values become missing",
+    "negative temperatures, fan speeds and powers become missing under an indoor-rack plausibility rule",
+    "zero fan speeds/power and high measurements remain unchanged",
+    "forward fill at most four consecutive 15-minute readings; reset at gaps, node and split boundaries",
+    "no backfill, interpolation, removal of rare high readings or invented labels",
+    "unknown labels remain recorded but are excluded from labelled evaluation windows"
+  ],
+  "limitations": [
+    "removing correlated sensors can hide individual fan faults",
+    "implausible temperature readings can themselves signal a sensor-health anomaly",
+    "previous test results were inspected; new experiments are exploratory",
+    "one seed and one rack subset; no guaranteed performance improvement"
+  ]
+}

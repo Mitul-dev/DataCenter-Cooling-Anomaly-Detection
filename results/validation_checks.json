@@ -1,0 +1,40 @@
+{
+  "evaluation_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "saved_model_inference": {
+    "lstm_models_passed": 9,
+    "isolation_forest_passed": true,
+    "invalid_cadence_rejected": true
+  },
+  "dashboard": {
+    "startup_passed": true,
+    "all_five_experiments_passed": true,
+    "server_control_passed": true,
+    "persistence_control_passed": true,
+    "feature_selection_experiments_passed": true,
+    "feature_selection_controls_passed": true
+  },
+  "report": {
+    "pages_visually_reviewed": 13
+  },
+  "presentation": {
+    "slides": 17,
+    "native_tables": 6,
+    "native_charts": 2
+  },
+  "raw_data_checksum_verified": true,
+  "preprocessing_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "data_cleaning_and_selection": {
+    "passed": true,
+    "matched_test_endpoints": 73300,
+    "matched_training_and_validation_counts": true,
+    "rows_preserved": 751363,
+    "selected_features": 16,
+    "original_labels_splits_and_valid_selected_values_preserved": true
+  }
+}

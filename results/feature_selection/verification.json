@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "matched_test_endpoints": 73300,
+  "matched_training_and_validation_counts": true,
+  "rows_preserved": 751363,
+  "selected_features": 16,
+  "original_labels_splits_and_valid_selected_values_preserved": true
+}

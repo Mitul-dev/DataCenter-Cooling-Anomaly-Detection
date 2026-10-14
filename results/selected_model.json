@@ -1,0 +1,17 @@
+{
+  "name": "cooling12_8",
+  "criterion": "Validation endpoint F1, then incident recall, then false bursts",
+  "experiments": [
+    "base24",
+    "base8",
+    "base48",
+    "enhanced24",
+    "robust24",
+    "feature_reference8",
+    "clean22_8",
+    "correlation8",
+    "cooling12_8"
+  ],
+  "previous_selection": "base8",
+  "feature_selection_winner": "cooling12_8"
+}

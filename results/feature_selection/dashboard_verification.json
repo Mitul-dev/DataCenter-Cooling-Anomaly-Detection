@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "experiments": [
+    "feature_reference8",
+    "clean22_8",
+    "correlation8",
+    "cooling12_8"
+  ],
+  "server_control_passed": true,
+  "persistence_control_passed": true
+}
