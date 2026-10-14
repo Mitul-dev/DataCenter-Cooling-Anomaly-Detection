@@ -1,0 +1,57 @@
+{
+  "task": 4,
+  "seeds": [
+    7,
+    42,
+    123
+  ],
+  "configuration": "lstm8_p1",
+  "validation_windows": 71982,
+  "policies_evaluated": 135,
+  "feasible_policies": 0,
+  "feasible_seeds": 0,
+  "variation": {
+    "average_precision": {
+      "mean": 0.02361566583873161,
+      "sample_std": 0.0042493683609794285,
+      "minimum": 0.019430718005545487,
+      "maximum": 0.027926650560442842
+    },
+    "precision": {
+      "mean": 0.0267419673067765,
+      "sample_std": 0.007512696512799213,
+      "minimum": 0.018175445623873424,
+      "maximum": 0.032209136331192004
+    },
+    "recall": {
+      "mean": 0.4072431633407243,
+      "sample_std": 0.010301078983567148,
+      "minimum": 0.40022172949002216,
+      "maximum": 0.4190687361419069
+    },
+    "false_positive_rate": {
+      "mean": 0.20045488651284937,
+      "sample_std": 0.06609633410782109,
+      "minimum": 0.15260270118176703,
+      "maximum": 0.2758722566122679
+    },
+    "false_bursts_per_node_day": {
+      "mean": 0.9420132810980523,
+      "sample_std": 0.40416117516556094,
+      "minimum": 0.48945569725764776,
+      "maximum": 1.2669834125197965
+    },
+    "event_recall_observable": {
+      "mean": 0.5673758865248227,
+      "sample_std": 0.024568096561260643,
+      "minimum": 0.5531914893617021,
+      "maximum": 0.5957446808510638
+    }
+  },
+  "release_status": "no_release_candidate",
+  "seed42_exact_reproduction": true,
+  "independent_holdout_scored": false,
+  "exploratory_period_scored": false,
+  "dashboard_default_changed": false,
+  "next_step": "Investigate richer training features and label alignment before independent evaluation"
+}

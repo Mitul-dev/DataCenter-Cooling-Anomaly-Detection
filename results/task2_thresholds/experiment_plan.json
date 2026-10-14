@@ -1,0 +1,70 @@
+{
+  "task": 2,
+  "scope": "exploratory policy tuning of historical models on a shared frozen validation cohort",
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea",
+  "validation_cohort_sha256": "a97255667fbb6713fc203dfff9b70024bb3dcfff1a0798757430755958371648",
+  "models": [
+    "base8",
+    "cooling12_8",
+    "robust24",
+    "isolation_forest"
+  ],
+  "score_modes": "whole_window and latest_reading for each LSTM; anomaly score for Isolation Forest",
+  "quantiles": [
+    95.0,
+    99.0,
+    99.5,
+    99.9,
+    99.95
+  ],
+  "threshold_scopes": [
+    "global",
+    "per_node"
+  ],
+  "quantile_fit": "fully known normal validation histories only",
+  "pr_candidates": [
+    "highest empirical precision at recall >=0.4",
+    "highest empirical precision at recall >=0.6",
+    "highest empirical precision at recall >=0.8",
+    "highest empirical F0.5"
+  ],
+  "pr_fit": "validation only; global score threshold; exact ties follow >= semantics",
+  "alarm_rules": [
+    "immediate",
+    "consecutive_2",
+    "two_of_three"
+  ],
+  "cadence_minutes": 15,
+  "two_of_three_definition": "at least two highs in three complete consecutive eligible readings; current reading need not be high",
+  "reset": "any node change or gap between eligible scored timestamps",
+  "notification_demonstration": "60-minute cooldown on rising edges, separate from raw decisions; reset at gaps/nodes",
+  "policy_targets": {
+    "precision_min": 0.3,
+    "recall_min": 0.4,
+    "false_positive_rate_max": 0.01,
+    "false_bursts_per_scored_node_day_max": 0.1,
+    "observable_incident_recall_min": 0.6
+  },
+  "selection": "Among feasible validation policies, maximize precision, then F0.5, then minimize false-burst rate, then maximize recall. If none feasible, report no feasible policy; do not relax targets silently.",
+  "heldout_nodes_accessed": false,
+  "new_model_training": false,
+  "training_caveat": "Historical training sets and early-stopping periods differ. This is a diagnostic on identical validation endpoints, not the primary retrained-model comparison.",
+  "model_checksums": {
+    "base8": {
+      "model.pt": "20227e60b72324c7dba9640de15009bface5348369921b1ddea42f48a00134bb",
+      "scaler.joblib": "4532a1eebd80620ba54acb2143cd44fff7db47f9a1660f7c48b5fb589af05c81"
+    },
+    "cooling12_8": {
+      "model.pt": "f907b7b75fc916ad8afd6e9ba34a817452a8c5d4e2f2f02d6ea7c7787019562d",
+      "scaler.joblib": "215bf6dbb4701b82e1f1fbc043d23a5004c923f28b860fdff6b5c3ee7d60ba81"
+    },
+    "robust24": {
+      "model.pt": "5fa144d95754cb443f40a9c7fd5fe74cf93b5cbe39d8660af239c702d739ccf3",
+      "scaler.joblib": "8ab403e8175985303b907cfca470f101d0073cdbb4a8c93012fbbeee45b0496d"
+    },
+    "isolation_forest": {
+      "model.joblib": "4399a3d987181182a6eb4ea6cd4764dfc8d0e6340a42123d3aafa81f66fcc052",
+      "scaler.joblib": "4532a1eebd80620ba54acb2143cd44fff7db47f9a1660f7c48b5fb589af05c81"
+    }
+  }
+}

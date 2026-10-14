@@ -13,7 +13,7 @@ def main():
     for name in ['README.md','requirements.txt','requirements-tested.txt','run_dashboard.ps1','Start Dashboard.bat',
                  'M100_submission.ipynb','M100_explore.ipynb','scores.npz','lstm_threshold_results.csv','node10_error_plot.png']:
         files.append(ROOT/name)
-    for name in ['cleaned_telemetry.parquet','selected_telemetry.parquet']:
+    for name in ['cleaned_telemetry.parquet','selected_telemetry.parquet','quality_indicators.parquet']:
         path=ROOT/'artifacts'/name
         if path.exists():files.append(path)
     files.extend(p for p in (ROOT/'submission').iterdir() if p.is_file() and p.suffix in ['.pdf','.pptx','.md'])

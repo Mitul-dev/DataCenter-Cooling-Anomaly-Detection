@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "models_verified": 9,
+  "standalone_csv_inference_verified": [
+    "lstm8_p1",
+    "lstm8_p3",
+    "lstm8_p10",
+    "lstm24_p3",
+    "lstm8_corr_p3",
+    "lstm8_quality_p3",
+    "gradient_boosting8",
+    "autoencoder8_refit",
+    "isolation_forest8_refit"
+  ],
+  "policies_reproduced": 441,
+  "validation_rows": 71982,
+  "training_only_scaler_and_feature_selection_verified": true,
+  "checkpoint_selection_verified": true,
+  "source_and_artifact_hashes_verified": true,
+  "reserved_nodes_scored": false
+}

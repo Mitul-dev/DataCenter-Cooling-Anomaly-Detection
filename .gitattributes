@@ -13,3 +13,9 @@
 *.png binary
 *.pdf binary
 *.pptx binary
+# Frozen evidence uses byte hashes; preserve recorded line endings in checkouts.
+results/**/*.json -text
+results/**/*.csv -text
+HVAC_submission.ipynb -text
+submission/HVAC*.json -text
+*.zip binary

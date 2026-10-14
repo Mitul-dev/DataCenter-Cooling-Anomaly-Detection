@@ -1,0 +1,106 @@
+{
+  "purpose": "immutable reference for robustness results; not a qualified operational release",
+  "snapshots": {
+    "7": {
+      "artifacts": {
+        "model.pt": "af4a8d7dfb5cbb3566c5116b9351d1a79a7f45144dedd4cdb66a2dc99f6913cc",
+        "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+        "validation_scores.npz": "5cc2c99a6dbac8b423cf4dcd1bc41297c3142d67981686bd29d352e775048d57",
+        "history.csv": "38f6897fad50d15ac6b372ac1c7f7b3deedf4a0c9b768798d153af11bbb3f19a"
+      },
+      "configuration": "lstm8_p1",
+      "features": [
+        "ambient",
+        "fan0_0",
+        "fan0_1",
+        "fan1_0",
+        "fan1_1",
+        "fan2_0",
+        "fan2_1",
+        "fan3_0",
+        "fan3_1",
+        "fan_disk_power",
+        "p0_vdd_temp",
+        "p1_vdd_temp",
+        "dimm_temp",
+        "p0_core_temp",
+        "p1_core_temp",
+        "gpu_core_temp",
+        "gpu_mem_temp",
+        "p0_power",
+        "p1_power",
+        "total_power",
+        "ps0_input_power",
+        "ps1_input_power"
+      ]
+    },
+    "42": {
+      "artifacts": {
+        "model.pt": "e90a56c4054b259a85776d5283df250bc78db19b8a52aadaff10ae057fd23f07",
+        "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+        "validation_scores.npz": "17c1e8535f3af007ca78224654c735c936699eb7e47f866c7556e701be6da57a",
+        "history.csv": "479f0167778d09a718a1b124a6f810196af8db6b3bd0fe1bd099d24e97aa726a"
+      },
+      "configuration": "lstm8_p1",
+      "features": [
+        "ambient",
+        "fan0_0",
+        "fan0_1",
+        "fan1_0",
+        "fan1_1",
+        "fan2_0",
+        "fan2_1",
+        "fan3_0",
+        "fan3_1",
+        "fan_disk_power",
+        "p0_vdd_temp",
+        "p1_vdd_temp",
+        "dimm_temp",
+        "p0_core_temp",
+        "p1_core_temp",
+        "gpu_core_temp",
+        "gpu_mem_temp",
+        "p0_power",
+        "p1_power",
+        "total_power",
+        "ps0_input_power",
+        "ps1_input_power"
+      ]
+    },
+    "123": {
+      "artifacts": {
+        "model.pt": "0ce07c56c2375f9d0e4a8f105b4f80b9ab9e1249cfbbbc17c88c47ea3a1d6cab",
+        "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+        "validation_scores.npz": "f524d67f8e29b256eaa0cdc7fa061cf410c44db35c49ce64bbf727018417462d",
+        "history.csv": "59bd021e3e5c76d7f9534c1f39939bb41009bfa4c39fd96b573a410082af635f"
+      },
+      "configuration": "lstm8_p1",
+      "features": [
+        "ambient",
+        "fan0_0",
+        "fan0_1",
+        "fan1_0",
+        "fan1_1",
+        "fan2_0",
+        "fan2_1",
+        "fan3_0",
+        "fan3_1",
+        "fan_disk_power",
+        "p0_vdd_temp",
+        "p1_vdd_temp",
+        "dimm_temp",
+        "p0_core_temp",
+        "p1_core_temp",
+        "gpu_core_temp",
+        "gpu_mem_temp",
+        "p0_power",
+        "p1_power",
+        "total_power",
+        "ps0_input_power",
+        "ps1_input_power"
+      ]
+    }
+  },
+  "policy_specs_sha256": "bdf1d2f010497f8602399ed66fdd2ec3161122bc15838f48900c269127a445ef",
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea"
+}

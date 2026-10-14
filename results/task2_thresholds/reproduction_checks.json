@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "policies_reproduced": 298,
+  "validation_rows": 71982,
+  "all_model_score_arrays_aligned": true,
+  "model_and_cohort_hashes_verified": true,
+  "feasibility_flags_reproduced": true,
+  "unseen_node_fallbacks_validation_only": true,
+  "cooldown_raw_predictions_unchanged": true,
+  "reserved_nodes_scored": false
+}

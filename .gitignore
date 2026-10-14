@@ -8,6 +8,7 @@ artifacts/reduced_*.npz
 # Large source archive and generated submission bundle.
 0.tar
 submission/*.zip
+submission/HVAC_DL_Project_Presentation_Final.pptx
 
 # Local artifact-authoring scratch data and machine files.
 .chart-data-*/

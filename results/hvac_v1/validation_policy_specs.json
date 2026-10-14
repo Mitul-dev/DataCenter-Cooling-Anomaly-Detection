@@ -1,0 +1,722 @@
+{
+  "p0001": {
+    "threshold": 5.367774009704589,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0002": {
+    "threshold": 5.367774009704589,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0003": {
+    "threshold": 5.367774009704589,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0004": {
+    "threshold": 5.367774009704589,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0005": {
+    "threshold": 5.367774009704589,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0006": {
+    "threshold": 5.367774009704589,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0007": {
+    "threshold": -1.0952787399291994,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0008": {
+    "threshold": -1.0952787399291994,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0009": {
+    "threshold": -1.0952787399291994,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0010": {
+    "threshold": 1.220877408981323,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0011": {
+    "threshold": 1.220877408981323,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0012": {
+    "threshold": 1.220877408981323,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0013": {
+    "threshold": 2.1998197436332703,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0014": {
+    "threshold": 2.1998197436332703,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0015": {
+    "threshold": 2.1998197436332703,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0016": {
+    "threshold": 4.122596979141235,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0017": {
+    "threshold": 4.122596979141235,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0018": {
+    "threshold": 4.122596979141235,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0019": {
+    "threshold": 5.036553859710693,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0020": {
+    "threshold": 5.036553859710693,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0021": {
+    "threshold": 5.036553859710693,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0022": {
+    "threshold": 5.311735963821412,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0023": {
+    "threshold": 5.311735963821412,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0024": {
+    "threshold": 5.311735963821412,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0025": {
+    "threshold": 5.329039192199712,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0026": {
+    "threshold": 5.329039192199712,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0027": {
+    "threshold": 5.329039192199712,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0028": {
+    "threshold": 0.0,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0029": {
+    "threshold": 0.0,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0030": {
+    "threshold": 0.0,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0031": {
+    "threshold": 6.967112064361571,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0032": {
+    "threshold": 6.967112064361571,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0033": {
+    "threshold": 6.967112064361571,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0034": {
+    "threshold": 4.408504009246825,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0035": {
+    "threshold": 4.408504009246825,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0036": {
+    "threshold": 4.408504009246825,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0037": {
+    "threshold": -0.5086991786956788,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0038": {
+    "threshold": -0.5086991786956788,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0039": {
+    "threshold": -0.5086991786956788,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0040": {
+    "threshold": -4.832540512084962,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0041": {
+    "threshold": -4.832540512084962,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0042": {
+    "threshold": -4.832540512084962,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0043": {
+    "threshold": 0.740958571434021,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0044": {
+    "threshold": 0.740958571434021,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0045": {
+    "threshold": 0.740958571434021,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0046": {
+    "threshold": 3.148171305656433,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0047": {
+    "threshold": 3.148171305656433,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0048": {
+    "threshold": 3.148171305656433,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0049": {
+    "threshold": 3.2230246663093567,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0050": {
+    "threshold": 3.2230246663093567,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0051": {
+    "threshold": 3.2230246663093567,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0052": {
+    "threshold": 6.7661471486091935,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0053": {
+    "threshold": 6.7661471486091935,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0054": {
+    "threshold": 6.7661471486091935,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0055": {
+    "threshold": 6.870435452461243,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0056": {
+    "threshold": 6.870435452461243,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0057": {
+    "threshold": 6.870435452461243,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0058": {
+    "threshold": 0.0,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0059": {
+    "threshold": 0.0,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0060": {
+    "threshold": 0.0,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0061": {
+    "threshold": 8.685954093933104,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0062": {
+    "threshold": 8.685954093933104,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0063": {
+    "threshold": 8.685954093933104,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0064": {
+    "threshold": 7.0713205337524405,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0065": {
+    "threshold": 7.0713205337524405,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0066": {
+    "threshold": 7.0713205337524405,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0067": {
+    "threshold": 2.798918724060058,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0068": {
+    "threshold": 2.798918724060058,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0069": {
+    "threshold": 2.798918724060058,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0070": {
+    "threshold": 2.0450243949890132,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0071": {
+    "threshold": 2.0450243949890132,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0072": {
+    "threshold": 2.0450243949890132,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0073": {
+    "threshold": 7.55509889125824,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0074": {
+    "threshold": 7.55509889125824,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0075": {
+    "threshold": 7.55509889125824,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0076": {
+    "threshold": 8.06174349784851,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0077": {
+    "threshold": 8.06174349784851,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0078": {
+    "threshold": 8.06174349784851,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0079": {
+    "threshold": 8.351128339767456,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0080": {
+    "threshold": 8.351128339767456,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0081": {
+    "threshold": 8.351128339767456,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0082": {
+    "threshold": 8.673774886131287,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0083": {
+    "threshold": 8.673774886131287,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0084": {
+    "threshold": 8.673774886131287,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0085": {
+    "threshold": 8.679650902748108,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0086": {
+    "threshold": 8.679650902748108,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0087": {
+    "threshold": 8.679650902748108,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0088": {
+    "threshold": 0.0,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0089": {
+    "threshold": 0.0,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0090": {
+    "threshold": 0.0,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0091": {
+    "threshold": 0.8662017873698739,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0092": {
+    "threshold": 0.8662017873698739,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0093": {
+    "threshold": 0.8662017873698739,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0094": {
+    "threshold": 0.8270324424140829,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0095": {
+    "threshold": 0.8270324424140829,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0096": {
+    "threshold": 0.8270324424140829,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0097": {
+    "threshold": 0.36622752143790344,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0098": {
+    "threshold": 0.36622752143790344,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0099": {
+    "threshold": 0.36622752143790344,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0100": {
+    "threshold": 0.11562911006202202,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0101": {
+    "threshold": 0.11562911006202202,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0102": {
+    "threshold": 0.11562911006202202,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0103": {
+    "threshold": 0.8648156583422213,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0104": {
+    "threshold": 0.8648156583422213,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0105": {
+    "threshold": 0.8648156583422213,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0106": {
+    "threshold": 0.8648156583422213,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0107": {
+    "threshold": 0.8648156583422213,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0108": {
+    "threshold": 0.8648156583422213,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0109": {
+    "threshold": 0.8648156583422213,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0110": {
+    "threshold": 0.8648156583422213,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0111": {
+    "threshold": 0.8648156583422213,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0112": {
+    "threshold": 0.8648156583422213,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0113": {
+    "threshold": 0.8648156583422213,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0114": {
+    "threshold": 0.8648156583422213,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0115": {
+    "threshold": 0.8648156583422213,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0116": {
+    "threshold": 0.8648156583422213,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0117": {
+    "threshold": 0.8648156583422213,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0118": {
+    "threshold": 0.5,
+    "rule": "immediate",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0119": {
+    "threshold": 0.5,
+    "rule": "consecutive_2",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  },
+  "p0120": {
+    "threshold": 0.5,
+    "rule": "two_of_three",
+    "cadence_minutes": 1,
+    "reset": "day/unit/gap"
+  }
+}

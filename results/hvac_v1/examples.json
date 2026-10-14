@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Detected fault",
+    "node": 147,
+    "date": "2017-11-06",
+    "source_fault": true,
+    "bias_c": 1.0,
+    "plot": "detected_fault.png"
+  },
+  {
+    "type": "Missed fault day",
+    "node": 168,
+    "date": "2017-11-27",
+    "source_fault": true,
+    "bias_c": -1.0,
+    "plot": "missed_fault_day.png"
+  },
+  {
+    "type": "False alarm",
+    "node": 143,
+    "date": "2017-11-02",
+    "source_fault": false,
+    "bias_c": 0.0,
+    "plot": "false_alarm.png"
+  }
+]

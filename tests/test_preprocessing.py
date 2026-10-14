@@ -23,6 +23,10 @@ class PreprocessingTests(unittest.TestCase):
         self.assertEqual(out[1, 0], 80.)
         self.assertTrue(np.isnan(out[1, 1:]).all())
 
+    def test_signed_derived_changes_remain_valid(self):
+        x=np.array([[-3.,-50.]],dtype=np.float32)
+        np.testing.assert_array_equal(sanitize(x,['cpu_temp_change','power_change']),x)
+
     def test_feature_decisions_ignore_validation_and_test_values(self):
         train = np.array([[1., 2., 1.], [2., 4., 0.], [3., 6., 1.], [4., 8., 0.]])
         x = np.vstack([train, [[1., 7., 9.], [8., 3., 6.]]])

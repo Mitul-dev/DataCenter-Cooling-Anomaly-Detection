@@ -1,0 +1,19 @@
+{
+  "source_midnight_median_delay_minutes": 392.0,
+  "first_eligible_median_delay_minutes": 2.0,
+  "fault_days_total": 42,
+  "observable_fault_days": 36,
+  "fault_days_detected": 35,
+  "false_alarm_bursts": 1,
+  "test_targets_met": {
+    "precision": true,
+    "recall": true,
+    "fpr": false,
+    "false_bursts": true,
+    "observable_fault_days": true
+  },
+  "seed_test_accuracy_mean": 0.9167564010528836,
+  "seed_test_accuracy_std": 0.0564201221826287,
+  "simulation_only": true,
+  "post_test_tuning": false
+}

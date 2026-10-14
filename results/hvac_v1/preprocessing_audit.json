@@ -1,0 +1,49 @@
+{
+  "fit_rows": 9060,
+  "fit_days": 11,
+  "fit_seasons": [
+    "winter",
+    "spring"
+  ],
+  "source_and_derived_features": [
+    "supply_temp",
+    "supply_setpoint",
+    "outdoor_temp",
+    "mixed_temp",
+    "return_temp",
+    "supply_fan_speed",
+    "return_fan_speed",
+    "outdoor_damper",
+    "return_damper",
+    "cooling_valve",
+    "heating_valve",
+    "duct_pressure_setpoint",
+    "duct_pressure",
+    "supply_error",
+    "mix_return_delta",
+    "mix_outdoor_delta",
+    "outdoor_return_delta",
+    "pressure_error",
+    "command_mix_residual",
+    "missing_supply_temp",
+    "missing_supply_setpoint",
+    "missing_outdoor_temp",
+    "missing_mixed_temp",
+    "missing_return_temp",
+    "missing_supply_fan_speed",
+    "missing_return_fan_speed",
+    "missing_outdoor_damper",
+    "missing_return_damper",
+    "missing_cooling_valve",
+    "missing_heating_valve",
+    "missing_duct_pressure_setpoint",
+    "missing_duct_pressure"
+  ],
+  "temperatures_below_zero_retained": true,
+  "test_statistics_used": false,
+  "implementation_sha256": {
+    "src/dccad/hvac.py": "d166a7f59c09c12f1761ae1f52f395c64f44e6c54497f96b26763663cfc13453",
+    "scripts/train_hvac.py": "42df4691a3a82852dbc0b9cacd030c110ec3899b0f2f3f87e36d16525d4ab419",
+    "src/dccad/supervised.py": "3157b871ef87a98709c95aaaf7ae7968b5bb20f23ec4428f5873f7e3e3ab30c1"
+  }
+}

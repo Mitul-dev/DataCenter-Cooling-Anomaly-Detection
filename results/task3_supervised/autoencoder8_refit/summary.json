@@ -1,0 +1,54 @@
+{
+  "name": "autoencoder8_refit",
+  "kind": "autoencoder",
+  "width": 8,
+  "feature_set": "full",
+  "features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "seed": 42,
+  "training_windows": 104230,
+  "training_positives": 0,
+  "validation_windows": 71982,
+  "validation_positives": 902,
+  "seconds": 138.39628887176514,
+  "best_epoch": 25,
+  "epochs_run": 25,
+  "stop_reason": "maximum_epochs",
+  "score_metrics": {
+    "whole_window": {
+      "average_precision": 0.021677918500742945
+    },
+    "latest_reading": {
+      "average_precision": 0.017920393912528927
+    }
+  },
+  "artifact_checksums": {
+    "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+    "preprocessing.json": "7f61d94da158651ed6cb27e53e94e6c82e7c4a83ce40cf49fe0f12dcdca73520",
+    "validation_scores.npz": "33ddc737322c84d66c222b68631aa2387f186bf63b601d4addc2ab156e599237",
+    "model.pt": "81e922171165c4428d4fd90cd68dabecddc649bc8cec8b75ea8ec446cce413fa"
+  },
+  "reserved_nodes_scored": false
+}

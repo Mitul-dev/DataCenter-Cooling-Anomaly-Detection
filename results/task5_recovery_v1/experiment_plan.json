@@ -1,0 +1,327 @@
+{
+  "task": 5,
+  "experiment": "recovery_v1",
+  "seed": 42,
+  "models": [
+    "extended_lstm8_p1",
+    "extended_boosting8"
+  ],
+  "search_budget": "one fixed additional-input set; one LSTM and one tree architecture; no extra weight/width search",
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea",
+  "cohorts": {
+    "train": {
+      "path": "results/protocol_v1/train_cohort.csv",
+      "sha256": "7571323017cb7aacd968a57ae9bb40ea8d8e92b9329d147480a18006c657a769",
+      "windows": 111070,
+      "critical_endpoints": 1445,
+      "normal_only_calibration_windows": 104230
+    },
+    "validation": {
+      "path": "results/protocol_v1/validation_cohort.csv",
+      "sha256": "a97255667fbb6713fc203dfff9b70024bb3dcfff1a0798757430755958371648",
+      "windows": 71982,
+      "critical_endpoints": 902,
+      "normal_only_calibration_windows": 68978
+    }
+  },
+  "targets": {
+    "precision_min": 0.3,
+    "recall_min": 0.4,
+    "false_positive_rate_max": 0.01,
+    "false_bursts_per_scored_node_day_max": 0.1,
+    "observable_incident_recall_min": 0.6
+  },
+  "width": 8,
+  "eligibility_width": 24,
+  "base_features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "extra_features": [
+    "ps0_input_voltag_avg",
+    "ps0_output_curre_avg",
+    "ps0_output_volta_avg",
+    "ps1_input_voltag_avg",
+    "ps1_output_curre_avg",
+    "ps1_output_volta_avg",
+    "p0_io_power_avg",
+    "p1_io_power_avg",
+    "p0_mem_power_avg",
+    "p1_mem_power_avg",
+    "pcie_avg",
+    "ambient_std",
+    "total_power_std",
+    "p0_power_std",
+    "p1_power_std",
+    "ambient_max",
+    "total_power_max",
+    "fan_std_max",
+    "gpu_core_max",
+    "gpu_mem_max",
+    "gpu_core_spread",
+    "gpu_mem_spread"
+  ],
+  "model_features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power",
+    "ps0_input_voltag_avg",
+    "ps0_output_curre_avg",
+    "ps0_output_volta_avg",
+    "ps1_input_voltag_avg",
+    "ps1_output_curre_avg",
+    "ps1_output_volta_avg",
+    "p0_io_power_avg",
+    "p1_io_power_avg",
+    "p0_mem_power_avg",
+    "p1_mem_power_avg",
+    "pcie_avg",
+    "ambient_std",
+    "total_power_std",
+    "p0_power_std",
+    "p1_power_std",
+    "ambient_max",
+    "total_power_max",
+    "fan_std_max",
+    "gpu_core_max",
+    "gpu_mem_max",
+    "gpu_core_spread",
+    "gpu_mem_spread",
+    "unavailable_ps0_input_voltag_avg",
+    "unavailable_ps0_output_curre_avg",
+    "unavailable_ps0_output_volta_avg",
+    "unavailable_ps1_input_voltag_avg",
+    "unavailable_ps1_output_curre_avg",
+    "unavailable_ps1_output_volta_avg",
+    "unavailable_p0_io_power_avg",
+    "unavailable_p1_io_power_avg",
+    "unavailable_p0_mem_power_avg",
+    "unavailable_p1_mem_power_avg",
+    "unavailable_pcie_avg",
+    "unavailable_ambient_std",
+    "unavailable_total_power_std",
+    "unavailable_p0_power_std",
+    "unavailable_p1_power_std",
+    "unavailable_ambient_max",
+    "unavailable_total_power_max",
+    "unavailable_fan_std_max",
+    "unavailable_gpu_core_max",
+    "unavailable_gpu_mem_max",
+    "unavailable_gpu_core_spread",
+    "unavailable_gpu_mem_spread",
+    "median_fallback_fraction"
+  ],
+  "source_columns": [
+    "ps0_input_voltag_avg",
+    "ps0_output_curre_avg",
+    "ps0_output_volta_avg",
+    "ps1_input_voltag_avg",
+    "ps1_output_curre_avg",
+    "ps1_output_volta_avg",
+    "p0_io_power_avg",
+    "p1_io_power_avg",
+    "p0_mem_power_avg",
+    "p1_mem_power_avg",
+    "pcie_avg",
+    "ambient_std",
+    "total_power_std",
+    "p0_power_std",
+    "p1_power_std",
+    "ambient_max",
+    "total_power_max",
+    "fan0_0_std",
+    "fan0_1_std",
+    "fan1_0_std",
+    "fan1_1_std",
+    "fan2_0_std",
+    "fan2_1_std",
+    "fan3_0_std",
+    "fan3_1_std",
+    "gpu0_core_temp_max",
+    "gpu1_core_temp_max",
+    "gpu3_core_temp_max",
+    "gpu4_core_temp_max",
+    "gpu0_mem_temp_max",
+    "gpu1_mem_temp_max",
+    "gpu3_mem_temp_max",
+    "gpu4_mem_temp_max",
+    "gpu0_core_temp_avg",
+    "gpu1_core_temp_avg",
+    "gpu3_core_temp_avg",
+    "gpu4_core_temp_avg",
+    "gpu0_mem_temp_avg",
+    "gpu1_mem_temp_avg",
+    "gpu3_mem_temp_avg",
+    "gpu4_mem_temp_avg"
+  ],
+  "aggregates": {
+    "fan_std_max": [
+      [
+        "fan0_0_std",
+        "fan0_1_std",
+        "fan1_0_std",
+        "fan1_1_std",
+        "fan2_0_std",
+        "fan2_1_std",
+        "fan3_0_std",
+        "fan3_1_std"
+      ],
+      "max"
+    ],
+    "gpu_core_max": [
+      [
+        "gpu0_core_temp_max",
+        "gpu1_core_temp_max",
+        "gpu3_core_temp_max",
+        "gpu4_core_temp_max"
+      ],
+      "max"
+    ],
+    "gpu_mem_max": [
+      [
+        "gpu0_mem_temp_max",
+        "gpu1_mem_temp_max",
+        "gpu3_mem_temp_max",
+        "gpu4_mem_temp_max"
+      ],
+      "max"
+    ],
+    "gpu_core_spread": [
+      [
+        "gpu0_core_temp_avg",
+        "gpu1_core_temp_avg",
+        "gpu3_core_temp_avg",
+        "gpu4_core_temp_avg"
+      ],
+      "spread"
+    ],
+    "gpu_mem_spread": [
+      [
+        "gpu0_mem_temp_avg",
+        "gpu1_mem_temp_avg",
+        "gpu3_mem_temp_avg",
+        "gpu4_mem_temp_avg"
+      ],
+      "spread"
+    ]
+  },
+  "negative_rule": "Negative absolute indoor-rack measurements, spreads and standard deviations become missing; genuine zeros/high measurements retained",
+  "aggregation": "All specified devices must be observed; incomplete groups become missing",
+  "preprocessing": "Original base scaler reused; extra causal ffill <=4 resets at node/gap/split; remaining extra missing values use normal-training medians; extra scaler on same normal-training rows as base; clip +/-10; raw unavailability indicators and median-fallback fraction appended",
+  "neural": {
+    "hidden": 32,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "batch_size": 512,
+    "max_epochs": 25,
+    "patience": 5,
+    "gradient_clip": 1.0,
+    "stopping": "highest labelled calendar-validation average precision"
+  },
+  "pos_weight": 1,
+  "boosting": {
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "max_iter": 200,
+    "checkpoints": [
+      50,
+      100,
+      200
+    ],
+    "early_stopping": false,
+    "class_weight": null,
+    "inputs": "latest, mean, population std and OLS slope over same 8-reading sensor history"
+  },
+  "policy_search": {
+    "quantiles": [
+      95.0,
+      99.0,
+      99.5,
+      99.9,
+      99.95
+    ],
+    "rules": [
+      "immediate",
+      "consecutive_2",
+      "two_of_three"
+    ],
+    "scopes": [
+      "global",
+      "per_node"
+    ],
+    "pr_recall_floors": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "include_best_f0_5": true
+  },
+  "include_default_threshold": true,
+  "comparison_models": [
+    "lstm8_p1",
+    "gradient_boosting8"
+  ],
+  "baseline_artifacts": {
+    "lstm8_p1": {
+      "validation_scores.npz": "05ff4096ff84096a9228b34be54f8ddf256e72907960cb733db43a97d79c1e71",
+      "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+      "summary.json": "920b4ed5fbc764025efb7ec7efae2a8c8ba0ecc85d9db55be475ac1d2033c433"
+    },
+    "gradient_boosting8": {
+      "validation_scores.npz": "3d070db6325dcb538fb14b0154ee535d164860fd423b97dcb2d56b370357c7b1",
+      "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+      "summary.json": "dad2d7256a0b32bc5eaef28dd4305113ace376532720654a91f9aee869626214"
+    }
+  },
+  "architecture_selection": "no configuration tuning; single-seed recovery candidate requires feasible policy and AP improvement over its matched original baseline; repeated seeds and freeze required before independent evaluation",
+  "independent_holdout_scored": false,
+  "exploratory_period_scored": false,
+  "label": "Existing value==2 versus value==0 outcome preserved; companion preparation code selects batchs::client::state; alert-specific raw metadata absent",
+  "implementation_sha256": {
+    "src/dccad/recovery.py": "21ce1d561522deb11cc1efbaacd50bb1e466c0bcf9b36f7a332a197fa14002ed",
+    "scripts/train_task3.py": "ab13c03aa7434ae5176433ff47ec3beb25f131e5dc1369c2c0f5f6f98f1980c3",
+    "src/dccad/supervised.py": "3157b871ef87a98709c95aaaf7ae7968b5bb20f23ec4428f5873f7e3e3ab30c1",
+    "src/dccad/alarm_policies.py": "d47045c3aed78abe813c36b67c1302625e1c45eff09ae799563c76cc28ea8b07"
+  }
+}

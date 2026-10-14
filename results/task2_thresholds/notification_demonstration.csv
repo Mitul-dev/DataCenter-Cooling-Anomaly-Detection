@@ -1,0 +1,3 @@
+policy_id,raw_precision,raw_recall,raw_false_bursts,raw_detected_incidents,displayed_notifications,false_notifications,notified_incidents,notified_incident_recall_all,cooldown_minutes,raw_decisions_unchanged
+p0170,0.037197768133911964,0.19955654101995565,766,28,715,687,28,0.5957446808510638,60,True
+p0210,0.1060842433697348,0.07538802660753881,24,10,34,24,10,0.2127659574468085,60,True

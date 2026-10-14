@@ -8,6 +8,10 @@ from sklearn.metrics import average_precision_score, precision_recall_fscore_sup
 def consecutive_alarm(meta, score, thresholds, persistence=1, cadence_minutes=30):
     """Reset at node changes and gaps; emit only after k consecutive highs."""
     per_node = isinstance(thresholds, dict)
+    if cadence_minutes <= 0 or persistence < 1 or int(persistence) != persistence:
+        raise ValueError('Cadence must be positive and persistence a positive integer')
+    if len(meta) != len(score):
+        raise ValueError('Metadata and scores must have the same length')
     pred = np.zeros(len(score), dtype=bool)
     streak = 0
     previous_node, previous_time = None, None
@@ -23,15 +27,26 @@ def consecutive_alarm(meta, score, thresholds, persistence=1, cadence_minutes=30
 
 def metrics(y, score, pred):
     y = np.asarray(y, dtype=bool)
+    pred = np.asarray(pred, dtype=bool)
+    score = np.asarray(score)
+    if y.ndim != 1 or pred.shape != y.shape or score.shape != y.shape:
+        raise ValueError('Labels, scores and predictions must be aligned one-dimensional arrays')
     p, r, f1, _ = precision_recall_fscore_support(y, pred, average="binary", zero_division=0)
+    fp = int((pred & ~y).sum()); tn = int((~pred & ~y).sum())
+    tp = int((pred & y).sum())
     return {"roc_auc": float(roc_auc_score(y, score)) if len(np.unique(y)) == 2 else None,
             "average_precision": float(average_precision_score(y, score)) if y.any() else None,
             "precision": float(p), "recall": float(r), "f1": float(f1),
+            "f0_5": float(1.25*p*r/(.25*p+r)) if .25*p+r else 0.,
+            "false_positive_rate": fp/(fp+tn) if fp+tn else None,
+            "false_discovery_ratio": fp/(tp+fp) if tp+fp else None,
             "tp": int((pred & y).sum()), "fp": int((pred & ~y).sum()),
             "fn": int((~pred & y).sum()), "tn": int((~pred & ~y).sum())}
 
 
 def bursts(meta, flag, cadence_minutes=30):
+    if cadence_minutes <= 0 or len(meta) != len(flag):
+        raise ValueError('Positive cadence and aligned alarm metadata are required')
     result, i = [], 0
     nodes, times = meta["node"].to_numpy(), meta["time_ns"].to_numpy()
     while i < len(flag):
@@ -47,6 +62,7 @@ def bursts(meta, flag, cadence_minutes=30):
 
 
 def incident_metrics(meta, pred, episodes, cadence_minutes=30):
+    pred = np.asarray(pred, dtype=bool)
     nodes, times = meta["node"].to_numpy(), meta["time_ns"].to_numpy()
     detected, observable, delays = 0, 0, []
     details = []
@@ -70,13 +86,14 @@ def incident_metrics(meta, pred, episodes, cadence_minutes=30):
     # Exposure is the duration of scored bins, excluding missing periods.
     node_days = len(meta) * cadence_minutes / (24 * 60)
     false_bursts = len(alarm_bursts) - true_bursts
-    return {"episodes": len(episodes), "observable_episodes": int(observable), "detected": int(detected),
+    return {"cadence_minutes": cadence_minutes,"episodes": len(episodes), "observable_episodes": int(observable), "detected": int(detected),
             "event_recall_all": detected / len(episodes) if len(episodes) else 0.,
             "event_recall_observable": detected / observable if observable else 0.,
             "alarm_bursts": len(alarm_bursts), "false_bursts": false_bursts,
             "burst_precision": true_bursts / len(alarm_bursts) if alarm_bursts else 0.,
-            "scored_node_days": node_days, "false_bursts_per_node_day": false_bursts / node_days if node_days else 0.,
-            "median_delay_minutes": float(np.median(delays)) if delays else None}, pd.DataFrame(details)
+            "scored_node_days": node_days, "false_bursts_per_node_day": false_bursts / node_days if node_days else None,
+            "median_delay_minutes": float(np.median(delays)) if delays else None}, pd.DataFrame(
+                details, columns=['node','start_ns','end_ns','readings','score_opportunities','detected','delay_minutes'])
 
 
 def calibrate(normal_meta, normal_scores, quantile=99, per_node=False):

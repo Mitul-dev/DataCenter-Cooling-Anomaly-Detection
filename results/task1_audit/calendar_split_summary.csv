@@ -1,0 +1,4 @@
+split,rows,known_normal,critical,unknown_or_other,raw_incidents,observable_incidents,eligible_windows,eligible_critical_endpoints
+train,535433,448287,6988,80158,1023,415,111070,1445
+validation,72576,71287,902,387,47,47,71982,902
+exploratory,143354,140598,1539,1217,34,34,139777,895

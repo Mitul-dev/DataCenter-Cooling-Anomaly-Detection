@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "cohort_counts": {
+    "train": 111070,
+    "validation": 71982,
+    "exploratory": 139777
+  },
+  "calendar_and_gap_boundaries_verified": true,
+  "target_alignment_verified": true,
+  "cohort_and_manifest_hashes_verified": true,
+  "reserved_nodes_not_scored": true,
+  "holdout_schema_available": true,
+  "quality_rows_preserved": 751363,
+  "historical_fixed_policy_diagnostics": [
+    "base8",
+    "robust24",
+    "isolation_forest",
+    "cooling12_8"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "validation_position": 0,
+  "row_index": 59951,
+  "node": 7,
+  "expected_score": -5.115294933319092,
+  "score_mode": "logit"
+}

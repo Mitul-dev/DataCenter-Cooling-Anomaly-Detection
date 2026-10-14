@@ -1,0 +1,8 @@
+node,rows,first_utc,last_utc,duplicate_timestamps,final_period_rows,clock_eligible_24_reading_endpoints,missing_source_columns,label_values_read,numeric_sensor_values_read,predictions_made
+2,79989,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+3,72944,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+4,82403,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+5,75952,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+6,82604,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+18,83923,2020-03-09T12:00:00+00:00,2022-09-28T21:45:00+00:00,0,15928,15905,,False,False,False
+19,81847,2020-03-09T12:00:00+00:00,2022-09-28T22:00:00+00:00,0,13851,13805,,False,False,False

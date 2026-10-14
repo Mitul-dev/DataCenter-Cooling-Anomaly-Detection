@@ -1,0 +1,164 @@
+{
+  "task": 3,
+  "seed": 42,
+  "configs": [
+    {
+      "name": "lstm8_p1",
+      "kind": "lstm",
+      "width": 8,
+      "pos_weight": 1,
+      "feature_set": "full"
+    },
+    {
+      "name": "lstm8_p3",
+      "kind": "lstm",
+      "width": 8,
+      "pos_weight": 3,
+      "feature_set": "full"
+    },
+    {
+      "name": "lstm8_p10",
+      "kind": "lstm",
+      "width": 8,
+      "pos_weight": 10,
+      "feature_set": "full"
+    },
+    {
+      "name": "lstm24_p3",
+      "kind": "lstm",
+      "width": 24,
+      "pos_weight": 3,
+      "feature_set": "full"
+    },
+    {
+      "name": "lstm8_corr_p3",
+      "kind": "lstm",
+      "width": 8,
+      "pos_weight": 3,
+      "feature_set": "correlation"
+    },
+    {
+      "name": "lstm8_quality_p3",
+      "kind": "lstm",
+      "width": 8,
+      "pos_weight": 3,
+      "feature_set": "quality"
+    },
+    {
+      "name": "gradient_boosting8",
+      "kind": "boosting",
+      "width": 8,
+      "feature_set": "full"
+    },
+    {
+      "name": "autoencoder8_refit",
+      "kind": "autoencoder",
+      "width": 8,
+      "feature_set": "full"
+    },
+    {
+      "name": "isolation_forest8_refit",
+      "kind": "isolation_forest",
+      "width": 8,
+      "feature_set": "full"
+    }
+  ],
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea",
+  "cohorts": {
+    "train": {
+      "path": "results/protocol_v1/train_cohort.csv",
+      "sha256": "7571323017cb7aacd968a57ae9bb40ea8d8e92b9329d147480a18006c657a769",
+      "windows": 111070,
+      "critical_endpoints": 1445,
+      "normal_only_calibration_windows": 104230
+    },
+    "validation": {
+      "path": "results/protocol_v1/validation_cohort.csv",
+      "sha256": "a97255667fbb6713fc203dfff9b70024bb3dcfff1a0798757430755958371648",
+      "windows": 71982,
+      "critical_endpoints": 902,
+      "normal_only_calibration_windows": 68978
+    }
+  },
+  "scaler": "StandardScaler on finite normal calendar-training rows, all 22 sensors",
+  "clip": 10.0,
+  "neural": {
+    "hidden": 32,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "batch_size": 512,
+    "max_epochs": 25,
+    "patience": 5,
+    "gradient_clip": 1.0,
+    "stopping": "highest labelled calendar-validation average precision"
+  },
+  "autoencoder": {
+    "hidden": 64,
+    "latent": 16,
+    "max_epochs": 25,
+    "patience": 5,
+    "stopping": "lowest normal-history calendar-validation MSE"
+  },
+  "boosting": {
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "max_iter": 200,
+    "checkpoints": [
+      50,
+      100,
+      200
+    ],
+    "early_stopping": false,
+    "class_weight": null,
+    "inputs": "latest, mean, population std and OLS slope over same 8-reading sensor history"
+  },
+  "isolation_forest": {
+    "n_estimators": 200,
+    "max_samples": 256,
+    "contamination": "auto"
+  },
+  "loss": "BCEWithLogitsLoss; training weights only; no oversampling",
+  "eligibility_width": 24,
+  "targets": {
+    "precision_min": 0.3,
+    "recall_min": 0.4,
+    "false_positive_rate_max": 0.01,
+    "false_bursts_per_scored_node_day_max": 0.1,
+    "observable_incident_recall_min": 0.6
+  },
+  "policy_search": {
+    "quantiles": [
+      95.0,
+      99.0,
+      99.5,
+      99.9,
+      99.95
+    ],
+    "rules": [
+      "immediate",
+      "consecutive_2",
+      "two_of_three"
+    ],
+    "scopes": [
+      "global",
+      "per_node"
+    ],
+    "pr_recall_floors": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "include_best_f0_5": true
+  },
+  "reserved_nodes_accessed": false,
+  "exploratory_period_scored": false,
+  "classifier_selection": "feasible validation policy key, otherwise highest validation AP as a provisional candidate only",
+  "inference": "scores are uncalibrated; labels, timestamps and node IDs are not model inputs",
+  "source_checksums": {
+    "scripts\\train_task3.py": "dba7e70da72acf40e19a5376f02452179947902e67406260358dfd6b661f6e76",
+    "src\\dccad\\supervised.py": "3157b871ef87a98709c95aaaf7ae7968b5bb20f23ec4428f5873f7e3e3ab30c1",
+    "src\\dccad\\protocol.py": "b804dd5d05528956a7d8bea619c36dad9e4e10aa9e0180eff4730c5fb16e8f83"
+  }
+}

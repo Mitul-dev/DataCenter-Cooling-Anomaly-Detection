@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "seeds_verified": [
+    7,
+    42,
+    123
+  ],
+  "policies_reproduced": 135,
+  "seed42_original_checkpoint_and_scores_exact": true,
+  "standalone_csv_inference_verified": 3,
+  "whole_node_bootstrap_reproduced": true,
+  "per_node_counts_reproduced": true,
+  "release_gate_reproduced": true,
+  "input_and_model_hashes_verified": true,
+  "training_feature_audit_excludes_holdout_and_labels": true,
+  "reserved_nodes_scored": false
+}

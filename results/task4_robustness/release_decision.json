@@ -1,0 +1,14 @@
+{
+  "status": "no_release_candidate",
+  "selected_seed": null,
+  "selected_policy": null,
+  "release_gate": "all three seeds must have a feasible validation policy; use seed 42, never cherry-pick a seed; its global fallback must also pass the same validation targets",
+  "seed_policy_statuses": {
+    "7": "diagnostic_only",
+    "42": "diagnostic_only",
+    "123": "diagnostic_only"
+  },
+  "reason": "At least one seed fails the frozen validation targets or the primary fallback fails",
+  "independent_holdout_scored": false,
+  "dashboard_default_changed": false
+}

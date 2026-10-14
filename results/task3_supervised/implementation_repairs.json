@@ -1,0 +1,9 @@
+[
+  {
+    "source": "scripts\\train_task3.py",
+    "pre_training_sha256": "dba7e70da72acf40e19a5376f02452179947902e67406260358dfd6b661f6e76",
+    "repaired_sha256": "ab13c03aa7434ae5176433ff47ec3beb25f131e5dc1369c2c0f5f6f98f1980c3",
+    "reason": "Repair Matplotlib linthresh placement, restrict FPR axis to nonnegative values, and use readable ablation axis limits. Training configurations, weights, scores and policy selection are unchanged. Preserve the pre-training manifest and resume reporting under this documented source hash.",
+    "training_or_policy_changes": false
+  }
+]

@@ -1,0 +1,13 @@
+split,label,rows,missing_cells,invalid_cells,imputed_cells,rows_with_any_missing,rows_with_any_invalid
+train,-1,80156,1097537,0,58398,49954,0
+train,0,448287,139994,10,11414,6374,5
+train,2,6988,16230,16,2051,885,8
+train,3,2,0,0,0,0,0
+validation,-1,360,396,0,396,18,0
+validation,0,71287,0,0,0,0,0
+validation,2,902,0,0,0,0,0
+validation,3,27,0,0,0,0,0
+exploratory,-1,1199,22338,0,2340,1016,0
+exploratory,0,140598,22864,4,692,1044,2
+exploratory,2,1539,4848,100,349,468,50
+exploratory,3,18,0,0,0,0,0

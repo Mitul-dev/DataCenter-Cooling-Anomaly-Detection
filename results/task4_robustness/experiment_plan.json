@@ -1,0 +1,113 @@
+{
+  "task": 4,
+  "configuration": "lstm8_p1",
+  "seeds": [
+    7,
+    42,
+    123
+  ],
+  "primary_seed": 42,
+  "feature_names": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "width": 8,
+  "eligibility_width": 24,
+  "clip": 10.0,
+  "neural": {
+    "hidden": 32,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "batch_size": 512,
+    "max_epochs": 25,
+    "patience": 5,
+    "gradient_clip": 1.0,
+    "stopping": "highest labelled calendar-validation average precision"
+  },
+  "pos_weight": 1,
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea",
+  "cohorts": {
+    "train": {
+      "path": "results/protocol_v1/train_cohort.csv",
+      "sha256": "7571323017cb7aacd968a57ae9bb40ea8d8e92b9329d147480a18006c657a769",
+      "windows": 111070,
+      "critical_endpoints": 1445,
+      "normal_only_calibration_windows": 104230
+    },
+    "validation": {
+      "path": "results/protocol_v1/validation_cohort.csv",
+      "sha256": "a97255667fbb6713fc203dfff9b70024bb3dcfff1a0798757430755958371648",
+      "windows": 71982,
+      "critical_endpoints": 902,
+      "normal_only_calibration_windows": 68978
+    }
+  },
+  "targets": {
+    "precision_min": 0.3,
+    "recall_min": 0.4,
+    "false_positive_rate_max": 0.01,
+    "false_bursts_per_scored_node_day_max": 0.1,
+    "observable_incident_recall_min": 0.6
+  },
+  "policy_search": {
+    "quantiles": [
+      95.0,
+      99.0,
+      99.5,
+      99.9,
+      99.95
+    ],
+    "rules": [
+      "immediate",
+      "consecutive_2",
+      "two_of_three"
+    ],
+    "scopes": [
+      "global",
+      "per_node"
+    ],
+    "pr_recall_floors": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "include_best_f0_5": true
+  },
+  "include_default_logit_zero": true,
+  "inputs_sha256": {
+    "model.pt": "60241113829931364d43d527a5bf58a081bcdd7f834f6d2dde4d95c4302be96c",
+    "preprocessing.joblib": "dd3f650eb7bc98b36d7aed5d6833ef14f88b2df43f36b868a8b1b97e1825cb46",
+    "validation_scores.npz": "05ff4096ff84096a9228b34be54f8ddf256e72907960cb733db43a97d79c1e71"
+  },
+  "task3_summary_sha256": "bffb17ba70c993f10a430f86f522137651b08958d3a137c2268b54e2e2b962e1",
+  "policy_selection": "same feasible-policy key as Task 3; otherwise max precision with recall >=40% for diagnosis only",
+  "release_rule": "all three seeds must have a feasible validation policy; use seed 42, never cherry-pick a seed; its global fallback must also pass the same validation targets",
+  "uncertainty": {
+    "method": "whole-node percentile bootstrap on each fixed selected validation policy",
+    "replicates": 2000,
+    "seed": 20261014,
+    "limitation": "Nine development nodes from one rack; conditional on selected policies. Selection uncertainty and future drift are not captured."
+  },
+  "heldout_access": "no reserved node measurements or labels; no holdout scoring unless a release passes the validation gate in a later task",
+  "training_configuration_search": false
+}

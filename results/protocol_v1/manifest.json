@@ -1,0 +1,130 @@
+{
+  "protocol_version": "v1",
+  "status": "frozen_before_new_model_training",
+  "prepared_date": "2026-10-14",
+  "task": "Current Nagios server-health anomaly classification from thermal, fan and power telemetry",
+  "claims_excluded": [
+    "cooling-specific diagnosis",
+    "future-fault prediction",
+    "energy savings"
+  ],
+  "development_nodes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17
+  ],
+  "independent_holdout_nodes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    18,
+    19
+  ],
+  "time_boundaries_utc": {
+    "train_end_exclusive": "2022-01-22T00:00:00+00:00",
+    "validation_end_exclusive": "2022-04-16T00:00:00+00:00",
+    "final_end_exclusive": "2022-09-29T00:00:00+00:00"
+  },
+  "boundary_rationale": "Day-aligned dates after the latest historical training and validation cutoffs, chosen from timestamp metadata, not model scores.",
+  "cadence_minutes": 15,
+  "maximum_input_width": 24,
+  "candidate_input_widths": [
+    8,
+    24
+  ],
+  "training_stride": 4,
+  "validation_and_evaluation_stride": 1,
+  "primary_sensor_features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "quality_feature_candidates": [
+    "missing_<sensor>",
+    "invalid_<sensor>",
+    "imputed_<sensor>"
+  ],
+  "preprocessing": {
+    "negative_base_sensor_measurements": "missing under indoor-rack plausibility assumption; preserve raw and invalid flags",
+    "filling": "causal, maximum four readings, reset at node/gap/calendar split",
+    "unresolved_missing_values": "exclude from primary matched cohort; report coverage",
+    "scaler_fit": "finite normal training rows only; never validation/holdout",
+    "feature_selection_fit": "training only; no label-derived features",
+    "label_mapping": {
+      "normal": 0,
+      "critical": 2,
+      "unknown_or_other": "exclude endpoint targets, never relabel normal"
+    }
+  },
+  "cohort_rule": "Primary comparison requires a finite, consecutive, same-split 24-reading history across all 22 base sensors and a known endpoint label. Historical labels inside inputs may be unknown; labels are never model inputs. Autoencoder training/calibration additionally requires all history labels normal.",
+  "cohort_files": {
+    "train": {
+      "path": "results/protocol_v1/train_cohort.csv",
+      "sha256": "7571323017cb7aacd968a57ae9bb40ea8d8e92b9329d147480a18006c657a769",
+      "windows": 111070,
+      "critical_endpoints": 1445,
+      "normal_only_calibration_windows": 104230
+    },
+    "validation": {
+      "path": "results/protocol_v1/validation_cohort.csv",
+      "sha256": "a97255667fbb6713fc203dfff9b70024bb3dcfff1a0798757430755958371648",
+      "windows": 71982,
+      "critical_endpoints": 902,
+      "normal_only_calibration_windows": 68978
+    },
+    "exploratory": {
+      "path": "results/protocol_v1/exploratory_cohort.csv",
+      "sha256": "9475871d1104aa243110696f1f372ac144260949bc42e965a37591d28f6aca8a",
+      "windows": 139777,
+      "critical_endpoints": 895,
+      "normal_only_calibration_windows": 136438
+    }
+  },
+  "source_archive_sha256": "d46ec4db0c12037c298eb074d256374730fab92e6efedaa073348533d3ab3840",
+  "base_cache_sha256": "d448a42cd77ebfa3848631d18835895b722e424ca7c206bb77193489236083b4",
+  "baseline_rescoring": "Historical models are diagnostics only. Fair primary baselines must be retrained on the calendar-aligned training cohort.",
+  "policy_targets": {
+    "precision_min": 0.3,
+    "recall_min": 0.4,
+    "false_positive_rate_max": 0.01,
+    "false_bursts_per_scored_node_day_max": 0.1,
+    "observable_incident_recall_min": 0.6
+  },
+  "policy_selection": "Among feasible validation policies, maximize precision, then F0.5, then minimize false-burst rate, then maximize recall. If none feasible, report no feasible policy; do not relax targets silently.",
+  "independent_evaluation": {
+    "gate": "Only after architecture, seed rule, preprocessing, model and alarm policy are frozen",
+    "period": "[validation_end_exclusive, final_end_exclusive) on the seven reserved nodes",
+    "node_thresholds": "Global validation-calibrated fallback for unseen nodes; no calibration on final labels",
+    "interpretation": "Unseen-node and later-period generalization, reported separately from exploratory development recordings",
+    "label_or_finite_coverage": "Apply predeclared eligibility at final evaluation, disclose all excluded rows/incidents without changing servers or period"
+  },
+  "historical_test_status": "already inspected; exploratory, never claim it is a new blind test",
+  "seed_rule": "Evaluate finalist with 7,42,123; release uses seed 42 unless a different validation-only rule is documented before final evaluation"
+}

@@ -1,0 +1,9 @@
+{
+  "validation_position": 0,
+  "row_index": 59951,
+  "node": 7,
+  "expected_scores": {
+    "whole_window": 0.0018884368473663926,
+    "latest_reading": 0.002033753553405404
+  }
+}

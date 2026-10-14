@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_labels_match_documented_scenarios": true,
+  "whole_season_and_day_separation": true,
+  "eligibility_and_timestamps_verified": true,
+  "training_only_preprocessing_reproduced": true,
+  "full_validation_scores_reproduced": 4,
+  "validation_policies_reproduced": 120,
+  "fresh_csv_windows_reproduced": 4,
+  "fixed_seed42_selection_verified": true,
+  "full_frozen_test_scores_reproduced": 4,
+  "source_and_artifact_hashes_verified": true,
+  "m100_reserved_servers_scored": false
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "recovery_models_verified": 2,
+  "all_validation_scores_freshly_reproduced": true,
+  "standalone_csv_windows_reproduced": 2,
+  "policies_reproduced": 180,
+  "validation_endpoints": 71982,
+  "original_base_preprocessing_unchanged": true,
+  "extra_preprocessing_training_only": true,
+  "no_endpoint_excluded_for_extra_missingness": true,
+  "node_metrics_and_bootstrap_reproduced": true,
+  "frozen_input_hashes_verified": true,
+  "recovery_selection_gate_reproduced": true,
+  "reserved_nodes_scored": false
+}

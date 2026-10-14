@@ -1,0 +1,18 @@
+{
+  "report_pages": 11,
+  "presentation_slides": 14,
+  "native_chart_count": 3,
+  "native_table_count": 5,
+  "executed_notebook_code_cells": 8,
+  "visual_review": "All report pages and rendered slides inspected",
+  "powerpoint_desktop_opened": false,
+  "unit_tests_passed": 39,
+  "fresh_folder_frozen_scores_verified": true,
+  "fresh_folder_dashboard_replays_verified": true,
+  "environment": "Existing pinned Python environment reused; no clean dependency installation claimed",
+  "sha256": {
+    "HVAC_DL_Project_Presentation.pptx": "2b13b4570f1a90b64d0c53a04c94cf34b8432da726e2dfb7311388149de6a9b9",
+    "HVAC_DL_Project_Report.pdf": "4105f301aa93d49b9bc307cddf3e96cdcf87125ff6731e39f94eadde5383c613",
+    "HVAC_submission.ipynb": "663f6d456979539ce0cae56015506ec14fe1c8e658df1f919cabf89252909aed"
+  }
+}

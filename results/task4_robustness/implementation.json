@@ -1,0 +1,12 @@
+{
+  "source_checksums": {
+    "scripts/run_task4.py": "b853b5b861f9a4ac7be1886fea5c8524b12ccca52caa705a45da2515c0e0180a",
+    "scripts/audit_task4_features.py": "10f4e7b14d531cad8118c6f52a3fe7f1d45c2fd94f564252256ac2f02802b74c",
+    "scripts/verify_task4.py": "89725d04b95a3e66aa4c4f28d39f9399c5c72fb698118be9d867e7bf4fd9b1c6",
+    "src/dccad/robustness.py": "dacf4f6e97ede1f4c2ca70c6dddb98a22760c69969bcc0fa80d3a723b726ebf8",
+    "src/dccad/supervised.py": "3157b871ef87a98709c95aaaf7ae7968b5bb20f23ec4428f5873f7e3e3ab30c1",
+    "src/dccad/alarm_policies.py": "d47045c3aed78abe813c36b67c1302625e1c45eff09ae799563c76cc28ea8b07",
+    "src/dccad/protocol.py": "b804dd5d05528956a7d8bea619c36dad9e4e10aa9e0180eff4730c5fb16e8f83"
+  },
+  "training_and_policy_configuration_changes_after_runs": false
+}

@@ -1,0 +1,20 @@
+{
+  "status": "validation_qualified",
+  "models": 4,
+  "neural_seeds": [
+    7,
+    42,
+    123
+  ],
+  "feasible_neural_seeds": 3,
+  "feasible_policies": 62,
+  "policies": 120,
+  "primary_model": "lstm_seed_42",
+  "test_scored": false,
+  "validation_windows": 33432,
+  "validation_faults": 28656,
+  "raw_fault_days": 42,
+  "observable_fault_days": 36,
+  "seed_ap_mean": 0.9819828701037526,
+  "seed_ap_std": 0.0026721873034955125
+}

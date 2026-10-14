@@ -1,0 +1,25 @@
+{
+  "scaler_fit_rows": 442442,
+  "scaler_fit_latest_ns": 1642808700000000000,
+  "correlation_selected_features": [
+    "ambient",
+    "fan0_0",
+    "fan1_0",
+    "fan1_1",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "train_rows": 111070,
+  "validation_rows": 71982,
+  "reserved_nodes_read": false
+}

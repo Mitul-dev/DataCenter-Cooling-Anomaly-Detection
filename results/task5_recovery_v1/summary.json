@@ -1,0 +1,21 @@
+{
+  "task": 5,
+  "experiment": "recovery_v1",
+  "models_trained": 2,
+  "validation_windows": 71982,
+  "validation_positives": 902,
+  "measurement_features": 44,
+  "indicator_features": 23,
+  "total_model_features": 67,
+  "additional_missing_inputs_drop_endpoints": false,
+  "policies_evaluated": 180,
+  "recovery_policies_evaluated": 90,
+  "feasible_recovery_policies": 0,
+  "status": "no_qualified_recovery_candidate",
+  "recovery_candidate": null,
+  "selected_policy": null,
+  "independent_holdout_scored": false,
+  "exploratory_period_scored": false,
+  "dashboard_default_changed": false,
+  "next_step": "Report the failed recovery honestly; discuss task/dataset scope before further model search"
+}

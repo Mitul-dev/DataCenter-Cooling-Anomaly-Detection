@@ -20,11 +20,15 @@ BASE_FEATURES = ["ambient"] + [f"fan{i}_{j}" for i in range(4) for j in range(2)
 ]
 
 
-def load_reduced(archive: Path, cache: Path, enhanced: bool = False):
+def load_reduced(archive: Path, cache: Path, enhanced: bool = False, nodes=None):
     """Read archive members directly without extracting arbitrary paths."""
+    nodes = NODES if nodes is None else sorted(set(nodes))
     if cache.exists():
         z = np.load(cache, allow_pickle=False)
-        return {k: z[k] for k in z.files}
+        cached = {k: z[k] for k in z.files}
+        if sorted(np.unique(cached['node']).tolist()) != list(nodes):
+            raise ValueError('Cache node cohort does not match the requested nodes')
+        return cached
     blocks = []
     feature_names = BASE_FEATURES.copy()
     extra = ["cpu_temp_max", "gpu_temp_max", "fan_min", "fan_spread",
@@ -33,7 +37,7 @@ def load_reduced(archive: Path, cache: Path, enhanced: bool = False):
     if enhanced:
         feature_names += extra
     with tarfile.open(archive) as tar:
-        for node in NODES:
+        for node in nodes:
             source = tar.extractfile(f"{node}.parquet")
             if source is None:
                 raise FileNotFoundError(f"Node {node} missing from archive")
@@ -98,7 +102,7 @@ def prepare(data, scaler_kind="standard", clip=5.0):
     from sklearn.preprocessing import RobustScaler
     filled = data["raw"].copy()
     split = np.zeros(len(filled), dtype=np.int8)
-    for node in NODES:
+    for node in np.unique(data['node']):
         idx = np.flatnonzero(data["node"] == node)
         # Causal filling only. A large timestamp gap resets the fill history.
         segments = np.r_[0, np.flatnonzero(np.diff(data["time_ns"][idx]) != CADENCE_NS) + 1, len(idx)]
@@ -117,7 +121,7 @@ def prepare(data, scaler_kind="standard", clip=5.0):
 
 def windows(data, scaled, split, which, width=24, stride=2, normal_only=False, materialize=True):
     xs, records = [], []
-    for node in NODES:
+    for node in np.unique(data['node']):
         idx = np.flatnonzero((data["node"] == node) & (split == which))
         if len(idx) < width:
             continue
@@ -144,7 +148,7 @@ def windows(data, scaled, split, which, width=24, stride=2, normal_only=False, m
 
 def raw_episodes(data, split, which=2):
     episodes = []
-    for node in NODES:
+    for node in np.unique(data['node']):
         idx = np.flatnonzero((data["node"] == node) & (split == which))
         flag = data["label"][idx] == 2
         times = data["time_ns"][idx]
@@ -160,4 +164,4 @@ def raw_episodes(data, split, which=2):
             episodes.append({"node": node, "start_ns": int(times[i]),
                              "end_ns": int(times[j] + CADENCE_NS), "readings": j - i + 1})
             i = j + 1
-    return pd.DataFrame(episodes)
+    return pd.DataFrame(episodes, columns=['node', 'start_ns', 'end_ns', 'readings'])

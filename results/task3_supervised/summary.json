@@ -1,0 +1,19 @@
+{
+  "task": 3,
+  "status": "no_feasible_neural_policy",
+  "provisional_dl_candidate": "lstm8_p1",
+  "selected_neural_policy": null,
+  "feasible_neural_policies": 0,
+  "feasible_policies": 0,
+  "policies_evaluated": 441,
+  "models_trained": 9,
+  "validation_rows": 71982,
+  "validation_positives": 902,
+  "validation_prevalence": 0.01253091050540413,
+  "independent_holdout_scored": false,
+  "exploratory_period_scored": false,
+  "dashboard_default_changed": false,
+  "protocol_sha256": "722f9d8aa3566100c76c9e831541d31dd4f4e1e45cc86322fe1f5b9cd91861ea",
+  "next_task": 4,
+  "caveat": "Single-seed validation development results; release and final accuracy are not established."
+}

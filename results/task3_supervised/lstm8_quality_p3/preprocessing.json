@@ -1,0 +1,33 @@
+{
+  "features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power",
+    "missing_sensor_fraction",
+    "invalid_sensor_fraction",
+    "imputed_sensor_fraction"
+  ],
+  "clip": 10.0,
+  "eligibility_width": 24,
+  "width": 8,
+  "cadence_minutes": 15
+}

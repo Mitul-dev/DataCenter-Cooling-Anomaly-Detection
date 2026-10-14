@@ -1,0 +1,49 @@
+feature,group,available_nodes,training_finite_fraction,minimum_node_finite_fraction,nonconstant_nodes,present_in_all_development_schemas
+ambient_max,extrema hidden by averaged/pooled features,9,0.8937607506448052,0.8895656381931349,9,True
+ambient_min,extrema hidden by averaged/pooled features,9,0.8937607506448052,0.8895656381931349,9,True
+ambient_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan0_0_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan0_1_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan1_0_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan1_1_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan2_0_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan2_1_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan3_0_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan3_1_std,variation within aggregation intervals,9,0.8937607506448052,0.8895656381931349,9,True
+fan_disk_power_std,variation within aggregation intervals,9,0.8932975741129142,0.8876966976488061,9,True
+gpu0_core_temp_max,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu0_core_temp_min,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu0_mem_temp_max,extrema hidden by averaged/pooled features,9,0.8931406917392092,0.8876966976488061,9,True
+gpu0_mem_temp_min,extrema hidden by averaged/pooled features,9,0.8931406917392092,0.8876966976488061,9,True
+gpu1_core_temp_max,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu1_core_temp_min,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu1_mem_temp_max,extrema hidden by averaged/pooled features,9,0.8931444270338212,0.8876966976488061,9,True
+gpu1_mem_temp_min,extrema hidden by averaged/pooled features,9,0.8931444270338212,0.8876966976488061,9,True
+gpu3_core_temp_max,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu3_core_temp_min,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu3_mem_temp_max,extrema hidden by averaged/pooled features,9,0.8931425593865152,0.8876966976488061,9,True
+gpu3_mem_temp_min,extrema hidden by averaged/pooled features,9,0.8931425593865152,0.8876966976488061,9,True
+gpu4_core_temp_max,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu4_core_temp_min,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+gpu4_mem_temp_max,extrema hidden by averaged/pooled features,9,0.8931406917392092,0.8876800106796603,9,True
+gpu4_mem_temp_min,extrema hidden by averaged/pooled features,9,0.8931406917392092,0.8876800106796603,9,True
+gv100card0_avg,additional per-component measurements,9,0.8937607506448052,0.8895656381931349,0,True
+gv100card1_avg,additional per-component measurements,9,0.8937607506448052,0.8895656381931349,0,True
+gv100card3_avg,additional per-component measurements,9,0.8937607506448052,0.8895656381931349,0,True
+gv100card4_avg,additional per-component measurements,9,0.8937607506448052,0.8895656381931349,0,True
+p0_io_power_avg,additional per-component measurements,9,0.8932975741129142,0.8876966976488061,9,True
+p0_mem_power_avg,additional per-component measurements,9,0.8932975741129142,0.8876966976488061,9,True
+p0_power_std,variation within aggregation intervals,9,0.8932975741129142,0.8876966976488061,9,True
+p1_io_power_avg,additional per-component measurements,9,0.8932975741129142,0.8876966976488061,9,True
+p1_mem_power_avg,additional per-component measurements,9,0.8932975741129142,0.8876966976488061,9,True
+p1_power_std,variation within aggregation intervals,9,0.8932975741129142,0.8876966976488061,9,True
+pcie_avg,additional per-component measurements,9,0.8937607506448052,0.8895656381931349,9,True
+ps0_input_voltag_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+ps0_output_curre_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+ps0_output_volta_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+ps1_input_voltag_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+ps1_output_curre_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+ps1_output_volta_avg,power-supply voltage/current,9,0.8937607506448052,0.8895656381931349,9,True
+total_power_max,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+total_power_min,extrema hidden by averaged/pooled features,9,0.8932975741129142,0.8876966976488061,9,True
+total_power_std,variation within aggregation intervals,9,0.8932975741129142,0.8876966976488061,9,True

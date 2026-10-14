@@ -1,116 +1,94 @@
-# Data center telemetry anomaly detection
+# Cooling Equipment Sensor-Fault Detection with an LSTM
 
 Deep Learning project, Section B. Team: Rishabh Srivastava (2430010149), Mitul Seth (2430010099), Madhav Mittal (2430010096).
 
-The project trains an LSTM autoencoder on normal thermal, fan and power telemetry and compares it with Isolation Forest. The reference labels are general Nagios server-health alerts. The evaluated task does not establish cooling-specific diagnosis or prediction of future faults.
+This course project detects author-labelled outdoor-air temperature sensor bias in an occupied, running simulated air-handling unit (AHU). It compares three LSTM training seeds with gradient boosting using the same sensor histories. The original M100 investigation remains supporting research: its scheduler-state labels did not establish cooling-specific faults, and its false-alarm targets were not met. The user approved this change of dataset and scope on 14 October 2026.
 
-## Submission files
+## Final results
 
-- `submission/DCCAD_Final_Report.pdf`: final report with verified experiments, definitions, limitations and references.
-- `submission/DCCAD_Final_Presentation_Reviewed.pptx`: final presentation with editable evidence tables and charts.
-- `M100_submission.ipynb`: clean notebook for reproducing and examining the experiment workflow.
-- `results/selected_model.json`: identifies the LSTM selected using validation data.
-- `results/<experiment>/`: trained model, scaler, history, scores, window metadata, incident records and replay data.
-- `results/feature_selection/REPORT.md`: supplementary cleaning and feature-selection report, including matched-cohort results and tradeoffs.
-- `dashboard/app.py`: updated demo with recorded replay, sensor explanations and fresh CSV inference.
-- `M100_explore.ipynb` and `dashboard/legacy_app.py`: original work retained for traceability.
+Seed 42 was declared primary before evaluation. Its 30-minute history and two-of-three alarm rule were frozen using summer validation before the reserved autumn evaluation.
 
-## Run the demo
+| Autumn metric | Result |
+|---|---:|
+| Accuracy | 92.82% |
+| Alarm precision | 99.74% |
+| Fault-reading recall | 91.86% |
+| F1 | 95.64% |
+| False-positive rate | 1.44% |
+| TP / FP / FN / TN | 26,324 / 69 / 2,332 / 4,707 |
+| Observable fault days detected | 35 / 36 |
+| All raw fault days detected | 35 / 42 |
 
-The GitHub checkout includes the trained models, replay data, reports and slides, so the demo runs without the original dataset archive. Download `0.tar` from the dataset link below only when retraining. The 225 MiB submission ZIP and the source archive are excluded from Git; you can recreate the ZIP with `python scripts/package_submission.py`.
+**The 1.44% test FPR exceeds the original 1% goal.** The 69 false readings form one burst. False discovery ratio is 0.26%, with a different denominator than FPR. No threshold was adjusted after evaluation. Seed 7 has higher test accuracy but does not replace the predeclared primary. The tree has zero false positives and lower recall (72.05%); all models are reported.
 
-Python 3.11 is the tested environment. From this project directory:
+This is one simulated AHU and one fault family. Experimental fault prevalence is 85.71%, so an all-fault prediction would already score 85.71% accuracy with 100% FPR. The results do not establish deployment reliability, future-fault prediction or general cooling-failure diagnosis. Healthy validation/test each cover one scenario week; adjacent minutes and days are correlated.
+
+## Submission
+
+- [11-page report](submission/HVAC_DL_Project_Report.pdf)
+- [14-slide editable PowerPoint](submission/HVAC_DL_Project_Presentation.pptx)
+- [Executed notebook with figures](HVAC_submission.ipynb)
+- [Model card](results/hvac_v1/MODEL_CARD.md)
+- [Results and methodology](results/hvac_v1/REPORT.md)
+- Local bundle: `submission/HVAC_Project_Submission.zip`, recreated with `python scripts/package_hvac.py`. Generated submission ZIPs are excluded from Git.
+
+The primary ZIP includes source data, trained models, evidence, source code and submission files. Supporting M100 reports are included; complete historical experiments remain in the GitHub repository.
+
+## Run the dashboard
+
+Python 3.11.9 on Windows with CPU inference was tested. From this project folder:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-tested.txt
 .\.venv\Scripts\python.exe -m streamlit run dashboard\app.py
 ```
 
-If the local environment is already prepared, run `run_dashboard.ps1` or use the last command. The app resolves data paths relative to its own source, so it also runs when launched from another directory.
-
-The replay controls choose an experiment, server and alarm rule. The default experiment comes from `results/selected_model.json`; its alarm policy was chosen on labelled validation data. Manually changing the replay rule is exploratory and does not alter the reported results.
-
-The fresh-inference tab runs the saved model on a CSV. Download its actual 15-minute example window, then upload it to reproduce a score. A single window cannot establish a two-reading persistence streak. If a timestamp column is supplied, the app checks exact 15-minute cadence. Enhanced feature windows must use the definitions below.
-
-## Data and preprocessing
-
-Source: [M100 aggregated anomaly-detection dataset](https://zenodo.org/records/7541722), DOI 10.5281/zenodo.7541722, and its [data descriptor](https://www.nature.com/articles/s41597-023-02174-3).
-
-The local `0.tar` contains sixteen node files. Experiments retain the fixed nine-node subset 7, 8, 9, 10, 11, 13, 14, 16 and 17. The tar is read directly; files are not extracted through untrusted archive paths. The submission ZIP omits the large archive. Download `0.tar` from the dataset record and place it in the project root to reproduce training. It is already present in this local project.
-
-Each node uses a chronological 70/10/20 row split. Short gaps are filled forward at most four rows, with filling reset at timestamp discontinuities. Scalers fit finite normal training rows only. Windows never cross split boundaries or node boundaries. Known normal/CRITICAL labels and finite, consecutive input readings are required. Training windows contain no CRITICAL readings. Normal training is label-assisted; labelled validation selects the final alarm policy.
-
-Standard experiments clip scaled inputs to [-5, 5]. Robust24 uses median/IQR scaling with no clipping. Original recorded readings are kept separately for dashboard plots, so inverse scaling does not incorrectly present clipped values as raw measurements.
-
-## Data cleaning and feature selection
-
-The reproducible workflow is `scripts/clean_and_select.py`. It preserves the source archive and original experiments and creates `artifacts/cleaned_telemetry.parquet` (all 22 sensor inputs after cleaning) and `artifacts/selected_telemetry.parquet` (the correlation-selected inputs). Both exports preserve all rows, unknown labels and split assignments. Quality counts identify invalid readings, filled values and remaining missing values. These exports contain telemetry at 15-minute resolution, not preformed model windows.
-
-Nonfinite values become missing. Negative fan speeds, power and temperatures become missing under a stated indoor-rack plausibility rule; this is a project assumption rather than a manufacturer-specified sensor range. Genuine zeros and high measurements remain. Filling uses only preceding readings, at most four, resetting at gaps and node/split boundaries. Long outages remain missing. The original source readings remain available for audit. Invalid sensor readings can themselves signal health anomalies, so cleaning is evaluated rather than assumed beneficial.
-
-Feature selection uses only normal training rows. It removes inputs with over 20% missing readings, constants (standard deviation <=1e-8), and redundant inputs with absolute Pearson correlation >=0.95. The greedy order follows the original feature list. `results/feature_selection/feature_decisions.csv` records every decision and the retained counterpart for correlated inputs. Neither validation nor test statistics influence these decisions.
-
-Four width-8 models compare the original 22 inputs, cleaned 22 inputs, correlation-selected inputs, and a predefined 12-input cooling subset. They use identical training, validation and test endpoints, seed, training settings and architecture; parameter counts change with input dimensionality. Validation endpoint F1 selects the configuration. Test results remain exploratory because the recording was already inspected during development. The workflow retains the current dashboard default unless the new validation score improves it.
+If dependencies are already installed, double-click `Start Dashboard.bat`. If port 8501 is occupied:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\clean_and_select.py --prepare-only
-.\.venv\Scripts\python.exe scripts\clean_and_select.py
-.\.venv\Scripts\python.exe scripts\build_results.py
-.\.venv\Scripts\python.exe scripts\verify_artifacts.py
+.\.venv\Scripts\python.exe -m streamlit run dashboard\app.py --server.port 8502
 ```
 
-The first command creates cleaned datasets, selection decisions and the common cohort without training. The second runs the full four-model comparison (up to 30 epochs each). Detailed measured results and limitations are in `results/feature_selection/REPORT.md` and `comparison.csv`. The final PDF and PPT describe the earlier experiments; the feature-selection report supplements them.
+Open the address Streamlit prints. The dashboard replays held-out autumn days and scores uploaded sensor windows. Download its example CSV: supply 30 consecutive one-minute readings from one occupied, fan-on unit, with temperatures in Fahrenheit. Labels and imposed bias never enter the model. A single window returns an uncalibrated logit and cannot confirm a persistence alarm.
 
-## Original and enhanced feature definitions
+## Data and separation
 
-The 22 base features match the original reduced telemetry: ambient temperature; eight fan speeds; fan disk power; two CPU voltage-regulator temperatures; mean DIMM, CPU and GPU temperatures; processor and total power; and two power-supply input powers.
+Source: [LBNL AFDD evaluation collection](https://data.openei.org/submissions/910), DOI [10.25984/1824861](https://doi.org/10.25984/1824861). Unchanged archive and inventory are included in `data/hvac_benchmark`; attribution and selection are in [SOURCE.md](data/hvac_benchmark/SOURCE.md).
 
-Enhanced24 adds eleven features:
+`MZVAV-1.csv` contains 272,160 one-minute readings across 189 source days, with native condition labels and outdoor-air sensor biases of +/-1, +/-2 and +/-4 Celsius. All daily labels match the published inventory. Measurement temperatures are Fahrenheit; source local timestamps have unspecified timezone.
 
-- `cpu_temp_max`: maximum available CPU core `_temp_max` measurement across both processors.
-- `gpu_temp_max`: maximum available GPU core `_temp_max` measurement.
-- `fan_min` and `fan_spread`: minimum fan `_avg` reading and maximum-minus-minimum across eight fans.
-- `cpu_above_ambient`: maximum of the two mean processor core temperatures minus ambient.
-- `gpu_above_ambient`: mean GPU core temperature minus ambient.
-- `cpu_temp_change`, `fan_change`, `power_change`: difference from the preceding 15-minute reading for p0 core temperature, fan0_0 and total power. Differences reset at time gaps.
-- `ps0_output_voltage`, `ps1_output_voltage`: the original power-supply output voltage averages.
+| Partition | Seasons | Raw / scored days | Scored endpoints |
+|---|---|---:|---:|
+| Training | Winter + spring | 91 / 77 | 61,187 |
+| Validation | Summer | 49 / 42 | 33,432 |
+| Final test | Autumn | 49 / 42 | 33,432 |
 
-## Reproduce the experiments
+Whole source days and scenario blocks stay in one partition. A window requires 30 consecutive occupied, fan-on minutes and resets at days or gaps. Nights and nonoperating days are unscored; raw fault days remain in coverage denominators. This operating-mode task was frozen before fitting.
+
+Thirteen raw temperature/control/pressure inputs, six consistency features and thirteen missing indicators provide 32 channels. Negative outdoor Fahrenheit readings remain valid. Filling uses at most five previous minutes within the same day/contiguous segment. Remaining missing values and scaling use normal active training data only. Mixing consistency uses damper command as a proxy, not measured airflow fraction.
+
+## Reproduce and verify
+
+Using the installed environment (`python` below means its interpreter):
 
 ```powershell
-python scripts\evaluate_saved.py
-python scripts\train_baseline.py
-python scripts\train_experiments.py --epochs 30 --configs base24 base8 base48 enhanced24 robust24
-python scripts\build_results.py
+python scripts/prepare_hvac.py
+python scripts/train_hvac.py
+python scripts/verify_hvac.py --validation-only
+python scripts/evaluate_hvac.py
+python scripts/verify_hvac.py
+python scripts/build_hvac_evidence.py
+python scripts/run_tests.py
+python scripts/package_hvac.py
 ```
 
-The default neural training settings are hidden size 64, latent size 16, Adam 0.001, batch size 512, seed 42, up to 30 epochs and patience five on normal validation MSE. The scripts use GPU if the installed PyTorch runtime exposes one; otherwise they use CPU with four threads. The delivered runs use CPU. Floating-point implementations and package versions can change numerical results.
+Saved complete runs and final evaluation are reused after integrity checks. Evaluation does not retune on the already-inspected autumn data. New experiments require a new version and newly reserved evaluation data.
 
-Each model evaluates whole-window versus latest-reading error, validation normal percentiles 95/99/99.5, global versus per-node thresholds, and one versus two consecutive high scores. Endpoint F1 on labelled validation selects settings; ties use raw incident recall then a lower false-burst rate. Model selection also uses validation. Training loss and test metrics do not select the model.
+Verification reproduces four complete validation/test score arrays, all 120 validation policies, training-only preprocessing, source-label alignment and four fresh CSV examples. The 39 unit tests and dashboard replay checks passed. [Runtime](results/hvac_v1/environment.json), [protocol](results/hvac_v1/experiment_plan.json) and [verification](results/hvac_v1/verification.json) document the evidence.
 
-The original TensorFlow scores are separately audited and explicitly labelled as an original reference. The new PyTorch runs are independently trained; their weights are not converted TensorFlow checkpoints.
+View the executed notebook on GitHub. To rerun interactively, optionally install JupyterLab into this environment (`python -m pip install jupyterlab`) and launch `python -m jupyterlab`. Source data and models are included.
 
-## Evaluation definitions
+## Supporting M100 investigation
 
-`y_window` is positive if any reading in the input window is CRITICAL. `y_end` uses only the label at the last timestamp. These targets have different prevalence and are reported separately.
-
-Raw incidents are consecutive original CRITICAL 15-minute bins on one node. Non-CRITICAL labels and missing timestamps split incidents. An alarm detects an incident only if its timestamp falls inside an original incident bin. Delay starts at the incident's first bin. Matching after an incident has ended does not count.
-
-Both total and observable incident recall are reported. Observable incidents contain at least one scored endpoint. Unobservable incidents stay in the total denominator. Alarm bursts and persistence reset whenever consecutive scored timestamps are not 30 minutes apart. A scored node-day is scored-bin count multiplied by 30/1440. This excludes missing exposure and is not a wall-clock uptime estimate. False alarms are relative to Nagios labels and may include unlabelled unusual behaviour.
-
-AP is `average_precision_score`, not trapezoidal PR-AUC. Endpoint and per-node results, raw incident records, false bursts per scored node-day and median delay are included. Width and feature changes can change coverage. The existing recordings were inspected during earlier development, so conclusions remain exploratory despite validation-only new setting selection.
-
-## Check the project
-
-```powershell
-$env:PYTHONPATH = "$PWD\src"
-python -m unittest discover -s tests -v
-python scripts\verify_artifacts.py
-```
-
-The tests check gap-aware persistence, incident timing and coverage denominators. The artifact verifier checks saved-model inference against recorded scores, rejects irregular input timestamps, checks finite metrics and inspects result files. Only load the trusted model/scaler files supplied with this project; joblib files use Python serialisation.
-
-## Scope and next work
-
-The detector is a course prototype. Its labels cover general server health, its cohort is a single rack subset and runs use one seed. Several alarm policies still have low precision. Prospective evaluation, alert-specific cooling labels, more nodes, repeated seeds and operational false-alarm review are needed before deployment. The report and presentation include failures and competing baseline strengths.
+[Historical documentation](docs/M100_RESEARCH.md) describes the original project. Tasks 1-5 preserve split audits, threshold experiments, supervised comparisons, seed repetition, feature recovery and a source-label audit under `results/task*_*/`. Seven reserved M100 servers remain unscored. Original reports/notebooks retain historical names; use the HVAC files above for the current submission. The archived dashboard is `dashboard/m100_app.py` and requires historical artifacts from the full repository.

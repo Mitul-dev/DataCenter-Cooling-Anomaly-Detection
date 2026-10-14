@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "same_validation_rows_for_all_models": true,
+  "finite_scores": true,
+  "frozen_targets_used": true,
+  "reference_metrics_matched": [
+    "p0170",
+    "p0286",
+    "p0210",
+    "p0093",
+    "p0096",
+    "p0094",
+    "p0097"
+  ],
+  "reserved_nodes_scored": false,
+  "scores_read_only_from_saved_models": true,
+  "policies_evaluated": 298,
+  "feasible_policies": 0
+}

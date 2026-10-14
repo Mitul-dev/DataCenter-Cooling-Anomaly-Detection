@@ -5,12 +5,12 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-from .data import CADENCE_NS, NODES
+from .data import CADENCE_NS, BASE_FEATURES
 
 
 def chronological_split(data):
     split = np.zeros(len(data['raw']), dtype=np.int8)
-    for node in NODES:
+    for node in np.unique(data['node']):
         idx = np.flatnonzero(data['node'] == node)
         split[idx[int(.7 * len(idx)):int(.8 * len(idx))]] = 1
         split[idx[int(.8 * len(idx)):]] = 2
@@ -23,7 +23,7 @@ def sanitize(values, features):
     invalid = ~np.isfinite(x)
     for j, feature in enumerate(features):
         # Project-specific indoor-rack plausibility rules, not sensor specifications.
-        if feature == 'ambient' or 'temp' in feature or feature.startswith('fan') or 'power' in feature:
+        if feature in BASE_FEATURES:
             invalid[:, j] |= x[:, j] < 0
     x[invalid] = np.nan
     return x

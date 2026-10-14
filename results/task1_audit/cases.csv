@@ -1,0 +1,5 @@
+kind,node,time_ns,time_utc,score,threshold,outcome,critical_in_input_history,missing_cells_in_history,imputed_cells_in_history,top_latest_error_sensor
+highest_score_false_alarm,11,1648465200000000000,2022-03-28T11:00:00+00:00,1.4320262670516968,0.004225964657962322,FP,False,0,0,gpu_core_temp
+normal_endpoint_with_critical_history,13,1648655100000000000,2022-03-30T15:45:00+00:00,0.010143627412617207,0.006164025980979204,FP,True,0,0,p1_vdd_temp
+detected_incident,7,1643099400000000000,2022-01-25T08:30:00+00:00,0.01135474443435669,0.006795273162424564,TP,True,0,0,total_power
+missed_observable_incident,7,1647440100000000000,2022-03-16T14:15:00+00:00,0.005275552626699209,0.006795273162424564,FN,True,0,0,fan0_0

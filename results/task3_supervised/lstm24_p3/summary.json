@@ -1,0 +1,52 @@
+{
+  "name": "lstm24_p3",
+  "kind": "lstm",
+  "width": 24,
+  "pos_weight": 3,
+  "feature_set": "full",
+  "features": [
+    "ambient",
+    "fan0_0",
+    "fan0_1",
+    "fan1_0",
+    "fan1_1",
+    "fan2_0",
+    "fan2_1",
+    "fan3_0",
+    "fan3_1",
+    "fan_disk_power",
+    "p0_vdd_temp",
+    "p1_vdd_temp",
+    "dimm_temp",
+    "p0_core_temp",
+    "p1_core_temp",
+    "gpu_core_temp",
+    "gpu_mem_temp",
+    "p0_power",
+    "p1_power",
+    "total_power",
+    "ps0_input_power",
+    "ps1_input_power"
+  ],
+  "seed": 42,
+  "training_windows": 111070,
+  "training_positives": 1445,
+  "validation_windows": 71982,
+  "validation_positives": 902,
+  "seconds": 45.05497741699219,
+  "best_epoch": 6,
+  "epochs_run": 11,
+  "stop_reason": "patience",
+  "score_metrics": {
+    "logit": {
+      "average_precision": 0.016396576476554327
+    }
+  },
+  "artifact_checksums": {
+    "preprocessing.joblib": "c7de2a34979260a1cff7c4e3b81d7ff3937c2f9279447c9de54737ff47cbdd0a",
+    "preprocessing.json": "337a56ccf351ed92cb3c8aa4d662be79d0caa28a495b39196aed886607e83f39",
+    "validation_scores.npz": "9961cb090ec5b1f8839f11cd9f0e23c0470bb54023735dd5aab102ff58f8a45d",
+    "model.pt": "d0a6a7d6d3598b5c30729ffdf6eb21979a9f47ae14ad5ae6c5b793211ceb32f1"
+  },
+  "reserved_nodes_scored": false
+}
