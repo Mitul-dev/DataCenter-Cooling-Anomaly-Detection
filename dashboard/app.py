@@ -82,7 +82,7 @@ with tabs[3]:
     st.write('Training: winter and spring. Validation: summer. Test: autumn. Entire source days and documented scenario blocks stay within one season partition; input windows never cross a day or gap.')
     st.write('The data comes from LBNL’s public AFDD evaluation collection. The selected MZVAV-1 dataset simulates an AHU with outdoor-air sensor bias at ±1, ±2 and ±4 °C; its measurement columns use °F. Labels come from the source authors.')
     st.link_button('Official dataset and inventory','https://data.openei.org/submissions/910')
-    for file,label in [('HVAC_DL_Project_Report.pdf','Download project report'),('HVAC_DL_Project_Presentation.pptx','Download presentation')]:
+    for file,label in [('HVAC_PBL_Project_Report.pdf','Download PBL report'),('HVAC_PBL_Project_Report.docx','Download editable report'),('HVAC_DL_Project_Presentation.pptx','Download presentation')]:
         path=ROOT/'submission'/file
         if path.exists():st.download_button(label,path.read_bytes(),file_name=file)
     st.write('The M100 investigation remains available as supporting research. Its physical telemetry models did not meet the false-alarm targets; its published label query concerns batch-client scheduler state.')

@@ -25,7 +25,9 @@ This is one simulated AHU and one fault family. Experimental fault prevalence is
 
 ## Submission
 
-- [11-page report](submission/HVAC_DL_Project_Report.pdf)
+- [PBL report with university cover and certificate](submission/HVAC_PBL_Project_Report.pdf)
+- [Editable PBL report](submission/HVAC_PBL_Project_Report.docx)
+- [Earlier technical report](submission/HVAC_DL_Project_Report.pdf)
 - [14-slide editable PowerPoint](submission/HVAC_DL_Project_Presentation.pptx)
 - [Executed notebook with figures](HVAC_submission.ipynb)
 - [Model card](results/hvac_v1/MODEL_CARD.md)

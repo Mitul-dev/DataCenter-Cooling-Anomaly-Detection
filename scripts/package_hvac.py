@@ -16,7 +16,8 @@ def main():
              'Start Dashboard.bat', 'run_dashboard.ps1', 'HVAC_submission.ipynb', 'dashboard/app.py',
              'docs/M100_RESEARCH.md', 'results/project_progress.json',
              'submission/HVAC_DL_Project_Report.pdf', 'submission/HVAC_DL_Project_Presentation.pptx',
-             'submission/HVAC_artifact_checks.json']
+             'submission/HVAC_PBL_Project_Report.pdf', 'submission/HVAC_PBL_Project_Report.docx',
+             'submission/HVAC_artifact_checks.json', 'submission/HVAC_PBL_report_checks.json']
     names += ['scripts/' + n + '.py' for n in ['prepare_hvac', 'train_hvac', 'evaluate_hvac',
               'verify_hvac', 'build_hvac_evidence', 'analyze_thresholds', 'package_hvac', 'run_tests']]
     names += [str(p.relative_to(ROOT)) for p in (ROOT / 'results').glob('task*_*/*.md')]

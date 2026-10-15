@@ -13,6 +13,7 @@
 *.png binary
 *.pdf binary
 *.pptx binary
+*.docx binary
 # Frozen evidence uses byte hashes; preserve recorded line endings in checkouts.
 results/**/*.json -text
 results/**/*.csv -text

@@ -1,0 +1,22 @@
+{
+  "report_pages": 25,
+  "cover_and_certificate_pages": 2,
+  "chapters": 8,
+  "tables": 11,
+  "figures": 6,
+  "original_reference_unchanged": true,
+  "original_university_logo_preserved": true,
+  "faculty_details_verified": true,
+  "contents_and_page_references_refreshed_in_microsoft_word": true,
+  "body_numbering_restarts_at_one": true,
+  "all_pages_visually_reviewed": true,
+  "no_blank_pages": true,
+  "no_template_placeholders": true,
+  "results_consistent_with_frozen_test": true,
+  "report_date": "October 2026",
+  "academic_year": "2026-27",
+  "sha256": {
+    "HVAC_PBL_Project_Report.docx": "de0d27d141241e66b2596c8738b30572d86f080ff1a2cb90b4cb64ac865d4a8f",
+    "HVAC_PBL_Project_Report.pdf": "efb3bdc33106f67c5d94857131fc55835983aa164fcdb0a2d6e16f5ab1838066"
+  }
+}

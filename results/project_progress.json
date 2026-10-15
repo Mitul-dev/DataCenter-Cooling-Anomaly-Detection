@@ -1,5 +1,5 @@
 {
-  "updated_date": "2026-10-14",
+  "updated_date": "2026-10-15",
   "completed_tasks": [
     1,
     2,
@@ -55,7 +55,7 @@
   "submission_scope_choice_pending": false,
   "submission_options": "results/task5_recovery_v1/NEXT_OPTIONS.md",
   "primary_study": "hvac_v1",
-  "hvac_report": "submission/HVAC_DL_Project_Report.pdf",
+  "hvac_report": "submission/HVAC_PBL_Project_Report.pdf",
   "hvac_presentation": "submission/HVAC_DL_Project_Presentation.pptx",
   "hvac_notebook": "HVAC_submission.ipynb",
   "hvac_verification": "results/hvac_v1/verification.json",
@@ -66,5 +66,9 @@
   "hvac_validation_policies_reproduced": 120,
   "hvac_final_model_score_arrays_reproduced": 4,
   "submission_files_rebuilt": true,
-  "all_original_false_alarm_targets_met": false
+  "all_original_false_alarm_targets_met": false,
+  "hvac_editable_report": "submission/HVAC_PBL_Project_Report.docx",
+  "pbl_report_pages": 25,
+  "pbl_cover_and_certificate_added": true,
+  "pbl_report_verification": "submission/HVAC_PBL_report_checks.json"
 }

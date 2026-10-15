@@ -1,12 +1,12 @@
 {
   "bundle": "HVAC_Project_Submission.zip",
-  "bytes": 16422485,
-  "sha256": "935e6daa7a0720cadd339eee72da3e1eea77fdca9f7eb2c644cf93f15005dd37",
+  "bytes": 17611293,
+  "sha256": "e3527547edf4bc6b9b205d6efd438e36a29093453b6ab6caf9340409b509ef0f",
   "files": [
     {
       "path": "dashboard/app.py",
-      "bytes": 7752,
-      "sha256": "518761f20235b1333ed08008749ff23f9b01daca044fa97f9b0e5e1123d5233a"
+      "bytes": 7809,
+      "sha256": "10fc20d520e1451a44768716c8f5cb8bb1f2d7ffa261ed06a435a6059a2ef727"
     },
     {
       "path": "data/hvac_benchmark/afdd_source.zip",
@@ -40,8 +40,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6764,
-      "sha256": "bad6b3bfb22bccdb2d209d6a51303cbfb0425a952d9860e9ea5f1c49882d4c47"
+      "bytes": 6932,
+      "sha256": "4eb68ba86cfe3d0173bbf246f0f77ad216eabdefa610acccd008e8b748c1e596"
     },
     {
       "path": "requirements-tested.txt",
@@ -520,8 +520,8 @@
     },
     {
       "path": "results/project_progress.json",
-      "bytes": 3030,
-      "sha256": "86aa1081bf1e962a15a2a4e9874c5201d5c2dd7f1c03f8feaf4272d3db1a1c9e"
+      "bytes": 3244,
+      "sha256": "3de9a2f2c0d6957c5d190834377989144cf5ae2280a5379a89cf6139ea3c64a2"
     },
     {
       "path": "results/task1_audit/REPORT.md",
@@ -595,8 +595,8 @@
     },
     {
       "path": "scripts/package_hvac.py",
-      "bytes": 2282,
-      "sha256": "03784e9a880af9129aeac2f370cae72d128dd04bc20629b52e85c87741334ca7"
+      "bytes": 2422,
+      "sha256": "97bb25e0a6255db97be5e30c51b9bf921fa93b4e0203fb47ede50057c5815068"
     },
     {
       "path": "scripts/prepare_hvac.py",
@@ -707,6 +707,21 @@
       "path": "submission/HVAC_DL_Project_Report.pdf",
       "bytes": 375913,
       "sha256": "4105f301aa93d49b9bc307cddf3e96cdcf87125ff6731e39f94eadde5383c613"
+    },
+    {
+      "path": "submission/HVAC_PBL_Project_Report.docx",
+      "bytes": 495627,
+      "sha256": "de0d27d141241e66b2596c8738b30572d86f080ff1a2cb90b4cb64ac865d4a8f"
+    },
+    {
+      "path": "submission/HVAC_PBL_Project_Report.pdf",
+      "bytes": 816692,
+      "sha256": "efb3bdc33106f67c5d94857131fc55835983aa164fcdb0a2d6e16f5ab1838066"
+    },
+    {
+      "path": "submission/HVAC_PBL_report_checks.json",
+      "bytes": 798,
+      "sha256": "a3844ce7e68a6017afe24892cfce42d0f4f5bc142ea56be98fab7d0602c1689f"
     },
     {
       "path": "tests/test_alarm_policies.py",
