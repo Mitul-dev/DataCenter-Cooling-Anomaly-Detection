@@ -1,0 +1,29 @@
+{
+  "stage": "training_only_sensor_review",
+  "source_sha256": "68c58568e3f0e4e7d0f0de3194a2ce7ca80703c057325ee402a94d3eab5a76c1",
+  "original_inputs": 13,
+  "engineered_channels": 32,
+  "selector_fit": "original training winter",
+  "importance_partition": "original training spring",
+  "validation_or_test_used_for_selection": false,
+  "method": "Grouped whole-day permutation of latest/mean/std/slope for one raw sensor; five fixed repeats; rank by balanced log-loss increase",
+  "primary_selector_seed": 42,
+  "permutation_seed": 2026,
+  "internal_spring_ap": 0.8539193665025326,
+  "internal_spring_balanced_loss": 2.167899079759748,
+  "candidate_top_five": [
+    "outdoor_temp",
+    "outdoor_damper",
+    "mixed_temp",
+    "return_temp",
+    "cooling_valve"
+  ],
+  "top_five_lstm_trained": false,
+  "improvement_claimed": false,
+  "caveats": [
+    "Importance is conditional on the tree and other correlated sensors; it is not a physical causal ranking.",
+    "Top-five LSTM must be retrained and compared with matched raw13 and existing32 feature sets.",
+    "Autumn was already inspected; any repeated use is retrospective, not a new untouched evaluation.",
+    "New sensor types need a richer aligned source or an explicitly separate synthetic simulation."
+  ]
+}

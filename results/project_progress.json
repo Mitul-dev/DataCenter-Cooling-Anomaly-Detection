@@ -1,5 +1,5 @@
 {
-  "updated_date": "2026-10-15",
+  "updated_date": "2026-10-16",
   "completed_tasks": [
     1,
     2,
@@ -17,7 +17,7 @@
   "holdout_predictions_made": false,
   "task2_report": "results/task2_thresholds/REPORT.md",
   "task2_outcome": "No feasible policy among 298 evaluated",
-  "unit_tests_passed": 39,
+  "unit_tests_passed": 42,
   "task2_policies_reproduced": 298,
   "task3_report": "results/task3_supervised/REPORT.md",
   "task3_diagnostic": "results/task3_supervised/GENERALIZATION.md",
@@ -70,5 +70,11 @@
   "hvac_editable_report": "submission/HVAC_PBL_Project_Report.docx",
   "pbl_report_pages": 25,
   "pbl_cover_and_certificate_added": true,
-  "pbl_report_verification": "submission/HVAC_PBL_report_checks.json"
+  "pbl_report_verification": "submission/HVAC_PBL_report_checks.json",
+  "feature_extension_report": "results/hvac_feature_v2/REPORT.md",
+  "feature_extension_new_models": 6,
+  "feature_extension_policies_verified": 270,
+  "feature_extension_outcome": "Raw13 and selected raw5 reductions failed validation gate; original submitted model retained",
+  "sensor_expansion_plan": "SENSOR_EXPANSION_PLAN.md",
+  "additional_sensor_source_choice_pending": true
 }

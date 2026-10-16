@@ -91,6 +91,12 @@ Verification reproduces four complete validation/test score arrays, all 120 vali
 
 View the executed notebook on GitHub. To rerun interactively, optionally install JupyterLab into this environment (`python -m pip install jupyterlab`) and launch `python -m jupyterlab`. Source data and models are included.
 
+## Professor feedback on more data and five inputs
+
+The separate [sensor-expansion plan](SENSOR_EXPANSION_PLAN.md) documents the 16 October review. A [three-seed validation comparison](results/hvac_feature_v2/REPORT.md) tested the existing 32 channels against thirteen raw inputs and five training-selected raw inputs. Neither reduced raw-input set met the validation gate; the submitted model remains the same. This is a five-raw-input ablation, not a claim about every possible five-engineered-feature model. No new autumn predictions were made.
+
+The current file has no additional varying measurement channels to add. The plan identifies an official annual AHU simulation with 30 recorded variables, including airflow and fan power, for a separately versioned wider-data experiment. More data and fewer final model inputs are compatible, but improvement must be measured on newly reserved data. The extension reproduces six fresh validation score arrays and 270 policies; all 42 current unit tests pass.
+
 ## Supporting M100 investigation
 
 [Historical documentation](docs/M100_RESEARCH.md) describes the original project. Tasks 1-5 preserve split audits, threshold experiments, supervised comparisons, seed repetition, feature recovery and a source-label audit under `results/task*_*/`. Seven reserved M100 servers remain unscored. Original reports/notebooks retain historical names; use the HVAC files above for the current submission. The archived dashboard is `dashboard/m100_app.py` and requires historical artifacts from the full repository.

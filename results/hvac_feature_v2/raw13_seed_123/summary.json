@@ -1,0 +1,37 @@
+{
+  "name": "raw13_seed_123",
+  "family": "raw13",
+  "seed": 123,
+  "features": [
+    "supply_temp",
+    "supply_setpoint",
+    "outdoor_temp",
+    "mixed_temp",
+    "return_temp",
+    "supply_fan_speed",
+    "return_fan_speed",
+    "outdoor_damper",
+    "return_damper",
+    "cooling_valve",
+    "heating_valve",
+    "duct_pressure_setpoint",
+    "duct_pressure"
+  ],
+  "channels": 13,
+  "parameters": 6561,
+  "best_epoch": 17,
+  "epochs_run": 23,
+  "validation_ap": 0.890386816295859,
+  "stop_reason": "patience",
+  "fresh_csv_score": 8.939496994018555,
+  "expected_csv_score": 8.939496994018555,
+  "plan_sha256": "9d65bc43ba9bf06748466db71f80395826769c0694ffc4c923634a470c477b5c",
+  "test_scored": false,
+  "checksums": {
+    "model.pt": "db548fe55c1cac303bb77bbb437b3da27b94249ea4e9c69175846dfee03acd20",
+    "preprocessing.json": "deec453c6a7696b1a7398ad7e059e34ee3d88524d654791e1dd29ab47a6c325f",
+    "history.csv": "c210fedfefc0fb72644a4c6ce44ecb1aa87276a6a3951b1813e7117cf33de087",
+    "validation_scores.npz": "52e37958e81319e7d7b52a7f7938fdd15c3189948b428ab7af318066323b02d4",
+    "example_window.csv": "b7aab606ba79cbf76a71cc20a9b2a28ebd9fe1172e30539eff9215cea219e78e"
+  }
+}

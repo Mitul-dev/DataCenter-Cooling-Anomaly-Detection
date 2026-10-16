@@ -1,0 +1,59 @@
+{
+  "stage": "validation_only_feature_ablation",
+  "models": 9,
+  "new_models_trained": 6,
+  "validation_policies": 270,
+  "top_five_sensors": [
+    "outdoor_temp",
+    "cooling_valve",
+    "supply_temp",
+    "mixed_temp",
+    "outdoor_damper"
+  ],
+  "families": [
+    {
+      "family": "engineered32",
+      "channels": 32,
+      "parameters": 8993,
+      "seeds": 3,
+      "feasible_seeds": 3,
+      "ap_mean": 0.9819828701037526,
+      "ap_sd": 0.0026721873034955125,
+      "precision_mean": 1.0,
+      "recall_mean": 0.517250604876233,
+      "fpr_mean": 0.0,
+      "false_bursts_mean": 0.0
+    },
+    {
+      "family": "raw13",
+      "channels": 13,
+      "parameters": 6561,
+      "seeds": 3,
+      "feasible_seeds": 0,
+      "ap_mean": 0.8933010057415309,
+      "ap_sd": 0.023559753635315376,
+      "precision_mean": 0.8942241118222375,
+      "recall_mean": 0.4306137167318072,
+      "fpr_mean": 0.31016192071468457,
+      "false_bursts_mean": 26.333333333333332
+    },
+    {
+      "family": "raw5",
+      "channels": 5,
+      "parameters": 5537,
+      "seeds": 3,
+      "feasible_seeds": 0,
+      "ap_mean": 0.894735154326255,
+      "ap_sd": 0.01830897475974259,
+      "precision_mean": 0.9022395782565082,
+      "recall_mean": 0.4018006700167504,
+      "fpr_mean": 0.2631211613623674,
+      "false_bursts_mean": 10.666666666666666
+    }
+  ],
+  "new_test_predictions": false,
+  "independent_improvement_established": false,
+  "original_submission_replaced": false,
+  "additional_sensor_types_added": false,
+  "more_sensor_observations_added": false
+}

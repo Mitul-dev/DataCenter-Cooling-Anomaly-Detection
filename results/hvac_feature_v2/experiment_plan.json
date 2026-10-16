@@ -1,0 +1,89 @@
+{
+  "study": "hvac_feature_v2",
+  "purpose": "Same-data sensor-subset ablation; summer validation only",
+  "feature_sets": {
+    "engineered32": [
+      "supply_temp",
+      "supply_setpoint",
+      "outdoor_temp",
+      "mixed_temp",
+      "return_temp",
+      "supply_fan_speed",
+      "return_fan_speed",
+      "outdoor_damper",
+      "return_damper",
+      "cooling_valve",
+      "heating_valve",
+      "duct_pressure_setpoint",
+      "duct_pressure",
+      "supply_error",
+      "mix_return_delta",
+      "mix_outdoor_delta",
+      "outdoor_return_delta",
+      "pressure_error",
+      "command_mix_residual",
+      "missing_supply_temp",
+      "missing_supply_setpoint",
+      "missing_outdoor_temp",
+      "missing_mixed_temp",
+      "missing_return_temp",
+      "missing_supply_fan_speed",
+      "missing_return_fan_speed",
+      "missing_outdoor_damper",
+      "missing_return_damper",
+      "missing_cooling_valve",
+      "missing_heating_valve",
+      "missing_duct_pressure_setpoint",
+      "missing_duct_pressure"
+    ],
+    "raw13": [
+      "supply_temp",
+      "supply_setpoint",
+      "outdoor_temp",
+      "mixed_temp",
+      "return_temp",
+      "supply_fan_speed",
+      "return_fan_speed",
+      "outdoor_damper",
+      "return_damper",
+      "cooling_valve",
+      "heating_valve",
+      "duct_pressure_setpoint",
+      "duct_pressure"
+    ],
+    "raw5": [
+      "outdoor_temp",
+      "cooling_valve",
+      "supply_temp",
+      "mixed_temp",
+      "outdoor_damper"
+    ]
+  },
+  "seeds": [
+    7,
+    42,
+    123
+  ],
+  "primary_seed": 42,
+  "hidden": 32,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "batch": 512,
+  "max_epochs": 30,
+  "patience": 6,
+  "selection": "maximum validation AP; same fixed 30-policy alarm search and original targets",
+  "audit_sha256": "bcc74e9e125a6e22d2d199c3c421b77d6b9ccce1fe50b987a5bfe28213447ef5",
+  "source_sha256": "68c58568e3f0e4e7d0f0de3194a2ce7ca80703c057325ee402a94d3eab5a76c1",
+  "cohort_sha256": {
+    "train": "7868a9a16cce6efdecc39be155775946bcd551e24d1fb90a828a6e65a187aa91",
+    "validation": "9639d510022edc94aa96627c1a3eb81a3f5a644ab8039417e2e3f7c486011e85"
+  },
+  "implementation_sha256": {
+    "scripts/train_hvac_feature_study.py": "d014351de6d727cefd7b86a996d531ae994fc4723f006f2a130a75b05de91291",
+    "src/dccad/hvac_feature_study.py": "6d0a647422e961a8724c2f66e94448f00803093dfb22d391d3dc511248c8efcb"
+  },
+  "old_test_already_inspected": true,
+  "new_test_scoring_authorized": false,
+  "additional_architecture_search": false,
+  "interpretation": "Development comparison only; new reserved scenario data required for an independent improvement claim"
+}

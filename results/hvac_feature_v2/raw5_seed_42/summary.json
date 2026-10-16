@@ -1,0 +1,29 @@
+{
+  "name": "raw5_seed_42",
+  "family": "raw5",
+  "seed": 42,
+  "features": [
+    "outdoor_temp",
+    "cooling_valve",
+    "supply_temp",
+    "mixed_temp",
+    "outdoor_damper"
+  ],
+  "channels": 5,
+  "parameters": 5537,
+  "best_epoch": 9,
+  "epochs_run": 15,
+  "validation_ap": 0.8994857275236868,
+  "stop_reason": "patience",
+  "fresh_csv_score": 1.8535773754119873,
+  "expected_csv_score": 1.8535773754119873,
+  "plan_sha256": "9d65bc43ba9bf06748466db71f80395826769c0694ffc4c923634a470c477b5c",
+  "test_scored": false,
+  "checksums": {
+    "model.pt": "4623975940a252be86842d56333e77d29acdae74e799cf905d94143b88c63943",
+    "preprocessing.json": "b4b5ccabee46ed20018faefec52f5199b3d8dc2ee93fcb72d560e5387069f983",
+    "history.csv": "b09e5c16c3d71a97f85bdcedd3458cd864d47ef037b98250fedcfafbbf8b6f90",
+    "validation_scores.npz": "5d38649d940ca71fe163c510d54f8444499c4a76ec385e2cf192691f3947c97b",
+    "example_window.csv": "534cd46acee438e86c33e9a74011e0fd692d827e03cc9ad41e65f5567d969bba"
+  }
+}

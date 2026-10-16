@@ -1,0 +1,27 @@
+{
+  "candidate": "LBNL simulated single-duct AHU",
+  "url": "https://faultdetection.lbl.gov/dataset/simulated-sd-ahu/",
+  "doi": "10.25984/1881324",
+  "listed_data_points": 30,
+  "sampling": "one minute",
+  "time_scope": "365 days",
+  "files": "PDF inventory lists 20 faulty cases and one healthy case; website summary count differs, verify archive",
+  "listed_archive_mb": 593,
+  "uncompressed_gb": 2.69,
+  "status": "source documentation reviewed; no archive downloaded, joined, relabelled or trained",
+  "note": "Use as a separately versioned benchmark with new reserved scenarios; do not join its columns onto MZVAV-1 by row or date.",
+  "outdoor_bias_cases_c": [
+    -4,
+    -2,
+    2,
+    4
+  ],
+  "additional_recorded_channels": [
+    "outdoor airflow",
+    "return airflow",
+    "supply airflow",
+    "fan power",
+    "actual actuator positions",
+    "zone temperatures"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "new_full_validation_score_arrays_reproduced": 6,
+  "fresh_subset_csv_windows_reproduced": 6,
+  "validation_policies_reproduced": 270,
+  "original_baseline_artifact_hashes_intact": true,
+  "training_only_preprocessing_reproduced": true,
+  "subset_feature_counts_verified": true,
+  "no_new_test_predictions": true,
+  "existing_submission_replaced": false
+}

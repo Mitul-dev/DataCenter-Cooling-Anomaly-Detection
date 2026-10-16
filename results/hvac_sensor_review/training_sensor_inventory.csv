@@ -1,0 +1,19 @@
+column,role,unique_training,unique_active_training,missing_training
+Datetime,timestamp excluded,131040,63420,0
+AHU: Supply Air Temperature,model input,949,746,0
+AHU: Supply Air Temperature Set Point,model input,1,1,0
+AHU: Outdoor Air Temperature,model input,8851,8503,0
+AHU: Mixed Air Temperature,model input,2231,1706,0
+AHU: Return Air Temperature,model input,1298,751,0
+AHU: Supply Air Fan Status,eligibility/status,2,1,0
+AHU: Return Air Fan Status,eligibility/status,2,1,0
+AHU: Supply Air Fan Speed Control Signal,model input,17,11,0
+AHU: Return Air Fan Speed Control Signal,model input,17,11,0
+AHU: Outdoor Air Damper Control Signal,model input,88,87,0
+AHU: Return Air Damper Control Signal,model input,2,2,0
+AHU: Cooling Coil Valve Control Signal,model input,44,12,0
+AHU: Heating Coil Valve Control Signal,model input,2,2,0
+AHU: Supply Air Duct Static Pressure Set Point,model input,1,1,0
+AHU: Supply Air Duct Static Pressure,model input,12,1,0
+Occupancy Mode Indicator,eligibility/status,2,1,0
+Fault Detection Ground Truth,label excluded,2,2,0
