@@ -1,0 +1,28 @@
+{
+  "archive": {
+    "url": "https://fdddata.lbl.gov/data/Simulated_LBNL_FDD_Data_Sets_SDAHU/LBNL_FDD_Data_Sets_SDAHU.zip",
+    "bytes": 607666899,
+    "sha256": "8295fcf0f55bc955937cb4ec0198512c28e5ede32e6bbf735257b0df55426471",
+    "doi": "10.25984/1881324",
+    "downloaded_date": "2026-10-16"
+  },
+  "csv_count": 21,
+  "duplicate_content_groups": [
+    [
+      "coi_leakage_010_annual.csv",
+      "coi_leakage_025_annual.csv",
+      "coi_leakage_040_annual.csv",
+      "coi_leakage_050_annual.csv"
+    ],
+    [
+      "oa_bias_-2_annual.csv",
+      "oa_bias_-4_annual.csv",
+      "oa_bias_2_annual.csv",
+      "oa_bias_4_annual.csv"
+    ]
+  ],
+  "documented_sa_members_present": false,
+  "undocumented_coi_bias_members_present": true,
+  "training_started": false,
+  "labels_accepted": false
+}

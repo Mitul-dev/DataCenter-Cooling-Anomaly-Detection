@@ -2,6 +2,14 @@
 
 Prepared 16 October 2026 in response to professor feedback. This is a research extension; the submitted model and its independent autumn result remain unchanged.
 
+## Completed clarification and extension
+
+The professor's requested expansion concerns **which sensors' faults are detected**. The earlier model used five physical measurement channels plus six commands and two setpoints, but labeled faults only in outdoor-air temperature. The completed `multisensor_v2` experiment now identifies cold-deck and hot-deck temperature and pressure faults in a separate simulated dual-duct AHU. Its 26 inputs comprise 21 measurement channels and five commands. It does not add outdoor-air bias to these four new targets; the earlier detector remains selectable separately.
+
+The proposed richer single-duct archive below failed an integrity audit: four outdoor-bias tables were identical and documented supply-bias filenames were absent. These cases were excluded. The official dual-duct source has distinct native cases for the four selected sensor locations. Updated methods and results are in `results/multisensor_v2/REPORT.md`.
+
+The new reserved test gives 92.87% five-class accuracy and 2.10% healthy FPR, missing the 1% goal. Both tested raw-five models perform worse. The updated dashboard/report/presentation/notebook disclose these limitations. The test weeks have now been inspected and cannot serve as a fresh tuning target. The material below records the earlier planning and original-data feature comparison.
+
 ## What the present source can support
 
 MZVAV-1 has thirteen measurement/control inputs, plus timestamp, labels, occupancy and fan status. The latter status signals are constant during eligible operation. All thirteen measurement/control inputs are already available to the current model, which derives six consistency features and thirteen missing flags for 32 channels. This file does not contain additional airflow, humidity or power measurements. Some of its existing inputs are also constant in active training operation.

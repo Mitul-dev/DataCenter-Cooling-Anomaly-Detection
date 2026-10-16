@@ -1,0 +1,11 @@
+{
+  "scenarios": 17,
+  "sensor_fault_types": 4,
+  "classes": 5,
+  "source_csv_files": 56,
+  "source_archive_sha256": "bac73c863ca4ecad52846dbdd41d5daf9d844619e928f01b9eb18c1546d45c50",
+  "plan_sha256": "f75238856fbb6f08dc8e06ba8ed895eac7334ecb598fc1b8ea88768ac76eaac0",
+  "no_random_row_split": true,
+  "models_trained": false,
+  "test_predictions_made": false
+}

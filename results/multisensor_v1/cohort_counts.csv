@@ -1,0 +1,52 @@
+scenario,sensor,partition,raw_days,scored_days,endpoints
+DualDuct_FaultFree,Healthy,test,56,40,27640
+DualDuct_FaultFree,Healthy,train,253,181,125071
+DualDuct_FaultFree,Healthy,validation,56,40,27640
+DualDuct_SensorBias_CSA_+2C,Cold-deck temperature sensor,test,56,39,26949
+DualDuct_SensorBias_CSA_+2C,Cold-deck temperature sensor,train,253,178,122998
+DualDuct_SensorBias_CSA_+2C,Cold-deck temperature sensor,validation,56,39,26949
+DualDuct_SensorBias_CSA_+4C,Cold-deck temperature sensor,test,56,32,21509
+DualDuct_SensorBias_CSA_+4C,Cold-deck temperature sensor,train,253,141,97196
+DualDuct_SensorBias_CSA_+4C,Cold-deck temperature sensor,validation,56,33,22293
+DualDuct_SensorBias_CSA_-2C,Cold-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_CSA_-2C,Cold-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_CSA_-2C,Cold-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_CSA_-4C,Cold-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_CSA_-4C,Cold-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_CSA_-4C,Cold-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_CSP_+2inwg,Cold-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_CSP_+2inwg,Cold-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_CSP_+2inwg,Cold-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_CSP_+4inwg,Cold-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_CSP_+4inwg,Cold-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_CSP_+4inwg,Cold-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_CSP_-2inwg,Cold-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_CSP_-2inwg,Cold-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_CSP_-2inwg,Cold-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_CSP_-4inwg,Cold-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_CSP_-4inwg,Cold-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_CSP_-4inwg,Cold-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_HSA_+2C,Hot-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_HSA_+2C,Hot-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_HSA_+2C,Hot-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_HSA_+4C,Hot-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_HSA_+4C,Hot-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_HSA_+4C,Hot-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_HSA_-2C,Hot-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_HSA_-2C,Hot-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_HSA_-2C,Hot-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_HSA_-4C,Hot-deck temperature sensor,test,56,40,27640
+DualDuct_SensorBias_HSA_-4C,Hot-deck temperature sensor,train,253,181,125071
+DualDuct_SensorBias_HSA_-4C,Hot-deck temperature sensor,validation,56,40,27640
+DualDuct_SensorBias_HSP_+2inwg,Hot-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_HSP_+2inwg,Hot-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_HSP_+2inwg,Hot-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_HSP_+4inwg,Hot-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_HSP_+4inwg,Hot-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_HSP_+4inwg,Hot-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_HSP_-2inwg,Hot-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_HSP_-2inwg,Hot-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_HSP_-2inwg,Hot-deck pressure sensor,validation,56,40,27640
+DualDuct_SensorBias_HSP_-4inwg,Hot-deck pressure sensor,test,56,40,27640
+DualDuct_SensorBias_HSP_-4inwg,Hot-deck pressure sensor,train,253,181,125071
+DualDuct_SensorBias_HSP_-4inwg,Hot-deck pressure sensor,validation,56,40,27640

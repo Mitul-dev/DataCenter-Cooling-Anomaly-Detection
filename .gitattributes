@@ -18,5 +18,6 @@
 results/**/*.json -text
 results/**/*.csv -text
 HVAC_submission.ipynb -text
+HVAC_multisensor_submission.ipynb -text
 submission/HVAC*.json -text
 *.zip binary

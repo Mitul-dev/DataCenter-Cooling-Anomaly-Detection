@@ -2,9 +2,45 @@
 
 Deep Learning project, Section B. Team: Rishabh Srivastava (2430010149), Mitul Seth (2430010099), Madhav Mittal (2430010096).
 
-This course project detects author-labelled outdoor-air temperature sensor bias in an occupied, running simulated air-handling unit (AHU). It compares three LSTM training seeds with gradient boosting using the same sensor histories. The original M100 investigation remains supporting research: its scheduler-state labels did not establish cooling-specific faults, and its false-alarm targets were not met. The user approved this change of dataset and scope on 14 October 2026.
+This course project now identifies faults at **four sensor locations** in a simulated dual-duct air-handling unit: cold-deck and hot-deck air temperature, and cold-deck and hot-deck duct pressure. Healthy operation is the fifth model class. Each native scenario contains one sensor bias. The earlier outdoor-air detector and M100 investigation remain separate supporting studies.
 
-## Final results
+## Current four-sensor extension
+
+The LBNL dual-duct source provides 114 recorded points. This study uses 26 AHU inputs: **21 measurement channels and five control commands**. Seventeen selected source files cover a full year. Matching calendar weeks stay together across all scenarios. A fixed-seed LSTM uses 30-minute histories; training-only feature selection also tests five raw inputs.
+
+| Reserved test metric | Result |
+|---|---:|
+| Five-class accuracy | 92.87% |
+| Macro F1 | 89.36% |
+| Any-fault detection recall | 93.05% |
+| Correct-sensor recall range | 87.52% to 95.88% |
+| Healthy false-positive rate | **2.10%** |
+| Healthy false readings | 580 / 27,640 |
+
+**The 1% healthy FPR goal remains unmet.** The selected full-input model passed validation at 0.90% FPR, then missed the target on reserved test weeks. Five selected inputs performed worse and failed validation. The test is already inspected and was not used to retune thresholds. Broader fault coverage is established only within this simulation; these are different targets/data from the earlier outdoor-air benchmark, so its metrics are not a matched comparison.
+
+- [Updated PBL report with retained cover and certificate](submission/HVAC_Multisensor_PBL_Report.pdf)
+- [Editable updated report](submission/HVAC_Multisensor_PBL_Report.docx)
+- [Updated 12-slide presentation](submission/HVAC_Multisensor_Presentation.pptx)
+- [Executed multi-sensor notebook](HVAC_multisensor_submission.ipynb)
+- [Complete methods and results](results/multisensor_v2/REPORT.md)
+- [Model card](results/multisensor_v2/MODEL_CARD.md)
+- [Verification](results/multisensor_v2/verification.json)
+
+The dashboard opens the four-sensor extension by default. Its sidebar retains the earlier outdoor-air benchmark. Saved models, examples and replay run offline. The **1.7 GB raw dual-duct source archive and local caches are excluded from Git and the submission ZIP**; retraining downloads the public source separately:
+
+```powershell
+python scripts/download_sda.py --dual
+python scripts/prepare_multisensor.py
+python scripts/train_multisensor.py
+python scripts/refine_multisensor.py
+python scripts/evaluate_multisensor.py --study multisensor_v2
+python scripts/verify_multisensor.py
+```
+
+The logged development compares four unique LSTMs, fixed seed 42, two input sets and 504 final validation policies. Verification reproduces eight score arrays and twenty fresh CSV examples; all 46 unit tests pass. Only one seed is evaluated for this extension. Inactive/shutdown periods, simultaneous faults, new physical units and unseen severities are outside the measured scope. See [source attribution](data/dda_benchmark/SOURCE.md).
+
+## Earlier outdoor-air benchmark results
 
 Seed 42 was declared primary before evaluation. Its 30-minute history and two-of-three alarm rule were frozen using summer validation before the reserved autumn evaluation.
 
@@ -34,7 +70,7 @@ This is one simulated AHU and one fault family. Experimental fault prevalence is
 - [Results and methodology](results/hvac_v1/REPORT.md)
 - Local bundle: `submission/HVAC_Project_Submission.zip`, recreated with `python scripts/package_hvac.py`. Generated submission ZIPs are excluded from Git.
 
-The primary ZIP includes source data, trained models, evidence, source code and submission files. Supporting M100 reports are included; complete historical experiments remain in the GitHub repository.
+The ZIP includes the updated multi-sensor submission, trained models, replay/evidence, source code and the earlier submission. Its original small outdoor-air source archive is included. The larger dual-duct source downloads separately. Supporting M100 reports are included; complete historical experiments remain in the GitHub repository.
 
 ## Run the dashboard
 
@@ -52,7 +88,7 @@ If dependencies are already installed, double-click `Start Dashboard.bat`. If po
 .\.venv\Scripts\python.exe -m streamlit run dashboard\app.py --server.port 8502
 ```
 
-Open the address Streamlit prints. The dashboard replays held-out autumn days and scores uploaded sensor windows. Download its example CSV: supply 30 consecutive one-minute readings from one occupied, fan-on unit, with temperatures in Fahrenheit. Labels and imposed bias never enter the model. A single window returns an uncalibrated logit and cannot confirm a persistence alarm.
+Open the address Streamlit prints. The four-sensor dashboard replays reserved calendar weeks and scores an uploaded example with exactly 30 consecutive operating one-minute readings. Temperatures use Fahrenheit. Labels and imposed bias never enter the model. Its selected immediate policy uses uncalibrated class scores and per-sensor thresholds. The separately selectable earlier study retains its two-of-three policy.
 
 ## Data and separation
 
@@ -95,7 +131,7 @@ View the executed notebook on GitHub. To rerun interactively, optionally install
 
 The separate [sensor-expansion plan](SENSOR_EXPANSION_PLAN.md) documents the 16 October review. A [three-seed validation comparison](results/hvac_feature_v2/REPORT.md) tested the existing 32 channels against thirteen raw inputs and five training-selected raw inputs. Neither reduced raw-input set met the validation gate; the submitted model remains the same. This is a five-raw-input ablation, not a claim about every possible five-engineered-feature model. No new autumn predictions were made.
 
-The current file has no additional varying measurement channels to add. The plan identifies an official annual AHU simulation with 30 recorded variables, including airflow and fan power, for a separately versioned wider-data experiment. More data and fewer final model inputs are compatible, but improvement must be measured on newly reserved data. The extension reproduces six fresh validation score arrays and 270 policies; all 42 current unit tests pass.
+The original file has no additional varying measurement channels to add. The initially proposed annual single-duct source failed its integrity audit. The completed multi-sensor extension therefore uses the separate dual-duct source described above. Both raw-five studies are retained as evidence that fewer inputs do not automatically improve accuracy or false positives.
 
 ## Supporting M100 investigation
 

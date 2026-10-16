@@ -1,0 +1,163 @@
+{
+  "family": "all_inputs",
+  "classes": [
+    "Healthy",
+    "Cold-deck temperature sensor",
+    "Hot-deck temperature sensor",
+    "Cold-deck pressure sensor",
+    "Hot-deck pressure sensor"
+  ],
+  "policy": {
+    "thresholds": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "rule": "immediate",
+    "method": "fixed0.5",
+    "validation_metrics": {
+      "method": "fixed0.5",
+      "rule": "immediate",
+      "feasible": false,
+      "accuracy": 0.9709599389447269,
+      "macro_f1": 0.953514324955514,
+      "balanced_accuracy": 0.9601568288575285,
+      "fault_macro_ap": 0.9929562568708785,
+      "healthy_fpr": 0.10213458755426917,
+      "healthy_false_readings": 2823,
+      "healthy_readings": 27640,
+      "fault_detection_recall": 0.9866965305065084,
+      "confusion_matrix": [
+        [
+          24817,
+          76,
+          2529,
+          116,
+          102
+        ],
+        [
+          144,
+          103028,
+          918,
+          334,
+          98
+        ],
+        [
+          5142,
+          1014,
+          103228,
+          779,
+          397
+        ],
+        [
+          346,
+          199,
+          459,
+          109046,
+          510
+        ],
+        [
+          171,
+          76,
+          8,
+          52,
+          110253
+        ]
+      ],
+      "per_class": [
+        {
+          "sensor": "Healthy",
+          "support": 27640,
+          "tp": 24817,
+          "fp": 5803,
+          "fn": 2823,
+          "tn": 430399,
+          "precision": 0.8104833442194644,
+          "recall": 0.8978654124457308,
+          "f1": 0.8519395811877788,
+          "one_vs_rest_fpr": 0.013303469493491548,
+          "ap": 0.838573318359029
+        },
+        {
+          "sensor": "Cold-deck temperature sensor",
+          "support": 104522,
+          "tp": 103028,
+          "fp": 1365,
+          "fn": 1494,
+          "tn": 357955,
+          "precision": 0.9869244106405602,
+          "recall": 0.9857063584699872,
+          "f1": 0.9863150084962785,
+          "one_vs_rest_fpr": 0.0037988422575976847,
+          "ap": 0.995184628806569
+        },
+        {
+          "sensor": "Hot-deck temperature sensor",
+          "support": 110560,
+          "tp": 103228,
+          "fp": 3914,
+          "fn": 7332,
+          "tn": 349368,
+          "precision": 0.963469041085662,
+          "recall": 0.9336830680173661,
+          "f1": 0.9483422292859045,
+          "one_vs_rest_fpr": 0.011078968076494132,
+          "ap": 0.9806222146026311
+        },
+        {
+          "sensor": "Cold-deck pressure sensor",
+          "support": 110560,
+          "tp": 109046,
+          "fp": 1281,
+          "fn": 1514,
+          "tn": 352001,
+          "precision": 0.988389061607766,
+          "recall": 0.9863060781476122,
+          "f1": 0.9873464712726417,
+          "one_vs_rest_fpr": 0.003625998494120844,
+          "ap": 0.9965697419045085
+        },
+        {
+          "sensor": "Hot-deck pressure sensor",
+          "support": 110560,
+          "tp": 110253,
+          "fp": 1107,
+          "fn": 307,
+          "tn": 352175,
+          "precision": 0.9900592672413793,
+          "recall": 0.9972232272069464,
+          "f1": 0.9936283345349675,
+          "one_vs_rest_fpr": 0.003133474108502556,
+          "ap": 0.9994484421698056
+        }
+      ],
+      "healthy_false_bursts": 134,
+      "healthy_scored_days": 19.194444444444443,
+      "false_bursts_per_healthy_scored_day": 6.981186685962374
+    },
+    "classes": [
+      "Healthy",
+      "Cold-deck temperature sensor",
+      "Hot-deck temperature sensor",
+      "Cold-deck pressure sensor",
+      "Hot-deck pressure sensor"
+    ]
+  },
+  "seed": 42,
+  "plan_sha256": "f75238856fbb6f08dc8e06ba8ed895eac7334ecb598fc1b8ea88768ac76eaac0",
+  "families": {
+    "all_inputs": {
+      "model.pt": "ce2f2eadb4647429e6f7ed4fd7da946e3e83145a0c81340130979c066a73976d",
+      "preprocessing.json": "bbc9cd519912dfc11b16544d0f6ac3db6c93a7704801f306e4304e5d7b7c112d",
+      "validation_policy.json": "b5d2a5db844a96c2f1a27cb9b10abb2113fb3df4e610bc19a8d407ec47cb67fb"
+    },
+    "top5_inputs": {
+      "model.pt": "6e2cd0081475218f94c5ce6839af9297f0e0d0cb74796ad9aa719c6c49ad332e",
+      "preprocessing.json": "d0f68c2b4db094ad1cd44541cf326b343514e154264367cecffd4368076e4498",
+      "validation_policy.json": "22ecc3251d5d5ea196b7392bf26409b401ffee28fa54f9bcab1ce7fef0ac7449"
+    }
+  },
+  "qualified": false,
+  "test_predictions_made": false
+}

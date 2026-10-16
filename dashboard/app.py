@@ -10,6 +10,12 @@ from dccad.hvac_inference import score_window
 
 OUT=ROOT/'results/hvac_v1';MODEL=OUT/'lstm_seed_42'
 st.set_page_config(page_title='Cooling Equipment Fault Detection',layout='wide')
+if (ROOT/'results/multisensor_v2/test_summary.json').exists():
+    study=st.sidebar.selectbox('Project study',['Four-sensor extension','Earlier outdoor-air benchmark'])
+    if study=='Four-sensor extension':
+        from dccad.multisensor_dashboard import render
+        render(ROOT)
+        st.stop()
 st.title('Cooling Equipment Fault Detection')
 st.caption('LSTM sensor-bias detection | Simulated air-handling unit | Section B')
 st.write('This course prototype detects outdoor-air temperature sensor faults while the simulated air-handling unit is occupied and running. Results use a reserved autumn season.')

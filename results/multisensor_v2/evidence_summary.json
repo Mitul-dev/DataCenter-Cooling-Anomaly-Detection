@@ -1,0 +1,17 @@
+{
+  "test_fault_prevalence": 0.9403098531933365,
+  "five_class_majority_baseline_accuracy": 0.2387605872266541,
+  "eligible_train_endpoints": 2096259,
+  "eligible_validation_endpoints": 463842,
+  "eligible_test_endpoints": 463058,
+  "sampled_train_windows": 36404,
+  "checkpoint_validation_windows": 30877,
+  "healthy_active_test_calendar_days": 40,
+  "raw_test_days_per_scenario": 56,
+  "measurement_inputs": 21,
+  "command_inputs": 5,
+  "raw_candidate_inputs": 26,
+  "trainable_parameters": 8293,
+  "best_epoch": 42,
+  "epochs_run": 50
+}

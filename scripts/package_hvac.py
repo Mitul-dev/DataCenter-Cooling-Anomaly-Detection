@@ -10,7 +10,8 @@ OUTPUT = ROOT / 'submission/HVAC_Project_Submission.zip'
 
 def main():
     files = set()
-    for folder in ['src', 'tests', 'results/hvac_v1', 'results/hvac_feature_v2', 'results/hvac_sensor_review', 'data/hvac_benchmark']:
+    for folder in ['src', 'tests', 'results/hvac_v1', 'results/hvac_feature_v2', 'results/hvac_sensor_review', 'data/hvac_benchmark',
+                   'results/multisensor_v1', 'results/multisensor_v2', 'results/sda_source_audit']:
         files.update(p for p in (ROOT / folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     names = ['README.md', 'PROJECT_IMPROVEMENT_PLAN.md', 'SENSOR_EXPANSION_PLAN.md', 'requirements.txt', 'requirements-tested.txt',
              'Start Dashboard.bat', 'run_dashboard.ps1', 'HVAC_submission.ipynb', 'dashboard/app.py',
@@ -18,9 +19,16 @@ def main():
              'submission/HVAC_DL_Project_Report.pdf', 'submission/HVAC_DL_Project_Presentation.pptx',
              'submission/HVAC_PBL_Project_Report.pdf', 'submission/HVAC_PBL_Project_Report.docx',
              'submission/HVAC_artifact_checks.json', 'submission/HVAC_PBL_report_checks.json']
+    names += ['HVAC_multisensor_submission.ipynb', 'data/dda_benchmark/download.json', 'data/dda_benchmark/SOURCE.md',
+              'data/sda_benchmark/download.json', 'submission/HVAC_Multisensor_PBL_Report.docx',
+              'submission/HVAC_Multisensor_PBL_Report.pdf', 'submission/HVAC_Multisensor_Presentation.pptx',
+              'submission/HVAC_multisensor_artifact_checks.json']
     names += ['scripts/' + n + '.py' for n in ['prepare_hvac', 'train_hvac', 'evaluate_hvac',
               'verify_hvac', 'build_hvac_evidence', 'analyze_thresholds', 'package_hvac', 'run_tests',
               'audit_hvac_sensors', 'train_hvac_feature_study', 'verify_hvac_feature_study', 'report_hvac_feature_study']]
+    names += ['scripts/' + n + '.py' for n in ['download_sda', 'audit_sda_source', 'prepare_multisensor',
+              'train_multisensor', 'refine_multisensor', 'evaluate_multisensor', 'verify_multisensor',
+              'build_multisensor_evidence', 'build_multisensor_notebook', 'build_multisensor_submission']]
     names += [str(p.relative_to(ROOT)) for p in (ROOT / 'results').glob('task*_*/*.md')]
     for name in names:
         path = ROOT / name

@@ -1,0 +1,17 @@
+{
+  "method": "Whole-day grouped permutation on held-out training weeks",
+  "repeats": 3,
+  "seed": 2026,
+  "selector_seed": 42,
+  "selector_balanced_log_loss": 0.9436473940869414,
+  "candidate_features": 26,
+  "selected": [
+    "HSF_SPD",
+    "HSF_WAT",
+    "CSF_SPD",
+    "CHWC_VLV_DM",
+    "CSF_WAT"
+  ],
+  "validation_or_test_used": false,
+  "limitation": "Conditional selector importance; correlated inputs can share importance; not globally optimal"
+}

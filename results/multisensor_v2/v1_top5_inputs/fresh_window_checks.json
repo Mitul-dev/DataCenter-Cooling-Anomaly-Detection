@@ -1,0 +1,62 @@
+[
+  {
+    "class_id": 0,
+    "position": 0,
+    "scores": {
+      "Healthy": 0.2487937957048416,
+      "Cold-deck temperature sensor": 0.24191635847091675,
+      "Hot-deck temperature sensor": 0.2525657117366791,
+      "Cold-deck pressure sensor": 0.15015342831611633,
+      "Hot-deck pressure sensor": 0.10657081753015518
+    },
+    "passed": true
+  },
+  {
+    "class_id": 1,
+    "position": 27640,
+    "scores": {
+      "Healthy": 0.2483629435300827,
+      "Cold-deck temperature sensor": 0.24172136187553406,
+      "Hot-deck temperature sensor": 0.2509820759296417,
+      "Cold-deck pressure sensor": 0.14996176958084106,
+      "Hot-deck pressure sensor": 0.10897186398506165
+    },
+    "passed": true
+  },
+  {
+    "class_id": 2,
+    "position": 241938,
+    "scores": {
+      "Healthy": 0.24856990575790405,
+      "Cold-deck temperature sensor": 0.2418113648891449,
+      "Hot-deck temperature sensor": 0.2519848048686981,
+      "Cold-deck pressure sensor": 0.15005075931549072,
+      "Hot-deck pressure sensor": 0.10758322477340698
+    },
+    "passed": true
+  },
+  {
+    "class_id": 3,
+    "position": 131378,
+    "scores": {
+      "Healthy": 0.06852427870035172,
+      "Cold-deck temperature sensor": 0.10016694664955139,
+      "Hot-deck temperature sensor": 0.08346386253833771,
+      "Cold-deck pressure sensor": 0.3907104730606079,
+      "Hot-deck pressure sensor": 0.3571344316005707
+    },
+    "passed": true
+  },
+  {
+    "class_id": 4,
+    "position": 352498,
+    "scores": {
+      "Healthy": 0.24808359146118164,
+      "Cold-deck temperature sensor": 0.2697053551673889,
+      "Hot-deck temperature sensor": 0.24471698701381683,
+      "Cold-deck pressure sensor": 0.13883091509342194,
+      "Hot-deck pressure sensor": 0.09866315871477127
+    },
+    "passed": true
+  }
+]

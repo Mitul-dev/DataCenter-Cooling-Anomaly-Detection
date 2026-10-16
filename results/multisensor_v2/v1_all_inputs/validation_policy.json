@@ -1,0 +1,141 @@
+{
+  "method": "budget_sensor2_p99.25_others_p99.9",
+  "rule": "two_of_three",
+  "thresholds": [
+    0.9730257987976074,
+    0.8968355655670166,
+    0.9350700378417969,
+    0.9985477924346924
+  ],
+  "quantiles": [
+    99.9,
+    99.25,
+    99.9,
+    99.9
+  ],
+  "validation_metrics": {
+    "accuracy": 0.8629554891536342,
+    "macro_f1": 0.820995095201418,
+    "balanced_accuracy": 0.8831195060867125,
+    "fault_macro_ap": 0.9929562568708785,
+    "healthy_fpr": 0.009768451519536902,
+    "healthy_false_readings": 270,
+    "healthy_readings": 27640,
+    "fault_detection_recall": 0.858031370786929,
+    "confusion_matrix": [
+      [
+        27370,
+        19,
+        197,
+        28,
+        26
+      ],
+      [
+        3636,
+        100462,
+        291,
+        108,
+        25
+      ],
+      [
+        49627,
+        250,
+        60210,
+        370,
+        103
+      ],
+      [
+        2131,
+        64,
+        32,
+        108225,
+        108
+      ],
+      [
+        6533,
+        11,
+        0,
+        8,
+        104008
+      ]
+    ],
+    "per_class": [
+      {
+        "sensor": "Healthy",
+        "support": 27640,
+        "tp": 27370,
+        "fp": 61927,
+        "fn": 270,
+        "tn": 374275,
+        "precision": 0.30650525773542225,
+        "recall": 0.9902315484804631,
+        "f1": 0.46811530995322276,
+        "one_vs_rest_fpr": 0.14196862921307102,
+        "ap": 0.838573318359029
+      },
+      {
+        "sensor": "Cold-deck temperature sensor",
+        "support": 104522,
+        "tp": 100462,
+        "fp": 344,
+        "fn": 4060,
+        "tn": 358976,
+        "precision": 0.9965875047120211,
+        "recall": 0.9611565029371807,
+        "f1": 0.9785513909452194,
+        "one_vs_rest_fpr": 0.0009573639096070356,
+        "ap": 0.995184628806569
+      },
+      {
+        "sensor": "Hot-deck temperature sensor",
+        "support": 110560,
+        "tp": 60210,
+        "fp": 520,
+        "fn": 50350,
+        "tn": 352762,
+        "precision": 0.991437510291454,
+        "recall": 0.5445911722141823,
+        "f1": 0.7030182731040925,
+        "one_vs_rest_fpr": 0.0014719119570201708,
+        "ap": 0.9806222146026311
+      },
+      {
+        "sensor": "Cold-deck pressure sensor",
+        "support": 110560,
+        "tp": 108225,
+        "fp": 514,
+        "fn": 2335,
+        "tn": 352768,
+        "precision": 0.9952730850936646,
+        "recall": 0.9788802460202605,
+        "f1": 0.9870086046904,
+        "one_vs_rest_fpr": 0.001454928357516092,
+        "ap": 0.9965697419045085
+      },
+      {
+        "sensor": "Hot-deck pressure sensor",
+        "support": 110560,
+        "tp": 104008,
+        "fp": 262,
+        "fn": 6552,
+        "tn": 353020,
+        "precision": 0.9974872926057351,
+        "recall": 0.9407380607814761,
+        "f1": 0.9682818973141554,
+        "one_vs_rest_fpr": 0.0007416171783447784,
+        "ap": 0.9994484421698056
+      }
+    ],
+    "healthy_false_bursts": 50,
+    "healthy_scored_days": 19.194444444444443,
+    "false_bursts_per_healthy_scored_day": 2.604920405209841,
+    "feasible": true
+  },
+  "classes": [
+    "Healthy",
+    "Cold-deck temperature sensor",
+    "Hot-deck temperature sensor",
+    "Cold-deck pressure sensor",
+    "Hot-deck pressure sensor"
+  ]
+}

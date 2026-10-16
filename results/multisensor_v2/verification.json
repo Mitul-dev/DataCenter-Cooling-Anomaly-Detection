@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "complete_score_arrays": 8,
+  "validation_policies_reproduced": 504,
+  "fresh_csv_and_label_exclusion_checks": 20,
+  "training_only_preprocessing": true,
+  "calendar_week_partition_checks": true,
+  "classes": [
+    "Healthy",
+    "Cold-deck temperature sensor",
+    "Hot-deck temperature sensor",
+    "Cold-deck pressure sensor",
+    "Hot-deck pressure sensor"
+  ],
+  "test_reselection": false,
+  "reserved_test_already_inspected": true,
+  "seconds": 79.62819810002111,
+  "verified_files": {
+    "results\\multisensor_v2\\test_summary.json": "cd4ac4604d8f86a70339a0c59bb1633dcf2f1b34e1e2388003a41637e0b454ca",
+    "results\\multisensor_v2\\frozen_model.json": "05b099cb13d8ffbdbfe862bfc446560da7467f00f4bba0ac53e9e9f73f07f1c0"
+  }
+}

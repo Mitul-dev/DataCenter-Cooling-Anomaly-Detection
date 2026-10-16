@@ -1,0 +1,45 @@
+{
+  "family": "top5_inputs",
+  "seed": 42,
+  "features": [
+    "HSF_SPD",
+    "HSF_WAT",
+    "CSF_SPD",
+    "CHWC_VLV_DM",
+    "CSF_WAT"
+  ],
+  "channels": 5,
+  "classes": [
+    "Healthy",
+    "Cold-deck temperature sensor",
+    "Hot-deck temperature sensor",
+    "Cold-deck pressure sensor",
+    "Hot-deck pressure sensor"
+  ],
+  "parameters": 5605,
+  "train_windows": 36404,
+  "checkpoint_validation_windows": 30877,
+  "best_epoch": 16,
+  "epochs_run": 20,
+  "validation_fault_macro_ap": 0.8865713156809165,
+  "class_counts": [
+    2172,
+    8168,
+    8688,
+    8688,
+    8688
+  ],
+  "class_weights": [
+    3.3521178637200735,
+    0.8913809990205681,
+    0.8380294659300184,
+    0.8380294659300184,
+    0.8380294659300184
+  ],
+  "test_predictions_made": false,
+  "checksums": {
+    "model.pt": "6e2cd0081475218f94c5ce6839af9297f0e0d0cb74796ad9aa719c6c49ad332e",
+    "preprocessing.json": "d0f68c2b4db094ad1cd44541cf326b343514e154264367cecffd4368076e4498",
+    "history.csv": "47dba68827af253784ebcb2391ad8ae9fd8d941ad2d75f127d0eb6016229b9b5"
+  }
+}

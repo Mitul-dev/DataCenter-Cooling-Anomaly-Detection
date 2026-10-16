@@ -1,0 +1,18 @@
+{
+  "report_pages": 13,
+  "cover_and_certificate_text_preserved": true,
+  "report_all_pages_visually_reviewed": true,
+  "presentation_slides": 12,
+  "native_chart_count": 1,
+  "native_table_count": 7,
+  "presentation_all_slides_visually_reviewed": true,
+  "native_powerpoint_open_verified": false,
+  "executed_notebook_cells": 8,
+  "notebook_errors": 0,
+  "artifact_hashes": {
+    "HVAC_Multisensor_PBL_Report.docx": "dbe8e2a9349392dd1a6fae2f32a72f6be58b9776640bdab15606f5ad40e88f34",
+    "HVAC_Multisensor_PBL_Report.pdf": "08bd07c11a15e5a5897dc9a5396dd33fb15db535fefc7b2d96e0225b8d60cebb",
+    "HVAC_Multisensor_Presentation.pptx": "5fa22ea8293648e8316a6d76e92cedf35ec3563c07e3872f27d6d9ad4d0fd9c0"
+  },
+  "notebook_sha256": "54ee290fc1c7f95c0d4e7c41b0fd565894d884677a181ca3f2913f05fd28b410"
+}

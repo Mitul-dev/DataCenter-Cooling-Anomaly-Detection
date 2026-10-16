@@ -1,0 +1,282 @@
+[
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_CoolSeqUnstable.csv",
+    "bytes": 309249910,
+    "crc": 1367476506
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Cold_0.csv",
+    "bytes": 320092030,
+    "crc": 1781455061
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Cold_100.csv",
+    "bytes": 310378862,
+    "crc": 2654259680
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Cold_20.csv",
+    "bytes": 319432851,
+    "crc": 2825204304
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Cold_50.csv",
+    "bytes": 309809398,
+    "crc": 2428020872
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Cold_80.csv",
+    "bytes": 310270680,
+    "crc": 1507450299
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Hot_0.csv",
+    "bytes": 308975481,
+    "crc": 3730678852
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Hot_100.csv",
+    "bytes": 309929002,
+    "crc": 2677608793
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Hot_20.csv",
+    "bytes": 308947308,
+    "crc": 4083572679
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Hot_50.csv",
+    "bytes": 308788754,
+    "crc": 1767995992
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_Hot_80.csv",
+    "bytes": 309841289,
+    "crc": 3446198798
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_OA_0.csv",
+    "bytes": 308873419,
+    "crc": 2506308776
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_OA_100.csv",
+    "bytes": 308482059,
+    "crc": 4058478932
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_OA_28.csv",
+    "bytes": 306495979,
+    "crc": 3171902333
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_OA_45.csv",
+    "bytes": 309333368,
+    "crc": 312860871
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_DMPRStuck_OA_80.csv",
+    "bytes": 308056205,
+    "crc": 4235307861
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_FaultFree.csv",
+    "bytes": 309011282,
+    "crc": 469876882
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Airside_Minor.csv",
+    "bytes": 309075980,
+    "crc": 2198521672
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Airside_Moderate.csv",
+    "bytes": 309146457,
+    "crc": 974447181
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Airside_Severe.csv",
+    "bytes": 308974085,
+    "crc": 186346381
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Waterside_Minor.csv",
+    "bytes": 309041086,
+    "crc": 3316218163
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Waterside_Moderate.csv",
+    "bytes": 309004921,
+    "crc": 2585791488
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Cooling_Waterside_Severe.csv",
+    "bytes": 309056765,
+    "crc": 1505546124
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Airside_Minor.csv",
+    "bytes": 309031566,
+    "crc": 2387246003
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Airside_Moderate.csv",
+    "bytes": 309119312,
+    "crc": 1662968079
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Airside_Severe.csv",
+    "bytes": 308839430,
+    "crc": 2566645947
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Waterside_Minor.csv",
+    "bytes": 309080835,
+    "crc": 1501993498
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Waterside_Moderate.csv",
+    "bytes": 308935469,
+    "crc": 2516878741
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_Fouling_Heating_Waterside_Severe.csv",
+    "bytes": 309051368,
+    "crc": 3109473811
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_HeatSeqUnstable.csv",
+    "bytes": 309762281,
+    "crc": 3974978675
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSA_+2C.csv",
+    "bytes": 308439174,
+    "crc": 3861040305
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSA_+4C.csv",
+    "bytes": 305543730,
+    "crc": 699716060
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSA_-2C.csv",
+    "bytes": 309102421,
+    "crc": 2143916739
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSA_-4C.csv",
+    "bytes": 309393116,
+    "crc": 2901071837
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSP_+2inwg.csv",
+    "bytes": 309031800,
+    "crc": 526696799
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSP_+4inwg.csv",
+    "bytes": 308601014,
+    "crc": 250869811
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSP_-2inwg.csv",
+    "bytes": 309740346,
+    "crc": 209076712
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_CSP_-4inwg.csv",
+    "bytes": 309343028,
+    "crc": 3340863202
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSA_+2C.csv",
+    "bytes": 308913873,
+    "crc": 96585328
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSA_+4C.csv",
+    "bytes": 309164475,
+    "crc": 2868249378
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSA_-2C.csv",
+    "bytes": 309195974,
+    "crc": 2503861456
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSA_-4C.csv",
+    "bytes": 309204962,
+    "crc": 285431943
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSP_+2inwg.csv",
+    "bytes": 308578460,
+    "crc": 1356143569
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSP_+4inwg.csv",
+    "bytes": 309020024,
+    "crc": 2551260130
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSP_-2inwg.csv",
+    "bytes": 308842978,
+    "crc": 3424601769
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_SensorBias_HSP_-4inwg.csv",
+    "bytes": 308610004,
+    "crc": 2409381814
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Cooling_0_.csv",
+    "bytes": 323875441,
+    "crc": 1627899914
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Cooling_100_.csv",
+    "bytes": 308363049,
+    "crc": 457061959
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Cooling_20_.csv",
+    "bytes": 323151650,
+    "crc": 1115900669
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Cooling_50_.csv",
+    "bytes": 308679463,
+    "crc": 1733624317
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Cooling_80_.csv",
+    "bytes": 308398584,
+    "crc": 1676107813
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Heating_0_.csv",
+    "bytes": 311037926,
+    "crc": 867140477
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Heating_100_.csv",
+    "bytes": 311120235,
+    "crc": 1261368429
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Heating_20_.csv",
+    "bytes": 311330902,
+    "crc": 3595293568
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Heating_50_.csv",
+    "bytes": 310848329,
+    "crc": 1174345304
+  },
+  {
+    "member": "LBNL_FDD_Dataset_DDAHU/DualDuct_VLVStuck_Heating_80_.csv",
+    "bytes": 310617574,
+    "crc": 3797750144
+  }
+]

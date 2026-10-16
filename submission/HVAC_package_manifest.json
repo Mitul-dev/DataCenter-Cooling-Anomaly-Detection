@@ -1,12 +1,22 @@
 {
   "bundle": "HVAC_Project_Submission.zip",
-  "bytes": 19669537,
-  "sha256": "b38e3087889f09248c7a643a1185ac598a570c0898e5b06d8680ba0ec429c49e",
+  "bytes": 134936012,
+  "sha256": "b292b68ad779757c6eab16866d762987e5f8f79ac71fb5800c7b6ce0430c5dca",
   "files": [
     {
       "path": "dashboard/app.py",
-      "bytes": 7809,
-      "sha256": "10fc20d520e1451a44768716c8f5cb8bb1f2d7ffa261ed06a435a6059a2ef727"
+      "bytes": 8111,
+      "sha256": "3e5486b3a1d2d13be9f63abd89d35fbaadea8e8e0cf3779bb87a237514a9e3a2"
+    },
+    {
+      "path": "data/dda_benchmark/download.json",
+      "bytes": 280,
+      "sha256": "2768ad6f33a41442ea6e6e6e3fddb3403f5a46c7e16407a49f488cd672a3bc99"
+    },
+    {
+      "path": "data/dda_benchmark/SOURCE.md",
+      "bytes": 1915,
+      "sha256": "6fc60d304d56f01acdada7fd8aee446d26cd237f35eb1b9214a7a093b6748cb4"
     },
     {
       "path": "data/hvac_benchmark/afdd_source.zip",
@@ -24,9 +34,19 @@
       "sha256": "0c241a4d1b125a54e8d73e29b59e316012aef722524c3ea531c2f71da79d7d4d"
     },
     {
+      "path": "data/sda_benchmark/download.json",
+      "bytes": 279,
+      "sha256": "30d975a311f3b66f6d2793fd16dd14458fbfc23ba35a06a34aa0bd8851682f2d"
+    },
+    {
       "path": "docs/M100_RESEARCH.md",
       "bytes": 22205,
       "sha256": "b5eb308f7f5986d1850ba7844c3e9a107fbd7369633b767f2488e4a2397d0f7c"
+    },
+    {
+      "path": "HVAC_multisensor_submission.ipynb",
+      "bytes": 77451,
+      "sha256": "54ee290fc1c7f95c0d4e7c41b0fd565894d884677a181ca3f2913f05fd28b410"
     },
     {
       "path": "HVAC_submission.ipynb",
@@ -40,8 +60,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7940,
-      "sha256": "538af24217d1add75bb4f35c986a1dc718f54cb08949a79771090e9ae07c114e"
+      "bytes": 10628,
+      "sha256": "51ba6959c9dc11687defd275ab1e8d9295ec113a00b5931915ec121955f92082"
     },
     {
       "path": "requirements-tested.txt",
@@ -834,9 +854,534 @@
       "sha256": "bef4996211239b3245158d18e2204ea6ff8c95da380ec1f4d96202258df87f7c"
     },
     {
+      "path": "results/multisensor_v1/all_inputs/history.csv",
+      "bytes": 1258,
+      "sha256": "7b216369f9f311d0c00baf7369f0491a6e9fd5f006465d5a94e360377e2f899d"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/model.pt",
+      "bytes": 36721,
+      "sha256": "ce2f2eadb4647429e6f7ed4fd7da946e3e83145a0c81340130979c066a73976d"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/preprocessing.json",
+      "bytes": 2457,
+      "sha256": "bbc9cd519912dfc11b16544d0f6ac3db6c93a7704801f306e4304e5d7b7c112d"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/summary.json",
+      "bytes": 1439,
+      "sha256": "8b481325d86896c540edc237099942ba8b44ddb5a2030d18dad5359a1d16ede9"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/validation_policy.json",
+      "bytes": 3277,
+      "sha256": "b5d2a5db844a96c2f1a27cb9b10abb2113fb3df4e610bc19a8d407ec47cb67fb"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/validation_policy_search.json",
+      "bytes": 88469,
+      "sha256": "f85effa524164888783cba57241557452d217d53f7682c56764f3c72fec7f929"
+    },
+    {
+      "path": "results/multisensor_v1/all_inputs/validation_scores.npz",
+      "bytes": 10317181,
+      "sha256": "6a005a8fb66f586ee0266ee3a5fb234832a18ee2d5b388903da7c69eb8460d39"
+    },
+    {
+      "path": "results/multisensor_v1/archive_inventory.json",
+      "bytes": 7541,
+      "sha256": "0d7186597defed37ad30ff3cb8ac3c6c7f90a797fc29f9fb732cde930be34e11"
+    },
+    {
+      "path": "results/multisensor_v1/cohort_counts.csv",
+      "bytes": 3938,
+      "sha256": "43ef3dc31dd717e189f262e572b95e4cdeb213ff8c6d70cd5cd139808702bff2"
+    },
+    {
+      "path": "results/multisensor_v1/experiment_plan.json",
+      "bytes": 2608,
+      "sha256": "f75238856fbb6f08dc8e06ba8ed895eac7334ecb598fc1b8ea88768ac76eaac0"
+    },
+    {
+      "path": "results/multisensor_v1/feature_selection.json",
+      "bytes": 473,
+      "sha256": "dcfc713d7b71515b100f010ce22c118b78aec8da7d36dde458d885f6c80d0b32"
+    },
+    {
+      "path": "results/multisensor_v1/frozen_model.json",
+      "bytes": 4579,
+      "sha256": "a6b30e9acdb64c3ccabaa2ac2d584aae9a8e28ac3ffda13dc634c1795c9b312d"
+    },
+    {
+      "path": "results/multisensor_v1/preparation.json",
+      "bytes": 372,
+      "sha256": "8659a1e05769b314b3fe1f65d21efc9edf39b3002ead7a1bb761ce2b88600143"
+    },
+    {
+      "path": "results/multisensor_v1/scenarios.json",
+      "bytes": 9024,
+      "sha256": "15ac39252f8a356c74512779d1dd2e08425531cfc8c1988d3503a3fa36bfda66"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/history.csv",
+      "bytes": 1249,
+      "sha256": "47dba68827af253784ebcb2391ad8ae9fd8d941ad2d75f127d0eb6016229b9b5"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/model.pt",
+      "bytes": 25649,
+      "sha256": "6e2cd0081475218f94c5ce6839af9297f0e0d0cb74796ad9aa719c6c49ad332e"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/preprocessing.json",
+      "bytes": 600,
+      "sha256": "d0f68c2b4db094ad1cd44541cf326b343514e154264367cecffd4368076e4498"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/summary.json",
+      "bytes": 1093,
+      "sha256": "da9f6b97b5757b12c1747316866b74a4452d0233dce775e50d5b50c0f47d5864"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/validation_policy.json",
+      "bytes": 3348,
+      "sha256": "22ecc3251d5d5ea196b7392bf26409b401ffee28fa54f9bcab1ce7fef0ac7449"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/validation_policy_search.json",
+      "bytes": 87698,
+      "sha256": "3ff6121620c741974757587853b7cfc1abda2e71b0d66b8ca047c9186fcfd630"
+    },
+    {
+      "path": "results/multisensor_v1/top5_inputs/validation_scores.npz",
+      "bytes": 9968828,
+      "sha256": "5030984b9dd3fa80d1cdbeba9cd264c1c6d158f1331c0bb61798ddde7fc43de1"
+    },
+    {
+      "path": "results/multisensor_v1/training_feature_ranking.csv",
+      "bytes": 1389,
+      "sha256": "835937f200b1d7f25d73bf32e20dffa116e93b6b9806fd81c3289d0224a85c59"
+    },
+    {
+      "path": "results/multisensor_v1/training_implementation.json",
+      "bytes": 610,
+      "sha256": "9cc00b48e71000e2c22598ad425a7eb2c1b021223d960cf5db7e67f249d30e66"
+    },
+    {
+      "path": "results/multisensor_v1/training_ranges.csv",
+      "bytes": 61077,
+      "sha256": "4ec45dcc22aa756fa36cab7ddecd634a516b6af202b888c7da29c2bb69763cbb"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/example_class_0.csv",
+      "bytes": 5371,
+      "sha256": "27fd70ae3d54b799f3fab96346e09d61fa4bab8cac5fdf1f7edc4baee64e4819"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/example_class_1.csv",
+      "bytes": 5366,
+      "sha256": "a1bca37115451d2c359ac0f25c9e5a344080fb88e15b9c1cb80336fd4784e403"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/example_class_2.csv",
+      "bytes": 5385,
+      "sha256": "18ddac16bf34b6c23742ffc41706510c98570f845eb60ae58b1263d85f61a04d"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/example_class_3.csv",
+      "bytes": 5355,
+      "sha256": "3827a608a2d268ad224cf99b4903097787cfe259e8013737845f828f177dec99"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/example_class_4.csv",
+      "bytes": 5368,
+      "sha256": "2aafba479ec663424a2bd9796111257d0152d2d4da3dd39e0989dfb5d8a5ce52"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/fresh_window_checks.json",
+      "bytes": 1890,
+      "sha256": "9865dbc22a7feac593a03aac298101c1e7a8163a348755c320efe1370191601d"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/history.csv",
+      "bytes": 3117,
+      "sha256": "e61dada1490af66bf68c8595f806ace3fa62a3a1725e0a3ee3aa8785cc145222"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/model.pt",
+      "bytes": 36721,
+      "sha256": "ec759543b440e190b127344be36fa95c7893a3431141aec9edd96d6a06f6c945"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/preprocessing.json",
+      "bytes": 2457,
+      "sha256": "bbc9cd519912dfc11b16544d0f6ac3db6c93a7704801f306e4304e5d7b7c112d"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/summary.json",
+      "bytes": 1444,
+      "sha256": "10e9f66b954f51082d45db4cdf83a9bd6cecf49531eea4b23a6464c50f21c454"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/test_metrics.json",
+      "bytes": 2646,
+      "sha256": "e18d746785adde1fcdaac1ed5024d2125782235bf9f46ed228071e80c1899b33"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/test_per_day.csv",
+      "bytes": 36737,
+      "sha256": "52808aea605f4aafc17593769ae5b608fb78ab29fa5fdacf5cd7ff717d4aa624"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/test_scores.npz",
+      "bytes": 9979653,
+      "sha256": "c64c6e41dc75076ef041eac637fb4444b116b9a79dccce6912767a0dee1a36de"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/validation_policy.json",
+      "bytes": 3372,
+      "sha256": "18f2b062868e49b83a6c8642ec4522b94cfd47f0647fba297415bc49251dce8e"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/validation_policy_search.json",
+      "bytes": 89731,
+      "sha256": "b3554afd38158ad5dd1eebc780d8b04dcdc3162d39f82e25640dd6e30f9dcbfd"
+    },
+    {
+      "path": "results/multisensor_v2/all_inputs/validation_scores.npz",
+      "bytes": 9879788,
+      "sha256": "48cd1f054314b9d62ec20b03a30305f4fedfc711e2aa491fbb9ebedef7b7556d"
+    },
+    {
+      "path": "results/multisensor_v2/evidence_summary.json",
+      "bytes": 555,
+      "sha256": "e541ab81012f6039c7a2ef4e5487c5f90b41c4ac623dad89639df5b0071b95ed"
+    },
+    {
+      "path": "results/multisensor_v2/experiment_plan.json",
+      "bytes": 3371,
+      "sha256": "aae236d57c34604f8aa8f31c11263b3922bdbd1549823185acd1ce76cc1c3666"
+    },
+    {
+      "path": "results/multisensor_v2/frozen_model.json",
+      "bytes": 5314,
+      "sha256": "05b099cb13d8ffbdbfe862bfc446560da7467f00f4bba0ac53e9e9f73f07f1c0"
+    },
+    {
+      "path": "results/multisensor_v2/MODEL_CARD.md",
+      "bytes": 1278,
+      "sha256": "e8546756b9b41439f58c8003fec6a00c8386703a60f6b4aeca78054b9d546dff"
+    },
+    {
+      "path": "results/multisensor_v2/model_comparison.csv",
+      "bytes": 803,
+      "sha256": "0f295dfa689106e237c55823e6b7d55a8701f5c2709a646c2f5bf8df257bfaa1"
+    },
+    {
+      "path": "results/multisensor_v2/REPORT.md",
+      "bytes": 7298,
+      "sha256": "8794ef18036373156cd9a2e7ecd265de480c3967ad768aab8a4baceae380b87e"
+    },
+    {
+      "path": "results/multisensor_v2/scenarios.json",
+      "bytes": 9024,
+      "sha256": "15ac39252f8a356c74512779d1dd2e08425531cfc8c1988d3503a3fa36bfda66"
+    },
+    {
+      "path": "results/multisensor_v2/test_by_sensor.csv",
+      "bytes": 822,
+      "sha256": "bd5991b57d74f8fe1413f5d7895f6df36a0ae1b75968114cf4b02f268bffc523"
+    },
+    {
+      "path": "results/multisensor_v2/test_confusion_matrix.png",
+      "bytes": 130358,
+      "sha256": "5b4a7090910bfd1fc8a7c517ae3e4f745bac3a2116323a2a00be657f2e089d61"
+    },
+    {
+      "path": "results/multisensor_v2/test_replay.parquet",
+      "bytes": 15297703,
+      "sha256": "e7134d947772f0f0cfc380b11820363895bd73b762edd308031021694e196cd3"
+    },
+    {
+      "path": "results/multisensor_v2/test_sensor_performance.png",
+      "bytes": 39682,
+      "sha256": "c378fa859d8bc615dae207233dab41f1342fbd9f3e13b361d238338788846d17"
+    },
+    {
+      "path": "results/multisensor_v2/test_summary.json",
+      "bytes": 16211,
+      "sha256": "cd4ac4604d8f86a70339a0c59bb1633dcf2f1b34e1e2388003a41637e0b454ca"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/example_class_0.csv",
+      "bytes": 1604,
+      "sha256": "80af0eaf380a238015a0a9d96d79f157b4baeae086e39bf752714aa165c68c68"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/example_class_1.csv",
+      "bytes": 1600,
+      "sha256": "4fe76a1124bf7754d686cad69089dba83db5a1089b408410b3d6c9af60b40a4a"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/example_class_2.csv",
+      "bytes": 1602,
+      "sha256": "94023054fb381e0788e9bfa9f14ac7772a131d2200c64ba6c0c40361af961b50"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/example_class_3.csv",
+      "bytes": 1584,
+      "sha256": "f94b7ea4233e7156814171f4ed582b6ad93c1efbcbd28cf34fdd3f9ea410adfa"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/example_class_4.csv",
+      "bytes": 1591,
+      "sha256": "26c361969b4465a79c85c47a44fba49c8ed70d1caeddbc067ae4904c490c206e"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/fresh_window_checks.json",
+      "bytes": 1857,
+      "sha256": "5916f00b7dc89f688abefcc93d58800daf9a16e45f3a114909f34aadf14bc978"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/history.csv",
+      "bytes": 2042,
+      "sha256": "d7c5687796f73aa47c9bb5e8b0c94cf1308ea2145c7f7126ac95f56f32330993"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/model.pt",
+      "bytes": 25649,
+      "sha256": "fb87e8dfbec6f6c5fc9370abaf21bd82eed8c0df3a0ac52f21b954475fa7b550"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/preprocessing.json",
+      "bytes": 600,
+      "sha256": "d0f68c2b4db094ad1cd44541cf326b343514e154264367cecffd4368076e4498"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/summary.json",
+      "bytes": 1097,
+      "sha256": "bf6d8d1713bf4b873245304a93539bf47edaea6ea8c529dfa58c28c01c1a4e78"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/test_metrics.json",
+      "bytes": 2674,
+      "sha256": "87cd67ab07dfde227011cfa38e0edf30f088cb709a751b462f65d7f3dffe4fc8"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/test_per_day.csv",
+      "bytes": 36434,
+      "sha256": "64180eba2ad591861d9f63971bb1f0515b0ffffecb905206c410a0f8b80300a2"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/test_scores.npz",
+      "bytes": 9859214,
+      "sha256": "c27efda8f1e16b0886d1c2aa08b995f48325c50ad0891e0d1f403106340d3aeb"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/validation_policy.json",
+      "bytes": 3372,
+      "sha256": "a9df2dc269ace4ea77c941df15b77b7c95f644651498208bcaa22720d049fefc"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/validation_policy_search.json",
+      "bytes": 89889,
+      "sha256": "084089cd20bec394f8d599a11851f02421f684c5ef0f649e5b2edf78ac487367"
+    },
+    {
+      "path": "results/multisensor_v2/top5_inputs/validation_scores.npz",
+      "bytes": 10111852,
+      "sha256": "6edf73d7440e121d6bcd27bf7a12b0296b7b441ed96914d23d6093b3cb39ec57"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/example_class_0.csv",
+      "bytes": 5371,
+      "sha256": "27fd70ae3d54b799f3fab96346e09d61fa4bab8cac5fdf1f7edc4baee64e4819"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/example_class_1.csv",
+      "bytes": 5366,
+      "sha256": "a1bca37115451d2c359ac0f25c9e5a344080fb88e15b9c1cb80336fd4784e403"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/example_class_2.csv",
+      "bytes": 5385,
+      "sha256": "18ddac16bf34b6c23742ffc41706510c98570f845eb60ae58b1263d85f61a04d"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/example_class_3.csv",
+      "bytes": 5355,
+      "sha256": "3827a608a2d268ad224cf99b4903097787cfe259e8013737845f828f177dec99"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/example_class_4.csv",
+      "bytes": 5368,
+      "sha256": "2aafba479ec663424a2bd9796111257d0152d2d4da3dd39e0989dfb5d8a5ce52"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/fresh_window_checks.json",
+      "bytes": 1869,
+      "sha256": "0d109f94c853c77c1f9f0ac3da608e4357612c70bfa1debba1b033fc301c0ba9"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/history.csv",
+      "bytes": 1258,
+      "sha256": "7b216369f9f311d0c00baf7369f0491a6e9fd5f006465d5a94e360377e2f899d"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/model.pt",
+      "bytes": 36721,
+      "sha256": "ce2f2eadb4647429e6f7ed4fd7da946e3e83145a0c81340130979c066a73976d"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/preprocessing.json",
+      "bytes": 2457,
+      "sha256": "bbc9cd519912dfc11b16544d0f6ac3db6c93a7704801f306e4304e5d7b7c112d"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/summary.json",
+      "bytes": 1439,
+      "sha256": "8b481325d86896c540edc237099942ba8b44ddb5a2030d18dad5359a1d16ede9"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/test_metrics.json",
+      "bytes": 2642,
+      "sha256": "05f9b28c72d8a46426e2b14df4931af0f12998fca7b4f8cd593c5e28cb0ea844"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/test_per_day.csv",
+      "bytes": 36576,
+      "sha256": "539af4e4beec611a1a392f6bd02ca11135158684e678e4194336d60f25b1bf31"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/test_scores.npz",
+      "bytes": 10371404,
+      "sha256": "f0bfbf363ba8b09c92721afe2f8995d47704a3d7f93abfd102ea881195ecf62b"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/validation_policy.json",
+      "bytes": 3372,
+      "sha256": "4447de01aa299c65ad9793b05b613fdeb9394f6b63dde539c2ad0cdb72facb76"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/validation_policy_search.json",
+      "bytes": 89661,
+      "sha256": "effc56eb0ea0392891a91041d8e948ffbccdff714d0c770eff4e402e9ceab79b"
+    },
+    {
+      "path": "results/multisensor_v2/v1_all_inputs/validation_scores.npz",
+      "bytes": 10317181,
+      "sha256": "6a005a8fb66f586ee0266ee3a5fb234832a18ee2d5b388903da7c69eb8460d39"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/example_class_0.csv",
+      "bytes": 1604,
+      "sha256": "80af0eaf380a238015a0a9d96d79f157b4baeae086e39bf752714aa165c68c68"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/example_class_1.csv",
+      "bytes": 1600,
+      "sha256": "4fe76a1124bf7754d686cad69089dba83db5a1089b408410b3d6c9af60b40a4a"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/example_class_2.csv",
+      "bytes": 1602,
+      "sha256": "94023054fb381e0788e9bfa9f14ac7772a131d2200c64ba6c0c40361af961b50"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/example_class_3.csv",
+      "bytes": 1584,
+      "sha256": "f94b7ea4233e7156814171f4ed582b6ad93c1efbcbd28cf34fdd3f9ea410adfa"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/example_class_4.csv",
+      "bytes": 1591,
+      "sha256": "26c361969b4465a79c85c47a44fba49c8ed70d1caeddbc067ae4904c490c206e"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/fresh_window_checks.json",
+      "bytes": 1843,
+      "sha256": "e67c9a57acd495db4a983b751c7e270555e84241a23a8acaa467bbc9fba51caf"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/history.csv",
+      "bytes": 1249,
+      "sha256": "47dba68827af253784ebcb2391ad8ae9fd8d941ad2d75f127d0eb6016229b9b5"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/model.pt",
+      "bytes": 25649,
+      "sha256": "6e2cd0081475218f94c5ce6839af9297f0e0d0cb74796ad9aa719c6c49ad332e"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/preprocessing.json",
+      "bytes": 600,
+      "sha256": "d0f68c2b4db094ad1cd44541cf326b343514e154264367cecffd4368076e4498"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/summary.json",
+      "bytes": 1093,
+      "sha256": "da9f6b97b5757b12c1747316866b74a4452d0233dce775e50d5b50c0f47d5864"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/test_metrics.json",
+      "bytes": 2659,
+      "sha256": "0e9755d0132fe3e5d4ed093e0ffceb033f27df9f1a063f0c88781fda5541dfb9"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/test_per_day.csv",
+      "bytes": 36414,
+      "sha256": "76264c6e290f403af114752c5707ed08bf26fd04909e249dc2456103e92ef360"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/test_scores.npz",
+      "bytes": 9791849,
+      "sha256": "be6f610f594078abb6897e9efac2b98feabef5810f19b33bf7ef4a8e8df01c66"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/validation_policy.json",
+      "bytes": 3375,
+      "sha256": "007cf2a909cc3bc01d6ae1fb2d12c5c6793902a075b90d360a281ed2495836af"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/validation_policy_search.json",
+      "bytes": 89988,
+      "sha256": "8b44c9f04eb0ec997b5a49716127151ab8e3e057211e3ad5668ce56867ec15e5"
+    },
+    {
+      "path": "results/multisensor_v2/v1_top5_inputs/validation_scores.npz",
+      "bytes": 9968828,
+      "sha256": "5030984b9dd3fa80d1cdbeba9cd264c1c6d158f1331c0bb61798ddde7fc43de1"
+    },
+    {
+      "path": "results/multisensor_v2/verification.json",
+      "bytes": 779,
+      "sha256": "a9b029cf04580779147bfe6468fbdee9fe2f899674501fb34b7f566beb32379f"
+    },
+    {
       "path": "results/project_progress.json",
-      "bytes": 3633,
-      "sha256": "18168f338b6b6030f627f60fbc6238a35c4069ab881bc80adff95122103903be"
+      "bytes": 4470,
+      "sha256": "5808a56ac9e3b1f7c9401c969df401e7c0247c9addd947d818d53a23587c6a1d"
+    },
+    {
+      "path": "results/sda_source_audit/active_input_ranges.csv",
+      "bytes": 28041,
+      "sha256": "726411c9e0819482cbf11e46de46ae3348136d7c4ae9d6acf2db4519801a887f"
+    },
+    {
+      "path": "results/sda_source_audit/archive_inventory.csv",
+      "bytes": 2815,
+      "sha256": "349e4ddcad4c7ca708418b9257d6fd0a9b9877221d026a455c6a0cddef8f9ce1"
+    },
+    {
+      "path": "results/sda_source_audit/audit.json",
+      "bytes": 822,
+      "sha256": "adefad90ce821d7766acb5963f62fdd424bc90cdad5ed2da4cdbf8f1b883377c"
+    },
+    {
+      "path": "results/sda_source_audit/healthy_case_differences.csv",
+      "bytes": 27525,
+      "sha256": "22c2f41c2230083773cf425aa3c79ef37656b82b7bb120981abd9bf7fe1fb698"
     },
     {
       "path": "results/task1_audit/REPORT.md",
@@ -904,9 +1449,34 @@
       "sha256": "672d8ab83fbf24d973cf3b2c67618e3a0e0aa7548342f789ec184e7094ecd3fd"
     },
     {
+      "path": "scripts/audit_sda_source.py",
+      "bytes": 3840,
+      "sha256": "bc9e56ee8991ec31c02112ed3cc1a172ce3665357336b3f9e212b9a42982a4d8"
+    },
+    {
       "path": "scripts/build_hvac_evidence.py",
       "bytes": 10354,
       "sha256": "ac9b55aaa605ae69a484a365351a13b1a2d7cc230f289ee65580f930bf2cbc99"
+    },
+    {
+      "path": "scripts/build_multisensor_evidence.py",
+      "bytes": 13003,
+      "sha256": "634ef5ec70e4e0e41598d79614db69ddcdb1ae2485be72f6787b32f6589f2bb8"
+    },
+    {
+      "path": "scripts/build_multisensor_notebook.py",
+      "bytes": 9430,
+      "sha256": "974c327f7912795bf9b7e0cba77779ac5573a463e4395a0c18db8b62293429f2"
+    },
+    {
+      "path": "scripts/build_multisensor_submission.py",
+      "bytes": 25303,
+      "sha256": "c715d15e5f8520359fff98ba8eb3aba8ec95d97beb0e7e263a2f76b65cdd7a02"
+    },
+    {
+      "path": "scripts/download_sda.py",
+      "bytes": 1730,
+      "sha256": "2b6978812b2194ce905728ae4638d24bbdcb13e4106834f26ddbe0c352308db6"
     },
     {
       "path": "scripts/evaluate_hvac.py",
@@ -914,14 +1484,29 @@
       "sha256": "581eed8e529253e285cff666bbe8149a2ec5bfb7a9fefbead8797a4104c5ddc5"
     },
     {
+      "path": "scripts/evaluate_multisensor.py",
+      "bytes": 4732,
+      "sha256": "9d1827bae0cc2c652f14d4f09b51056ebc90e74ef06220220ccfeb3d3e35ac41"
+    },
+    {
       "path": "scripts/package_hvac.py",
-      "bytes": 2629,
-      "sha256": "80db1755f1fe41f07c17fd451629b058311960ca1df3aaa7cdb92d3bc2a336ee"
+      "bytes": 3435,
+      "sha256": "7dc0fd12ef046c28a6f3fdb83005bbc4cef093071d03f0fc77b66f9b662d0800"
     },
     {
       "path": "scripts/prepare_hvac.py",
       "bytes": 8308,
       "sha256": "cec1b9670dd3d16edf60a752de6a68d03c2296c52394c60e994dc00583c71db4"
+    },
+    {
+      "path": "scripts/prepare_multisensor.py",
+      "bytes": 8541,
+      "sha256": "43c6111b9983b2b08567ecd7fdfe2a0ae585dbe548c4aea43d8b2a6a969d9785"
+    },
+    {
+      "path": "scripts/refine_multisensor.py",
+      "bytes": 9231,
+      "sha256": "93fa69c74903097195dd7ddcd318045d3d03375709a92bdbf835a8fa8cd55bad"
     },
     {
       "path": "scripts/report_hvac_feature_study.py",
@@ -944,6 +1529,11 @@
       "sha256": "d014351de6d727cefd7b86a996d531ae994fc4723f006f2a130a75b05de91291"
     },
     {
+      "path": "scripts/train_multisensor.py",
+      "bytes": 12078,
+      "sha256": "61ddf3ebbe002063d6a9d2e6269d0668ef61dec6714623859ff898b7d36a77c1"
+    },
+    {
       "path": "scripts/verify_hvac.py",
       "bytes": 8343,
       "sha256": "d33fc66d091fbca8081291dff8c02de65dbbb6e15162f31ff0959314ed1702a7"
@@ -954,9 +1544,14 @@
       "sha256": "b498d4ec0ef0df6904f0c5318f76f5b206288cad503a692366b5e3ca7939552a"
     },
     {
-      "path": "SENSOR_EXPANSION_PLAN.md",
+      "path": "scripts/verify_multisensor.py",
       "bytes": 6042,
-      "sha256": "27ceadb2926c04bc6be53c5242bb4a2fc883d8b3bada1bb0fd6a368c0aa999ce"
+      "sha256": "7f9b67175fa84c21d82ce43f9c0c4c3d65edd4fe7ac4d2fa292697d09991343a"
+    },
+    {
+      "path": "SENSOR_EXPANSION_PLAN.md",
+      "bytes": 7394,
+      "sha256": "a56d71c1d02e5d5359912b32c92cdf755fa8589cb9d4a99a990ba24c22145680"
     },
     {
       "path": "src/dccad/__init__.py",
@@ -997,6 +1592,16 @@
       "path": "src/dccad/model.py",
       "bytes": 1245,
       "sha256": "dc12b29b0f1891f87a58ea95186f4ad34e045e2d4de4891e00339549a43b6398"
+    },
+    {
+      "path": "src/dccad/multisensor.py",
+      "bytes": 6310,
+      "sha256": "67c6a812442e70624f0e549f271822cf717a56d96b2a42e1b0067eb027006099"
+    },
+    {
+      "path": "src/dccad/multisensor_dashboard.py",
+      "bytes": 8029,
+      "sha256": "a466c591ca792568b9ae21910a474f6ddba7a075afdb1c9ba5f3745387c7f322"
     },
     {
       "path": "src/dccad/preprocessing.py",
@@ -1054,6 +1659,26 @@
       "sha256": "4105f301aa93d49b9bc307cddf3e96cdcf87125ff6731e39f94eadde5383c613"
     },
     {
+      "path": "submission/HVAC_multisensor_artifact_checks.json",
+      "bytes": 812,
+      "sha256": "b56dbb9aa0ce4b12c4e276f79039c3df3e2ad1afd769b30e871369643c98dcbe"
+    },
+    {
+      "path": "submission/HVAC_Multisensor_PBL_Report.docx",
+      "bytes": 253183,
+      "sha256": "dbe8e2a9349392dd1a6fae2f32a72f6be58b9776640bdab15606f5ad40e88f34"
+    },
+    {
+      "path": "submission/HVAC_Multisensor_PBL_Report.pdf",
+      "bytes": 526999,
+      "sha256": "08bd07c11a15e5a5897dc9a5396dd33fb15db535fefc7b2d96e0225b8d60cebb"
+    },
+    {
+      "path": "submission/HVAC_Multisensor_Presentation.pptx",
+      "bytes": 56084,
+      "sha256": "5fa22ea8293648e8316a6d76e92cedf35ec3563c07e3872f27d6d9ad4d0fd9c0"
+    },
+    {
       "path": "submission/HVAC_PBL_Project_Report.docx",
       "bytes": 495627,
       "sha256": "de0d27d141241e66b2596c8738b30572d86f080ff1a2cb90b4cb64ac865d4a8f"
@@ -1087,6 +1712,11 @@
       "path": "tests/test_hvac_feature_study.py",
       "bytes": 1920,
       "sha256": "c50eeb801e2d2d6056cabc30efc8dddb79949028865e5c5654010992e54493ba"
+    },
+    {
+      "path": "tests/test_multisensor.py",
+      "bytes": 2130,
+      "sha256": "ea9e89e6ec5a951be7aa35c247a898bb6dc616ea88dcc93e4c265ff555d831b3"
     },
     {
       "path": "tests/test_preprocessing.py",

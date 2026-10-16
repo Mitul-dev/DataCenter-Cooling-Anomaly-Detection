@@ -1,0 +1,17 @@
+{
+  "plan_sha256": "f75238856fbb6f08dc8e06ba8ed895eac7334ecb598fc1b8ea88768ac76eaac0",
+  "files": {
+    "scripts\\train_multisensor.py": "61ddf3ebbe002063d6a9d2e6269d0668ef61dec6714623859ff898b7d36a77c1",
+    "src\\dccad\\multisensor.py": "67c6a812442e70624f0e549f271822cf717a56d96b2a42e1b0067eb027006099",
+    "scripts\\prepare_multisensor.py": "43c6111b9983b2b08567ecd7fdfe2a0ae585dbe548c4aea43d8b2a6a969d9785"
+  },
+  "selected_five": [
+    "HSF_SPD",
+    "HSF_WAT",
+    "CSF_SPD",
+    "CHWC_VLV_DM",
+    "CSF_WAT"
+  ],
+  "normal_training_fit_rows": 130320,
+  "test_predictions_made": false
+}

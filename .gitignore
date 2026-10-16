@@ -9,6 +9,14 @@ artifacts/reduced_*.npz
 0.tar
 submission/*.zip
 submission/HVAC_DL_Project_Presentation_Final.pptx
+data/sda_benchmark/source.zip
+data/sda_benchmark/source.partial
+data/sda_benchmark/*.parquet
+data/sda_benchmark/*.npz
+data/dda_benchmark/source.zip
+data/dda_benchmark/source.partial
+data/dda_benchmark/*.parquet
+data/dda_benchmark/*.npz
 
 # Local artifact-authoring scratch data and machine files.
 .chart-data-*/
