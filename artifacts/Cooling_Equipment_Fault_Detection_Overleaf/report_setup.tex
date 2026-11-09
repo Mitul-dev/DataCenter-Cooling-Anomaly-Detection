@@ -1,0 +1,128 @@
+% Compile with XeLaTeX or Tectonic.
+% All report text, including the cover and certificate, is editable here.
+% Compile with XeLaTeX twice, or with the Codex LaTeX editor.
+% pdfTeX must select the PDF version before packages can write PDF data.
+\ifdefined\pdfminorversion
+  \pdfminorversion=7\relax
+\fi
+\RequirePackage{fix-cm}
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=0.7in,footskip=0.42in]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext}
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Times New Roman}
+    {\setmainfont{Times New Roman}}
+    {\setmainfont{texgyretermes-regular.otf}[
+      BoldFont=texgyretermes-bold.otf,
+      ItalicFont=texgyretermes-italic.otf,
+      BoldItalicFont=texgyretermes-bolditalic.otf]}
+\fi
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{graphicx}
+\usepackage{array,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{float,caption,titlesec,fancyhdr}
+\usepackage{amsmath,amssymb,booktabs,longtable,multirow}
+\usepackage{tikz,pgfplots,listings}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+\pgfplotsset{compat=1.18}
+\usepackage{xurl}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Cooling Equipment Sensor-Fault Detection},pdfauthor={Mitul Seth; Madhav Mittal; Rishabh Srivastva}}
+\urlstyle{same}
+\definecolor{gridgray}{HTML}{D9D9D9}
+\arrayrulecolor{gridgray}
+\setlength{\arrayrulewidth}{0.4pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6bp}
+\renewcommand{\normalsize}{\fontsize{12bp}{13.8bp}\selectfont}
+\normalsize
+\emergencystretch=1.5em
+\widowpenalty=10000
+\clubpenalty=10000
+\titleformat{\section}{\bfseries\fontsize{14bp}{16.1bp}\selectfont}{\thesection}{0.35em}{}
+\titleformat{\subsection}{\itshape\fontsize{12bp}{13.8bp}\selectfont}{\thesubsection}{0.35em}{}
+\titlespacing*{\section}{0pt}{9bp}{5bp}
+\titlespacing*{\subsection}{0pt}{9bp}{5bp}
+\captionsetup{font=normalsize,labelfont=normalfont,labelsep=space,skip=5bp}
+\setlength{\intextsep}{6bp}
+\setlength{\textfloatsep}{6bp}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\fontsize{10bp}{12bp}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setcounter{tocdepth}{2}
+\makeatletter
+\@addtoreset{table}{section}
+\@addtoreset{figure}{section}
+\makeatother
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\newcommand{\frontheading}[1]{\begin{center}\bfseries\fontsize{16bp}{18.4bp}\selectfont #1\end{center}\vspace{6bp}}
+
+
+\definecolor{reportblue}{HTML}{123550}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,
+  frame=none,keepspaces=true,showstringspaces=false}
+
+% Load from main.tex before \begin{document}.
+% Presentation rules stay here so frontmatter_visual_content.tex contains
+% ordinary headings and paragraphs for the Overleaf Visual Editor.
+
+\newcommand{\RestoreReportHeadingStyles}{%
+  \titleformat{\section}{\bfseries\fontsize{14bp}{16.1bp}\selectfont}{\thesection}{0.35em}{}%
+  \titleformat{\subsection}{\itshape\fontsize{12bp}{13.8bp}\selectfont}{\thesubsection}{0.35em}{}%
+  \titlespacing*{\section}{0pt}{9bp}{5bp}%
+  \titlespacing*{\subsection}{0pt}{9bp}{5bp}%
+}
+
+\newenvironment{EditableCover}{%
+  \clearpage
+  \thispagestyle{empty}%
+  \hypersetup{pageanchor=false}%
+  \pagenumbering{gobble}%
+  \begingroup
+  \normalfont\color{black}%
+  \fontsize{14.04bp}{17.5bp}\selectfont
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{6bp}%
+  \titleformat{\section}{\centering\bfseries\fontsize{18bp}{21bp}\selectfont}{}{0pt}{}%
+  \titleformat{\subsection}{\centering\bfseries\fontsize{20.04bp}{24bp}\selectfont}{}{0pt}{}%
+  \titlespacing*{\section}{0pt}{8bp}{7bp}%
+  \titlespacing*{\subsection}{0pt}{4bp}{10bp}%
+}{%
+  \par\endgroup
+  \RestoreReportHeadingStyles
+  \clearpage
+}
+
+\newenvironment{EditableCertificate}{%
+  \thispagestyle{empty}%
+  \begingroup
+  \normalfont\color{black}%
+  \fontsize{12bp}{20.7bp}\selectfont
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{6bp}%
+  \titleformat{\section}{\centering\bfseries\fontsize{18bp}{21bp}\selectfont}{}{0pt}{}%
+  \titlespacing*{\section}{0pt}{0pt}{10bp}%
+}{%
+  \par\endgroup
+  \RestoreReportHeadingStyles
+  \clearpage
+}
+
+\newenvironment{FacultyDetails}{%
+  \begingroup
+  \normalfont\fontsize{14.04bp}{18bp}\selectfont
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{6.12bp}%
+}{\par\endgroup}

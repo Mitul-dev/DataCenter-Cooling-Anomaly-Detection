@@ -1,0 +1,19 @@
+\frontheading{ABSTRACT}
+This Deep Learning project began with detection of outdoor-air temperature sensor bias at one sensor location and was expanded to diagnosis at four temperature and pressure sensor locations. The current model distinguishes healthy operation, cold-deck temperature bias, hot-deck temperature bias, cold-deck pressure bias and hot-deck pressure bias in a simulated dual-duct air-handling unit. Each source scenario contains one faulty sensor. The earlier single-sensor benchmark remains separate because the source data and diagnostic targets differ.
+
+The extension uses seventeen annual LBNL scenarios and twenty-six measured or control inputs. Thirty consecutive operating one-minute readings form each LSTM history. Matching calendar weeks remain together across all scenarios; cleaning, scaling and input selection use training data only. Four LSTM candidates compare full inputs with five training-selected raw inputs and two recorded training configurations. Validation selects the checkpoint and alarm policy before reserved test evaluation.
+
+The selected full-input model achieves 92.87\% five-class accuracy, 89.36\% macro F1 and 93.05\% any-fault recall on 463,058 eligible test minutes. Correct-sensor recall ranges from 87.52\% to 95.88\%. Healthy false-positive rate is 2.10\%, or 580 false readings out of 27,640 healthy readings, exceeding the 1\% goal despite a validation rate of 0.90\%. The five-input alternatives perform worse. The fixed test results are retained without post-test threshold retuning.
+
+The deliverables include saved model checkpoints, reproducible evidence, an executed notebook and a Streamlit demonstration. Findings are limited to known single-sensor bias families on one simulated unit with one training seed. Simultaneous faults, physical-equipment reliability and future-failure forecasting are not established. The report documents these limits and a proposed division of deep learning work among the three team members.
+
+\textbf{Keywords:} LSTM, deep learning, HVAC, sensor fault diagnosis, sequence classification, false-positive rate.
+\clearpage
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\tableofcontents
+\clearpage
+\listoftables
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
